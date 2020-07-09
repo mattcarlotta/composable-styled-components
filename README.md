@@ -67,8 +67,8 @@ const Button = compose(
   }
 `;
 
-const ComposedButton = extend(
-  setDisplayName("Composed Button"),
+const ExtendedButton = extend(
+  setDisplayName("Extended Button"),
   withProps({ 
     onClick: () => alert("Hey!") 
   }),
@@ -89,9 +89,9 @@ const App = () => (
     <Button>
       Button
     </Button>
-    <ComposedButton>
-      ComposedButton
-    </ComposedButton>
+    <ExtendedButton>
+      Extended Button
+    </ExtendedButton>
   <>
 );
 
