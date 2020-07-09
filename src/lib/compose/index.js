@@ -1,5 +1,7 @@
-export const compose = (...funcs) =>
-  funcs.reduce(
-    (a, b) => (...args) => a(b(...args)),
-    arg => arg
-  );
+import styled from "styled-components";
+import { extend } from "~lib";
+
+export const compose = (...f) => c => s =>
+  extend(...f)(styled(c)`
+    ${s};
+  `);

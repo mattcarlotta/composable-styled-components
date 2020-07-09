@@ -1,9 +1,9 @@
 import React from "react";
 import { render } from "react-dom";
 import {
-  build,
   compose,
   css,
+  extend,
   setDisplayName,
   withProps,
   withStyleAttributes,
@@ -11,7 +11,7 @@ import {
 } from "../../src";
 import "./styles/index.scss";
 
-const Button = build(
+const Button = compose(
   setDisplayName("Button"),
   withProps({
     type: "button",
@@ -38,18 +38,18 @@ const Button = build(
   }
 `);
 
-const ComposedButton = compose(
-  setDisplayName("Composed Button"),
+const ExtendedButton = extend(
+  setDisplayName("Extended Button"),
   withProps({
     resize: true,
-    onClick: () => alert("Composed Button!")
+    onClick: () => alert("Extended button!")
   }),
   withStyles(
     "color: #30a9ff; background: transparent;border: 1px solid #30a9dd; &:hover { color: #0077ff; border-color: #0077ff; }"
   )
 )(Button);
 
-const InterpolatedButton = compose(
+const InterpolatedButton = extend(
   setDisplayName("Interpolated Button"),
   withProps({
     resize: false,
@@ -68,18 +68,18 @@ const InterpolatedButton = compose(
   )
 )(Button);
 
-const ComposedWithAttributes = compose(
-  setDisplayName("Composed With Attributes"),
+const ExtendedWithAttributes = extend(
+  setDisplayName("Extended With Attributes"),
   withProps({
     resize: true,
-    onClick: () => alert("Composed with attributes")
+    onClick: () => alert("Extended with attributes")
   }),
   withStyleAttributes(props => ({
     size: props.resize ? "30px" : "12px"
   }))
 )(Button);
 
-const BuiltWithAttributes = build(
+const BuiltWithAttributes = compose(
   setDisplayName("Built With Attributes"),
   withProps({
     type: "button",
@@ -120,15 +120,15 @@ const App = () => (
   <div className="container">
     <h1>Composable Styled Components</h1>
     <Button>Button</Button>
-    <ComposedButton>Composed Button</ComposedButton>
+    <ExtendedButton>Extended Button</ExtendedButton>
     <InterpolatedButton>Interpolated Button (no action)</InterpolatedButton>
     <InterpolatedButton
       resize
-      onClick={() => alert("Composed interpolated button w/props!")}
+      onClick={() => alert("Extended interpolated button w/props!")}
     >
-      Composed Interpolated Button w/Props
+      Extended Interpolated Button w/Props
     </InterpolatedButton>
-    <ComposedWithAttributes>Composed With Attributes</ComposedWithAttributes>
+    <ExtendedWithAttributes>Extended With Attributes</ExtendedWithAttributes>
     <BuiltWithAttributes>Built With Attributes</BuiltWithAttributes>
   </div>
 );

@@ -1,8 +1,8 @@
 /* istanbul ignore file */
-export * from "./build";
 export * from "./compose";
 export * from "./createFactory";
 export * from "./displayName";
+export * from "./extend";
 export * from "./mapProps";
 export * from "./nest";
 export * from "./withProps";

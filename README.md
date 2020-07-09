@@ -6,6 +6,8 @@ A lightweight **composable** solution for [styled-components](https://github.com
 
 [Usage](#usage)
 
+[Demo](#demo)
+
 [Advanced Usage](#advanced-usage)
 
 [License](#license)
@@ -30,14 +32,14 @@ yarn add composable-styled-components
 import * as React;
 import { render } from "react-dom";
 import { 
-  build, 
-  compose,
+  compose, 
+  extend,
   setDisplayName, 
   withProps, 
   withStyles 
 } from "composable-styled-components";
 
-const Button = build(
+const Button = compose(
   setDisplayName("Button"),
   withProps({
     type: "button",
@@ -62,7 +64,7 @@ const Button = build(
   }
 `;
 
-const ComposedButton = compose(
+const ComposedButton = extend(
   setDisplayName("Composed Button"),
   withProps({ 
     onClick: () => alert("Hey!") 
@@ -91,6 +93,18 @@ const App = () => (
 );
 
 render(<App />, document.getElementById("root"));
+```
+
+## Demo
+
+```
+npm i && npm run demo
+```
+
+or
+
+```
+yarn && yarn demo
 ```
 
 ## Advanced Usage
