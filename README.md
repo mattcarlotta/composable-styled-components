@@ -16,6 +16,8 @@ A lightweight **composable** solution for [styled-components](https://github.com
 
 ## Installation
 
+⚠️ Note: **This has not been published to npm yet**. To try out this package, see [Demo](#demo) for installation instructions. 
+
 ```
 npm i composable-styled-components
 ```
@@ -97,6 +99,7 @@ render(<App />, document.getElementById("root"));
 
 ## Demo
 
+**npm**
 ```
 cd ~/Desktop
 git clone git@github.com:mattcarlotta/composable-styled-components.git
@@ -106,12 +109,15 @@ npm i && npm run demo
 
 or
 
+**yarn**
 ```
 cd ~/Desktop
 git clone git@github.com:mattcarlotta/composable-styled-components.git
 cd composable-styled-components
 yarn && yarn demo
 ```
+
+This demo contains a development webpack configuration, therefore files within the [demo/src](demo/src) can be altered/changed to update the browser window.
 
 ## Advanced Usage
 
