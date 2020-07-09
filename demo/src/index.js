@@ -38,8 +38,8 @@ const Button = build(
   }
 `);
 
-const A = compose(
-  setDisplayName("Composed A"),
+const ComposedButton = compose(
+  setDisplayName("Composed Button"),
   withProps({
     resize: true,
     onClick: () => alert("Hey!")
@@ -49,8 +49,8 @@ const A = compose(
   )
 )(Button);
 
-const B = compose(
-  setDisplayName("Composed B"),
+const ComposedInterpolatedButton = compose(
+  setDisplayName("Composed Interpolated Button"),
   withProps({
     resize: false,
     onClick: null
@@ -67,8 +67,8 @@ const B = compose(
   )
 )(Button);
 
-const C = compose(
-  setDisplayName("Composed C"),
+const ComposedWithAttributes = compose(
+  setDisplayName("Composed With Attributes"),
   withProps({
     resize: true
   }),
@@ -77,8 +77,8 @@ const C = compose(
   }))
 )(Button);
 
-const D = build(
-  setDisplayName("Button D"),
+const BuiltWithAttributes = build(
+  setDisplayName("Built With Attributes"),
   withProps({
     type: "button",
     onClick: () => alert("Built with attributes")
@@ -88,13 +88,15 @@ const D = build(
   }),
   withStyleAttributes(props => ({
     color: props.primary ? "#fff" : "#000",
-    background: props.primary ? "#188fff" : "#fff"
+    background: props.primary ? "#188fff" : "#fff",
+    size: props.primary ? "45px" : "14"
   })),
   withStyles(css`
     display: block;
     cursor: pointer;
     background: ${({ background }) => background};
     color: ${({ color }) => color};
+    font-size: ${({ size }) => size};
     border: 0;
     margin: 5px;
     padding: 8px 16px;
@@ -116,13 +118,15 @@ const App = () => (
   <div className="container">
     <h1>Composable Styled Components</h1>
     <Button>Button</Button>
-    <A>Hey</A>
-    <B>No Action</B>
-    <B resize onClick={() => alert("Angry!")}>
-      Angry
-    </B>
-    <C>Composed with attributes</C>
-    <D>Built with attributes</D>
+    <ComposedButton>Composed Button</ComposedButton>
+    <ComposedInterpolatedButton>
+      Composed Interpolated Button
+    </ComposedInterpolatedButton>
+    <ComposedInterpolatedButton resize onClick={() => alert("Angry!")}>
+      Composed Interpolated Button with Props
+    </ComposedInterpolatedButton>
+    <ComposedWithAttributes>Composed With Attributes</ComposedWithAttributes>
+    <BuiltWithAttributes>Built With Attributes</BuiltWithAttributes>
   </div>
 );
 
