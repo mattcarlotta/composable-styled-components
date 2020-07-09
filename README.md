@@ -98,12 +98,18 @@ render(<App />, document.getElementById("root"));
 ## Demo
 
 ```
+cd ~/Desktop
+git clone git@github.com:mattcarlotta/composable-styled-components.git
+cd composable-styled-components
 npm i && npm run demo
 ```
 
 or
 
 ```
+cd ~/Desktop
+git clone git@github.com:mattcarlotta/composable-styled-components.git
+cd composable-styled-components
 yarn && yarn demo
 ```
 
