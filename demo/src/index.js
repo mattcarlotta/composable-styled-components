@@ -42,15 +42,15 @@ const ComposedButton = compose(
   setDisplayName("Composed Button"),
   withProps({
     resize: true,
-    onClick: () => alert("Hey!")
+    onClick: () => alert("Composed Button!")
   }),
   withStyles(
     "color: #30a9ff; background: transparent;border: 1px solid #30a9dd; &:hover { color: #0077ff; border-color: #0077ff; }"
   )
 )(Button);
 
-const ComposedInterpolatedButton = compose(
-  setDisplayName("Composed Interpolated Button"),
+const InterpolatedButton = compose(
+  setDisplayName("Interpolated Button"),
   withProps({
     resize: false,
     onClick: null
@@ -59,6 +59,7 @@ const ComposedInterpolatedButton = compose(
     css`
       color: ${props => (props.resize ? "pink" : "limegreen")};
       background: darkred;
+      font-size: 16px;
 
       &:hover {
         color: ${props => (props.resize ? "red" : "darkgrey")};
@@ -70,10 +71,11 @@ const ComposedInterpolatedButton = compose(
 const ComposedWithAttributes = compose(
   setDisplayName("Composed With Attributes"),
   withProps({
-    resize: true
+    resize: true,
+    onClick: () => alert("Composed with attributes")
   }),
   withStyleAttributes(props => ({
-    size: props.resize ? "25px" : "12px"
+    size: props.resize ? "30px" : "12px"
   }))
 )(Button);
 
@@ -119,12 +121,13 @@ const App = () => (
     <h1>Composable Styled Components</h1>
     <Button>Button</Button>
     <ComposedButton>Composed Button</ComposedButton>
-    <ComposedInterpolatedButton>
-      Composed Interpolated Button
-    </ComposedInterpolatedButton>
-    <ComposedInterpolatedButton resize onClick={() => alert("Angry!")}>
-      Composed Interpolated Button with Props
-    </ComposedInterpolatedButton>
+    <InterpolatedButton>Interpolated Button (no action)</InterpolatedButton>
+    <InterpolatedButton
+      resize
+      onClick={() => alert("Composed interpolated button w/props!")}
+    >
+      Composed Interpolated Button w/Props
+    </InterpolatedButton>
     <ComposedWithAttributes>Composed With Attributes</ComposedWithAttributes>
     <BuiltWithAttributes>Built With Attributes</BuiltWithAttributes>
   </div>
