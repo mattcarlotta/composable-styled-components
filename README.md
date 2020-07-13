@@ -116,7 +116,7 @@ cd composable-styled-components
 npm i && npm run demo
 ```
 
-This demo contains a development webpack configuration, therefore files within the [demo/src](demo/src) can be altered/changed and saved to update the browser window.
+This demo contains a development webpack configuration, therefore files within the [src](src) can be altered/changed and saved to update the browser window.
 
 ## Advanced Usage
 
