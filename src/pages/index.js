@@ -11,7 +11,7 @@ const App = () => (
     <Head title="Home" />
     <img
       css="display:block;margin: 0 auto;width: 700px;"
-      src="https://i.imgur.com/eSJeEMu.png"
+      src="composableLogo.png"
       alt="composableLogo"
     />
     <p css="margin-top: 0;margin-bottom: 30px;">
