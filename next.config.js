@@ -3,9 +3,7 @@ const plugins = require("./config/plugins");
 
 const { NODE_ENV, LOCALHOST } = process.env;
 const inProd = NODE_ENV === "production";
-const assetPrefix = inProd
-  ? "https://mattcarlotta.github.io/composable-styled-components/"
-  : "";
+const assetPrefix = inProd ? LOCALHOST : "";
 
 /* opens a browser window */
 if (NODE_ENV === "development") openBrowser(`${LOCALHOST}`);

@@ -11,10 +11,10 @@
   ],
   "scripts": {
     "build": "rimraf dist && cross-env NODE_ENV=production rollup -c",
-    "build:demo": "rimraf docs && next build",
+    "build:demo": "next build",
     "checkbuild": "es-check es5 './dist/index.js' './dist/umd/index.umd.js' './docs/**/*.js'",
     "demo": "next dev -p 8080",
-    "export": "next export -o docs",
+    "export": "rimraf docs && next export -o docs && touch docs/.nojekyll",
     "start": "next start -p 8080",
     "test": "cross-env NODE_ENV=testing jest --config ./jest.json",
     "test:cov": "cross-env NODE_ENV=testing jest --config ./jest.json --coverage",
