@@ -1,27 +1,27 @@
 {
   "devFiles": [],
   "lowPriorityFiles": [
-    "static/PxqGqTiIVERR3tQGlNjfy/_buildManifest.js",
-    "static/PxqGqTiIVERR3tQGlNjfy/_ssgManifest.js"
+    "static/NOZG7J7pjt9eVGRqFUAOw/_buildManifest.js",
+    "static/NOZG7J7pjt9eVGRqFUAOw/_ssgManifest.js"
   ],
   "pages": {
     "/": [
       "static/runtime/webpack-c212667a5f965e81e004.js",
       "static/chunks/framework.c6faae2799416a6da8e8.js",
-      "static/chunks/8df34cd0868947be7be2b49eb8161ef81e5b174b.a828aa1a93239842461a.js",
-      "static/runtime/main-f2ba0741c28e772a9a26.js"
+      "static/chunks/875435ce068120302aff0eb85d4a54192a127a71.7e3666b8572b03f3038c.js",
+      "static/runtime/main-fdc39c45fa198748bab1.js"
     ],
     "/_app": [
       "static/runtime/webpack-c212667a5f965e81e004.js",
       "static/chunks/framework.c6faae2799416a6da8e8.js",
-      "static/chunks/8df34cd0868947be7be2b49eb8161ef81e5b174b.a828aa1a93239842461a.js",
-      "static/chunks/25894b875f34a446533a084f9deaf01e1a9e728e.61a8edfa4392dd7888f6.js",
-      "static/runtime/main-f2ba0741c28e772a9a26.js"
+      "static/chunks/875435ce068120302aff0eb85d4a54192a127a71.7e3666b8572b03f3038c.js",
+      "static/chunks/af03edcd4a51d815411e710d1372442b429725f0.78d96c91b84fc75541c9.js",
+      "static/runtime/main-fdc39c45fa198748bab1.js"
     ],
     "/_error": [
       "static/runtime/webpack-c212667a5f965e81e004.js",
       "static/chunks/framework.c6faae2799416a6da8e8.js",
-      "static/runtime/main-f2ba0741c28e772a9a26.js"
+      "static/runtime/main-fdc39c45fa198748bab1.js"
     ],
     "/_polyfills": [
       "static/runtime/polyfills-f1a72475392243fcf9b5.js"
@@ -29,8 +29,8 @@
     "/index": [
       "static/runtime/webpack-c212667a5f965e81e004.js",
       "static/chunks/framework.c6faae2799416a6da8e8.js",
-      "static/chunks/8df34cd0868947be7be2b49eb8161ef81e5b174b.a828aa1a93239842461a.js",
-      "static/runtime/main-f2ba0741c28e772a9a26.js"
+      "static/chunks/875435ce068120302aff0eb85d4a54192a127a71.7e3666b8572b03f3038c.js",
+      "static/runtime/main-fdc39c45fa198748bab1.js"
     ]
   }
 }
