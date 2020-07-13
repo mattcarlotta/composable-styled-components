@@ -7,7 +7,11 @@ const { NODE_ENV, LOCALHOST } = process.env;
 if (NODE_ENV === "development") openBrowser(`${LOCALHOST}`);
 
 module.exports = {
-  distDir: "docs",
+  exportPathMap: function () {
+    return {
+      "/": { page: "/" }
+    };
+  },
   webpack(config, { isServer }) {
     /* adds custom plugins to client and server */
     config.plugins.push(...plugins(isServer));
