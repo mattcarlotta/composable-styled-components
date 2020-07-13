@@ -1,0 +1,1 @@
+{"ast":null,"code":"import styled from \"styled-components\";\nimport { extend } from \"../extend\";\nexport const compose = (...f) => c => s => extend(...f)(styled(c).withConfig({\n  componentId: \"yfxakv-0\"\n})([\"\", \";\"], s));","map":null,"metadata":{},"sourceType":"module"}

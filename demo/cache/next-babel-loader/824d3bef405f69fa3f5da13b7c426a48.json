@@ -1,0 +1,1 @@
+{"ast":null,"code":"import * as React from \"react\";\nexport const createFactory = Type => React.createElement.bind(null, Type);","map":null,"metadata":{},"sourceType":"module"}

@@ -1,4 +1,4 @@
-# composable-styled-components
+![eSJeEMu.png](https://i.imgur.com/eSJeEMu.png)
 
 A lightweight **composable** solution for [styled-components](https://github.com/styled-components/styled-components).
 

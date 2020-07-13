@@ -1,19 +1,22 @@
-import babel from "rollup-plugin-babel";
+import { resolve } from "path";
+import babel from "@rollup/plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
 import filesize from "rollup-plugin-filesize";
-import resolve from "@rollup/plugin-node-resolve";
+import resolver from "@rollup/plugin-node-resolve";
 import { terser } from "rollup-plugin-terser";
 import { localResolver } from "./utils/resolver";
 import pkg from "./package.json";
 
 const outputs = [
+  { file: "module", format: "esm" },
   { file: "main", format: "cjs" },
-  { file: "fallback", format: "umd" },
-  { file: "module", format: "esm" }
+  { file: "browser", format: "umd" }
 ];
 
+const configFile = resolve(__dirname, "babel.rollup.js");
+
 export default {
-  input: "./src/index.js",
+  input: "./lib/index.js",
   output: outputs.map(({ file, format }) => ({
     file: pkg[file],
     name: "composable-styled-components",
@@ -29,10 +32,11 @@ export default {
   external: ["react", "react-dom", "styled-components"],
   plugins: [
     babel({
-      runtimeHelpers: true,
+      configFile,
+      babelHelpers: "runtime",
       exclude: "node_modules/**"
     }),
-    resolve(),
+    resolver(),
     localResolver(),
     commonjs(),
     terser({
