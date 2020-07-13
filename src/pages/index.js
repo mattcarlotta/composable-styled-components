@@ -10,7 +10,7 @@ const App = () => (
   <>
     <Head title="Home" />
     <img
-      css="display:block;margin: 0 auto;width: 700px;"
+      css="display:block;margin: 0 auto;width: 1500px;"
       src="composableLogo.png"
       alt="composableLogo"
     />
