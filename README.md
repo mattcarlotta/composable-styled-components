@@ -6,11 +6,9 @@ A lightweight **composable** solution for [styled-components](https://github.com
 
 [Usage](#usage)
 
-[Demo](#demo)
-
 [Documentation](#documentation)
 
-[Advanced Usage](#advanced-usage)
+[Demo](#demo)
 
 [License](#license)
 
@@ -100,36 +98,18 @@ const App = () => (
 render(<App />, document.getElementById("root"));
 ```
 
-## Demo
-
-**yarn**
-```
-cd ~/Desktop
-git clone git@github.com:mattcarlotta/composable-styled-components.git
-cd composable-styled-components
-yarn && yarn demo
-```
-
-**npm**
-```
-cd ~/Desktop
-git clone git@github.com:mattcarlotta/composable-styled-components.git
-cd composable-styled-components
-npm i && npm run demo
-```
-
-This demo contains a development webpack configuration, therefore files within the [src](src) can be altered/changed and saved to update the browser window.
-
 ## Documentation
 
 ⚠️ Note: **Under construction**.
 
 [Documentation](https://mattcarlotta.github.io/composable-styled-components/)
 
+## Demo
 
-## Advanced Usage
+⚠️ Note: **Under construction**.
 
-coming soon.
+[Demo](https://mattcarlotta.github.io/composable-styled-components/demo)
+
 
 ## License
 
