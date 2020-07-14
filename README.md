@@ -3,7 +3,7 @@
 </a>
 
 <div align="center">
-A lightweight <strong>composable</strong> solution for <a href="https://github.com/styled-components/ rel="noopener noreferrer" target="_blank">styled-components</a>.
+A lightweight <strong>composable</strong> solution for <a href="https://github.com/styled-components/" rel="noopener noreferrer" target="_blank">styled-components</a>.
 </div>
 
 <br />
