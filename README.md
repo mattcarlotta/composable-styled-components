@@ -1,6 +1,14 @@
-![composableLogo.png](https://raw.githubusercontent.com/mattcarlotta/composable-styled-components/master/docs/composableLogo.png)
+<a target="_blank" rel="noopener noreferrer" href="https://composable-styled-components.vercel.app" >
+<img src="https://raw.githubusercontent.com/mattcarlotta/composable-styled-components/master/public/composableLogo.png" alt="composableLogo.png" />
+</a>
 
-A lightweight **composable** solution for [styled-components](https://github.com/styled-components/styled-components).
+<div align="center">
+A lightweight <strong>composable</strong> solution for <a href="https://github.com/styled-components/ rel="noopener noreferrer" target="_blank">styled-components</a>.
+</div>
+
+---
+
+## Table of Contents
 
 [Installation](#installation)
 
@@ -102,7 +110,7 @@ render(<App />, document.getElementById("root"));
 
 ⚠️ Note: **Under construction**.
 
-[Documentation](https://composable-styled-components.vercel.app/)
+[Documentation](https://composable-styled-components.vercel.app/docs)
 
 ## Demo
 
