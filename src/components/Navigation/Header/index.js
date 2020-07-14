@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <NavContainer>
       <FlexStart>
-        <Link nomargin light href="/">
+        <Link nomargin light href="/" asHref="/">
           <img
             css="vertical-align: bottom;"
             src="composableIconWhite.png"
@@ -30,15 +30,15 @@ const Header = () => {
           />
         </Link>
         <nav>
-          <Link light href="/docs">
+          <Link light href="/docs" asHref="/docs">
             Documentation
           </Link>
           <Dot />
-          <Link light href="/demo">
+          <Link light href="/demo" asHref="/demo">
             Demo
           </Link>
           <Dot />
-          <Link light href="/releases">
+          <Link light href="/releases" asHref="/releases">
             Releases
           </Link>
         </nav>
