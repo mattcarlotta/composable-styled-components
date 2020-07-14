@@ -1,1 +1,0 @@
-{"ast":null,"code":"import { compose, setDisplayName } from \"~lib\";\nconst Container = compose(setDisplayName(\"Container\"))(\"div\")`\n  text-align: center;\n  margin: 55px auto 0;\n`;\nexport default Container;","map":null,"metadata":{},"sourceType":"module"}

@@ -8,3 +8,4 @@ ts-build/
 /dist
 coverage
 .cc_token
+.next
