@@ -1,9 +1,7 @@
 const openBrowser = require("react-dev-utils/openBrowser");
 const plugins = require("./config/plugins");
 
-const { NODE_ENV, LOCALHOST } = process.env;
-const inProd = NODE_ENV === "production";
-const assetPrefix = inProd ? LOCALHOST : "";
+const { assetPrefix, NODE_ENV, LOCALHOST } = process.env;
 
 /* opens a browser window */
 if (NODE_ENV === "development") openBrowser(`${LOCALHOST}`);
@@ -11,7 +9,10 @@ if (NODE_ENV === "development") openBrowser(`${LOCALHOST}`);
 module.exports = {
   assetPrefix,
   exportPathMap: () => ({
-    "/": { page: "/" }
+    "/": { page: "/" },
+    "/docs": { page: "/docs" },
+    "/demo": { page: "/demo" },
+    "/releases": { page: "/releases" }
   }),
   webpack(config, { isServer }) {
     /* adds custom plugins to client and server */
