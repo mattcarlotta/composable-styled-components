@@ -12,7 +12,7 @@ const NavContainer = extend(
     top: 0;
     height: 50px;
     background: #222222;
-    padding: 0 20px;
+    padding: 0 40px;
     color: #eee;
   `)
 )(Flex);
@@ -21,12 +21,11 @@ const Header = () => {
   return (
     <NavContainer>
       <FlexStart>
-        <Link nomargin light href="/" asHref="/">
+        <Link nomargin light href="/">
           <img
-            css="vertical-align: bottom;"
+            css="vertical-align: bottom;height:35px;margin-right: 20px;"
             src="composableIconWhite.png"
             alt="composableIconWhite"
-            height="35px"
           />
         </Link>
         <nav>

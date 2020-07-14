@@ -15,7 +15,12 @@ const LinkComponent = ({
   style,
   target
 }) => (
-  <Link href={href} as={`${assestPrefix}${asHref}`} prefetch={false} passHref>
+  <Link
+    href={href}
+    as={`${assestPrefix || ""}${asHref}`}
+    prefetch={false}
+    passHref
+  >
     <a
       data-test={dataTest}
       style={style}
@@ -43,6 +48,8 @@ LinkComponent.propTypes = {
 };
 
 LinkComponent.defaultProps = {
+  href: "",
+  asHref: "",
   onClick: () => {}
 };
 
@@ -50,7 +57,7 @@ export default styled(LinkComponent)`
   color: ${({ light }) => (light ? "#03a9f3" : "#000000a6")};
   white-space: nowrap;
   text-decoration: none;
-  margin: ${({ margin, nomargin }) => (nomargin ? "0px" : margin || "0 20px")};
+  margin: ${({ margin, nomargin }) => (nomargin ? "0px" : margin || "0 15px")};
   transition: all 0.2s ease-in-out;
   border-radius: 4px;
   cursor: pointer;
