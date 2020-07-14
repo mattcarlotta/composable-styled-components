@@ -5,8 +5,10 @@
       "~components/*": ["src/components/*"],
       "~lib/*": ["lib/*"],
       "~lib": ["lib/index"],
+      "~styles/*": ["src/styles/*"],
       "~utils/*": ["utils/*"]
     }
   },
-  "exclude": ["node_modules"]
+  "include": ["lib/**/*", "src/**/*", "utils/**/*"],
+  "exclude": ["node_modules", "*.config.js", "*.rollup.js"]
 }

@@ -1,5 +1,5 @@
 import { css, extend, setDisplayName, withProps, withStyles } from "~lib";
-import Button from "~components/Body/Button";
+import Button from "~components/Body/ExampleButton";
 
 const InterpolatedButton = extend(
   setDisplayName("Interpolated Button"),

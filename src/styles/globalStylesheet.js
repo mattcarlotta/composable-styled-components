@@ -9,9 +9,29 @@ export default createGlobalStyle`
   }
 
   body {
-    font-size: 14px;
+    font-size: 15px;
     font-family: sans-serif;
     min-height: 100vh;
+    background-color: #ebebeb;
+  }
+
+  .link {
+    color: #0088ff;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      color: #03a9f3;
+      text-decoration: underline;
+    }
+
+    &:focus {
+      color: #0088ff;
+      outline: none;
+      border: 0;
+    }
   }
 
   *,

@@ -1,5 +1,5 @@
 import { extend, setDisplayName, withProps, withStyles } from "~lib";
-import Button from "~components/Body/Button";
+import Button from "~components/Body/ExampleButton";
 
 const ExtendedButton = extend(
   setDisplayName("Extended Button"),
