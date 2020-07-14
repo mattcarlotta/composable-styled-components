@@ -1,13 +1,12 @@
 const openBrowser = require("react-dev-utils/openBrowser");
 const plugins = require("./config/plugins");
 
-const { assetPrefix, NODE_ENV, LOCALHOST } = process.env;
+const { NODE_ENV, LOCALHOST } = process.env;
 
 /* opens a browser window */
 if (NODE_ENV === "development") openBrowser(`${LOCALHOST}`);
 
 module.exports = {
-  assetPrefix,
   exportPathMap: () => ({
     "/": { page: "/" },
     "/docs": { page: "/docs" },

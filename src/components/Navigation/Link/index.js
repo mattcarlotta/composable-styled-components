@@ -2,8 +2,6 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Link from "next/link";
 
-const { assestPrefix } = process.env;
-
 const LinkComponent = ({
   asHref,
   className,
@@ -15,12 +13,7 @@ const LinkComponent = ({
   style,
   target
 }) => (
-  <Link
-    href={href}
-    as={`${assestPrefix || ""}${asHref}`}
-    prefetch={false}
-    passHref
-  >
+  <Link href={href} as={asHref} prefetch={false} passHref>
     <a
       data-test={dataTest}
       style={style}

@@ -3,7 +3,7 @@ const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
 const WebpackBar = require("webpackbar");
 const address = require("address");
 
-const { assestPrefix, LOCALHOST, NODE_ENV, PORT } = process.env;
+const { LOCALHOST, NODE_ENV, PORT } = process.env;
 const REMOTEADDRESS = address.ip();
 const inDev = NODE_ENV === "development";
 
@@ -15,7 +15,6 @@ module.exports = isServer => {
       /* envs for client */
       new DefinePlugin({
         "process.env": {
-          assestPrefix: JSON.stringify(assestPrefix),
           LOCALHOST: JSON.stringify(LOCALHOST),
           NODE_ENV: JSON.stringify(NODE_ENV)
         }
