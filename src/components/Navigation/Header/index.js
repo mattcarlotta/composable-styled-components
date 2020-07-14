@@ -29,15 +29,15 @@ const Header = () => {
           />
         </Link>
         <nav>
-          <Link light href="/docs" asHref="/docs">
+          <Link light href="/docs">
             Documentation
           </Link>
           <Dot />
-          <Link light href="/demo" asHref="/demo">
+          <Link light href="/demo">
             Demo
           </Link>
           <Dot />
-          <Link light href="/releases" asHref="/releases">
+          <Link light href="/releases">
             Releases
           </Link>
         </nav>
