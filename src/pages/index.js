@@ -52,7 +52,7 @@ const App = () => (
           Github
         </Button>
       </OutsideLink>
-      <Link light href="/docs" asHef="/docs">
+      <Link light href="/docs" asHref="/docs">
         <Button>
           <GiBookmark style={iconStyle} />
           Documentation
