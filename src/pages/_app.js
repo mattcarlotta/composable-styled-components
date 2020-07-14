@@ -3,13 +3,11 @@ import GlobalStylesheet from "~styles/globalStylesheet";
 import Header from "~components/Navigation/Header";
 
 const App = ({ Component, pageProps }) => (
-  <>
+  <Container>
     <GlobalStylesheet />
     <Header />
-    <Container>
-      <Component {...pageProps} />
-    </Container>
-  </>
+    <Component {...pageProps} />
+  </Container>
 );
 
 export default App;
