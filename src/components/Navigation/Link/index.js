@@ -61,7 +61,7 @@ const CustomLink = extend(
     target: PropTypes.string
   }),
   withStyles(css`
-    color: ${({ light }) => (light ? "#03a9f3" : "#000000a6")};
+    color: ${({ light }) => (light ? "#03a9f3" : "#03a9f3")};
     white-space: nowrap;
     text-decoration: none;
     text-transform: ${({ texttransform }) => texttransform || "none"};
@@ -86,7 +86,7 @@ const CustomLink = extend(
     }
 
     &:focus {
-      color: ${({ light }) => (light ? "#eee" : "#000000a6")};
+      color: ${({ light }) => (light ? "#eee" : "#03a9f3")};
       outline: none;
       border: 0;
     }

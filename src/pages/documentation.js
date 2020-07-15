@@ -1,3 +1,4 @@
+import APITable from "~components/Body/APITable";
 import Preview from "~components/Body/Preview";
 import MiniTitle from "~components/Body/MiniTitle";
 import Note from "~components/Body/Note";
@@ -7,6 +8,7 @@ import SyntaxHighlighter from "~components/Body/SyntaxHighlighter";
 import WrapperWithTitle from "~components/Body/WrapperWithTitle";
 import Head from "~components/Navigation/Head";
 import AnchorTitle from "~components/Navigation/AnchorTitle";
+import Link from "~components/Navigation/Link";
 import OutsideLink from "~components/Navigation/OutsideLink";
 
 const preStyles = { margin: "0 0 20px" };
@@ -41,7 +43,7 @@ const Headline = nest(Wrapper, Title);
 render(
   <Headline>
     Hello!
-  </Headline>
+  </Headline> 
 );`;
 
 const Documentation = () => (
@@ -53,7 +55,7 @@ const Documentation = () => (
       name="Documentation"
     />
     <img
-      css="display:block;margin: 30px auto; width: 750px;"
+      css="display:block;margin: 30px auto;width: 100%;max-width: 750px;"
       src="documentationLogo.png"
       alt="documentationLogo"
     />
@@ -91,13 +93,24 @@ const Documentation = () => (
     </Paragraph>
     <AnchorTitle id="getting-started">Getting Started</AnchorTitle>
     <Paragraph>
-      Just like styled-components, this package utilises tagged template
+      Just like styled-components, this package utilizes tagged template
       literals to style your components. For example, the code below creates two
-      simple components, a wrapper and a title with some styles and nests them
+      simple components, a wrapper and a title with some styles, and nests them
       together.
       <Preview code={exampleCode}>
         <WrapperWithTitle>Hello!</WrapperWithTitle>
       </Preview>
+    </Paragraph>
+    <AnchorTitle id="api">API</AnchorTitle>
+    <Paragraph>
+      The table below describes the supported <strong>function</strong>, their{" "}
+      <strong>usage</strong>, <strong>description</strong> and any additional{" "}
+      <strong>notes</strong>. For usage examples, please see the{" "}
+      <Link nomargin nopadding href="/demonstration">
+        demonstration
+      </Link>
+      &nbsp;page.
+      <APITable />
     </Paragraph>
   </>
 );
