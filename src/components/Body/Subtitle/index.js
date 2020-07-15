@@ -1,9 +1,10 @@
-import { compose, setDisplayName } from "~lib";
+import { css, compose, setDisplayName } from "~lib";
 
-const Subtitle = compose(setDisplayName("Subtitle"))("p")`
-  margin: 0 auto 30px;
-  width: 650px;
+const Subtitle = compose(setDisplayName("Subtitle"))("p")(css`
+  margin-bottom: 30px;
   word-wrap: break-word;
-`;
+  font-size: 16px;
+  text-align: ${({ textalign }) => textalign || "center"};
+`);
 
 export default Subtitle;

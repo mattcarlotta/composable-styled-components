@@ -69,7 +69,7 @@ const CustomLink = extend(
       nomargin ? "0px" : margin || "0 10px"};
     transition: all 0.2s ease-in-out;
     padding: ${({ nopadding }) => (nopadding ? "0" : "4px 8px")};
-    border-radius: 4px;
+    border-radius: 2px;
     cursor: pointer;
     ${({ active }) =>
       active &&

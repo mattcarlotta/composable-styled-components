@@ -8,6 +8,10 @@ import {
 
 const OutsideLink = compose(
   setDisplayName("Outside Link"),
+  withStyleAttributes({
+    rel: "noopener noreferrer",
+    target: "_blank"
+  }),
   withPropTypes({
     className: PropTypes.string,
     children: PropTypes.oneOfType([PropTypes.node, PropTypes.string])
@@ -15,10 +19,6 @@ const OutsideLink = compose(
     style: PropTypes.objectOf(
       PropTypes.oneOfType([PropTypes.string, PropTypes.number])
     )
-  }),
-  withStyleAttributes({
-    rel: "noopener noreferrer",
-    target: "_blank"
   })
 )("a")`
   color: #0088ff;

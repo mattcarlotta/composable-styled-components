@@ -23,6 +23,8 @@ const NavContainer = extend(
     background: #222222;
     padding: 0 40px;
     color: #eee;
+    z-index: 1000;
+    border-bottom: 1px solid #ebebeb;
   `)
 )(Flex);
 
