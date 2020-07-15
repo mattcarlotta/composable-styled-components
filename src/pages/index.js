@@ -1,6 +1,7 @@
 import { FaGithub } from "react-icons/fa";
 import { GiBookmark } from "react-icons/gi";
 import Button from "~components/Body/Button";
+import Subtitle from "~components/Body/Subtitle";
 import SyntaxHighlighter from "~components/Body/SyntaxHighlighter";
 import Head from "~components/Navigation/Head";
 import Link from "~components/Navigation/Link";
@@ -8,7 +9,18 @@ import OutsideLink from "~components/Navigation/OutsideLink";
 
 const exampeCode = `const Button = compose(
   setDisplayName("Button"),
-  withStyleAttributes({ type: "button" })
+  withStyleAttributes({ type: "button" }),
+  withProps(props => ({
+    ...props,
+    onClick: props.type === "button" ? onClick : null
+  })),
+  withPropTypes({
+    className: PropTypes.string,
+    children: PropTypes.oneOfType(
+      [PropTypes.node, PropTypes.string]
+    ).isRequired,
+    onClick: PropTypes.func
+  })
 )("button")\`
   cursor: pointer;
   background: #1f1f1f;
@@ -26,7 +38,13 @@ const exampeCode = `const Button = compose(
   &:focus {
     outline: 0;
   }
-\`;`;
+\`;
+
+const SubmitButton = extend(
+  setDisplayName("Submit Button"),
+  withStyleAttributes({ type: "submit" })
+)(Button);
+`;
 
 const iconStyle = { position: "relative", top: 2, marginRight: 8 };
 
@@ -34,17 +52,17 @@ const App = () => (
   <div css="text-align: center;">
     <Head title="Home" />
     <img
-      css="display:block;margin: 0 auto;width: 1500px;"
+      css="display:block;margin: 20px auto; width: 775px;user-select: none;"
       src="composableLogo.png"
       alt="composableLogo"
     />
-    <p css="margin-top: 0;margin-bottom: 30px;">
+    <Subtitle>
       A lightweight composable wrapper for&nbsp;
       <OutsideLink href="https://styled-components.com/">
         styled-components
       </OutsideLink>
       .
-    </p>
+    </Subtitle>
     <div css="margin-bottom: 20px;">
       <OutsideLink href="https://github.com/mattcarlotta/composable-styled-components">
         <Button margin="0 20px;">
@@ -52,16 +70,23 @@ const App = () => (
           Github
         </Button>
       </OutsideLink>
-      <Link light href="/docs">
+      <Link nohover light href="/documentation">
         <Button>
           <GiBookmark style={iconStyle} />
           Documentation
         </Button>
       </Link>
     </div>
-    <div css="width: 625px;text-align: left;margin: 0 auto;">
-      <SyntaxHighlighter>{exampeCode}</SyntaxHighlighter>
-    </div>
+    <SyntaxHighlighter
+      preStyles={{
+        width: "650px",
+        margin: "0 auto",
+        overflowY: "auto",
+        height: "500px"
+      }}
+    >
+      {exampeCode}
+    </SyntaxHighlighter>
   </div>
 );
 

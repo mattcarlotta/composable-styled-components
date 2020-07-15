@@ -1,10 +1,11 @@
-/* istanbul ignore file */
-import styled from "styled-components";
+import { compose, setDisplayName } from "~lib";
 
-export default styled.div`
+const FlexSpaceEvenly = compose(setDisplayName("FlexSpaceEvenly"))("div")`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
   width: 100%;
 `;
+
+export default FlexSpaceEvenly;

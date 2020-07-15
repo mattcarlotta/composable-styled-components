@@ -38,13 +38,13 @@ npm i -S composable-styled-components
 
 ⚠️ Note: **Under construction**.
 
-[Documentation](https://composable-styled-components.vercel.app/docs)
+[Documentation](https://composable-styled-components.vercel.app/documentation)
 
 ## Demo
 
 ⚠️ Note: **Under construction**.
 
-[Demo](https://composable-styled-components.vercel.app/demo)
+[Demo](https://composable-styled-components.vercel.app/demonstration)
 
 
 ## License

@@ -1,18 +1,18 @@
 import Subtitle from "~components/Body/Subtitle";
 import Head from "~components/Navigation/Head";
 
-const Releases = () => (
+const Documentation = () => (
   <>
     <Head
-      title="Releases"
-      url="/releases"
-      description="Information on new releases for composable-styled-components"
-      name="Releases"
+      title="Documentation"
+      url="/documentation"
+      description="Learn the basics of composable-styled-components"
+      name="Documentation"
     />
     <img
-      css="display:block;margin: 30px auto; width: 460px;"
-      src="releasesLogo.png"
-      alt="releasesLogo"
+      css="display:block;margin: 30px auto; width: 750px;"
+      src="documentationLogo.png"
+      alt="documentationLogo"
     />
     <Subtitle>
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
@@ -24,4 +24,4 @@ const Releases = () => (
   </>
 );
 
-export default Releases;
+export default Documentation;

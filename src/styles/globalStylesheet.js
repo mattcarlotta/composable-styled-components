@@ -34,6 +34,25 @@ export default createGlobalStyle`
     }
   }
 
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #777;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+
+    &:hover {
+      background: #555;
+    }
+  }
+
+
   *,
   ::after,
   ::before,

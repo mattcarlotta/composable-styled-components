@@ -9,8 +9,8 @@ if (NODE_ENV === "development") openBrowser(`${LOCALHOST}`);
 module.exports = {
   exportPathMap: () => ({
     "/": { page: "/" },
-    "/docs": { page: "/docs" },
-    "/demo": { page: "/demo" },
+    "/documentation": { page: "/documentation" },
+    "/demonstration": { page: "/demonstration" },
     "/releases": { page: "/releases" }
   }),
   webpack(config, { isServer }) {
