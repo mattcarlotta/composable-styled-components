@@ -11,7 +11,13 @@ const SyntaxContainer = compose(setDisplayName("Syntax Container"))("div")`
 
 const OutputContainer = extend(
   setDisplayName("Output Container"),
-  withStyles("margin-right: 0px;")
+  withStyles(`
+    @media (max-width: 768px) {
+      margin-top: 20px;
+      height: auto;
+    }
+    margin-right: 0px;
+  `)
 )(SyntaxContainer);
 
 const Preview = ({ children, code }) => (

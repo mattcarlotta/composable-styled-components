@@ -10,8 +10,8 @@ const Container = compose(setDisplayName("Container"))("div")`
 
   width: 100%;
   padding-top: 65px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
 `;
 
 export default Container;

@@ -4,9 +4,8 @@ import OutsideLink from "~components/Navigation/OutsideLink";
 
 const CustomTable = compose(setDisplayName("Table"))("table")` 
   width: 100%;
-  overflow: hidden;
-  overflow-x: auto;
   word-break: normal;
+  overflow-x: auto;
   margin: 20px 0;
   border-spacing: 0;
   border-collapse: collapse;
@@ -23,6 +22,14 @@ const Th = compose(setDisplayName("Th"))("th")`
 `;
 
 const Td = compose(setDisplayName("Td"))("td")`
+  @media (max-width: 1000px) {
+    max-width: 125px;
+    min-width: 125px;
+    width: auto !important;
+    overflow-x: auto;
+    white-space: pre;
+  }
+
   color: rgba(0, 0, 0, 0.87);
   padding: 10px;
   font-size: 15px;
@@ -110,32 +117,36 @@ const supportedFunctions = [
 
 const APITable = () => (
   <>
-    <CustomTable>
-      <thead>
-        <tr>
-          {headers.map(head => (
-            <Th key={head}>{head}</Th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {supportedFunctions.map(
-          ({ property, usage, description, notes }, index) => (
-            <tr
-              css={`
-                background: ${!Boolean(index % 2) ? "#dcdcdc" : "transparent"};
-              `}
-              key={description}
-            >
-              <Td>{property}</Td>
-              <Td style={{ width: 300 }}>{usage}</Td>
-              <Td style={{ width: 200 }}>{description}</Td>
-              <Td>{notes}</Td>
-            </tr>
-          )
-        )}
-      </tbody>
-    </CustomTable>
+    <div css="overflow-x: auto;margin-right: auto;margin-left: auto;">
+      <CustomTable>
+        <thead>
+          <tr>
+            {headers.map(head => (
+              <Th key={head}>{head}</Th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {supportedFunctions.map(
+            ({ property, usage, description, notes }, index) => (
+              <tr
+                css={`
+                  background: ${!Boolean(index % 2)
+                    ? "#dcdcdc"
+                    : "transparent"};
+                `}
+                key={description}
+              >
+                <Td>{property}</Td>
+                <Td style={{ width: 275 }}>{usage}</Td>
+                <Td style={{ width: 150 }}>{description}</Td>
+                <Td>{notes}</Td>
+              </tr>
+            )
+          )}
+        </tbody>
+      </CustomTable>
+    </div>
     <Note>
       Any functions with a dagger (&#8224;) should not be used within the&nbsp;
       <strong>first</strong>&nbsp;nor&nbsp;<strong>second</strong>&nbsp;argument
