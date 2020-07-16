@@ -2,7 +2,7 @@ import { FaGithub } from "react-icons/fa";
 import { GiBookmark } from "react-icons/gi";
 import Button from "~components/Body/Button";
 import Subtitle from "~components/Body/Subtitle";
-import SyntaxHighlighter from "~components/Body/SyntaxHighlighter";
+import HomeExample from "~components/Examples/HomeExample";
 import Head from "~components/Navigation/Head";
 import Link from "~components/Navigation/Link";
 import OutsideLink from "~components/Navigation/OutsideLink";
@@ -12,7 +12,9 @@ const exampeCode = `const Button = compose(
   withStyleAttributes({ type: "button" }),
   withProps(props => ({
     ...props,
-    onClick: props.type === "button" ? onClick : null
+    onClick: props.type === "button" 
+      ? () => alert("Button") 
+      : null
   })),
   withPropTypes({
     className: PropTypes.string,
@@ -70,23 +72,14 @@ const App = () => (
           Github
         </Button>
       </OutsideLink>
-      <Link nohover light href="/documentation">
+      <Link hover={false} light href="/documentation">
         <Button>
           <GiBookmark style={iconStyle} />
           Documentation
         </Button>
       </Link>
     </div>
-    <SyntaxHighlighter
-      preStyles={{
-        width: "650px",
-        margin: "0 auto",
-        overflowY: "auto",
-        height: "500px"
-      }}
-    >
-      {exampeCode}
-    </SyntaxHighlighter>
+    <HomeExample />
   </div>
 );
 

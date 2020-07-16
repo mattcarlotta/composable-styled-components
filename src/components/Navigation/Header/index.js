@@ -68,7 +68,7 @@ const Header = () => {
   return (
     <NavContainer>
       <FlexStart>
-        <Link nohover nomargin light href="/">
+        <Link hover={false} nomargin light href="/">
           <img
             css="vertical-align: bottom;height:35px;"
             src="composableIconWhite.png"
@@ -76,10 +76,11 @@ const Header = () => {
           />
         </Link>
         <nav>
-          {["documentation", "demonstration", "releases"].map(page => (
+          {["documentation", "demonstrations", "releases"].map(page => (
             <React.Fragment key={page}>
               <Link
                 active={activeTab.indexOf(page) > -1}
+                hover
                 light
                 href={`/${page}`}
                 texttransform="capitalize"

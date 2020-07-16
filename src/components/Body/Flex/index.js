@@ -1,7 +1,7 @@
 import { compose, css, setDisplayName } from "~lib";
 
 const Flex = compose(setDisplayName("Flex"))("div")(css`
-  @media (max-width: 768px) {
+  @media (max-width: 976px) {
     display: block;
     margin: 0 auto;
   }

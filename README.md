@@ -44,7 +44,7 @@ npm i -S composable-styled-components
 
 ⚠️ Note: **Under construction**.
 
-[Demo](https://composable-styled-components.vercel.app/demonstration)
+[Demo](https://composable-styled-components.vercel.app/demonstrations)
 
 
 ## License

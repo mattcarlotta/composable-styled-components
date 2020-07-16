@@ -10,7 +10,7 @@ const Releases = () => (
       name="Releases"
     />
     <img
-      css="display:block;margin: 30px auto; width: 460px;"
+      css="display:block;margin: 30px auto;width: 100%;max-width: 460px;"
       src="releasesLogo.png"
       alt="releasesLogo"
     />

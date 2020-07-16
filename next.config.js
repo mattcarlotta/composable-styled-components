@@ -10,7 +10,7 @@ module.exports = {
   exportPathMap: () => ({
     "/": { page: "/" },
     "/documentation": { page: "/documentation" },
-    "/demonstration": { page: "/demonstration" },
+    "/demonstrations": { page: "/demonstrations" },
     "/releases": { page: "/releases" }
   }),
   webpack(config, { isServer }) {

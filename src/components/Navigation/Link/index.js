@@ -61,7 +61,11 @@ const CustomLink = extend(
     target: PropTypes.string
   }),
   withStyles(css`
-    color: ${({ light }) => (light ? "#03a9f3" : "#03a9f3")};
+    color: ${({ dark, light }) => {
+      if (dark) return "#036ef3";
+      if (light) return "#03a9f3";
+      return "#000000a6";
+    }};
     white-space: nowrap;
     text-decoration: none;
     text-transform: ${({ texttransform }) => texttransform || "none"};
@@ -79,14 +83,18 @@ const CustomLink = extend(
     `};
 
     &:hover {
-      color: ${({ nohover, light }) =>
-        !nohover && light ? "#eee" : "#03a9f3"};
-      background-color: ${({ nohover, light }) =>
-        !nohover && light ? "#0f7ae5" : "transparent"};
+      color: ${({ hover, light }) => (hover && light ? "#eee" : "#0f7ae5")};
+      background-color: ${({ hover, light }) =>
+        hover && light ? "#0f7ae5" : "transparent"};
+      text-decoration: ${({ light }) => !light && "underline"};
     }
 
     &:focus {
-      color: ${({ light }) => (light ? "#eee" : "#03a9f3")};
+      color: ${({ dark, light }) => {
+        if (dark) return "#0f7ae5";
+        if (light) return "#eee";
+        return "#000000a6";
+      }};
       outline: none;
       border: 0;
     }

@@ -21,19 +21,19 @@ const OutsideLink = compose(
     )
   })
 )("a")`
-  color: #0088ff;
+  color: #036ef3;
   white-space: nowrap;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 
   &:hover {
-    color: #03a9f3;
+    color: #0f7ae5;
     text-decoration: underline;
   }
 
   &:focus {
-    color: #0088ff;
+    color: #036ef3;
     outline: none;
     border: 0;
   }

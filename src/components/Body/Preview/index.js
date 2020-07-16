@@ -4,19 +4,27 @@ import SyntaxHighlighter from "~components/Body/SyntaxHighlighter";
 import { compose, extend, setDisplayName, withStyles } from "~lib/";
 
 const SyntaxContainer = compose(setDisplayName("Syntax Container"))("div")`
-  height: 400px;
-  width: 100%;
-  margin-right: 10px;
+  @media (max-width: 976px) {
+    width: 100%;
+  }
+
+  height: 350px;
+  width: 433px;
+  margin-right: 8px;
 `;
 
 const OutputContainer = extend(
   setDisplayName("Output Container"),
   withStyles(`
-    @media (max-width: 768px) {
-      margin-top: 20px;
-      height: auto;
+    @media (max-width: 976px) {
+      margin-top: 10px;
     }
+    
+    padding: 10px;
+    border-radius: 4px;
+    background: #f7f7f7;
     margin-right: 0px;
+    border: 1px solid #0f7ae5;
   `)
 )(SyntaxContainer);
 

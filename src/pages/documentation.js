@@ -1,14 +1,12 @@
 import APITable from "~components/Body/APITable";
-import Preview from "~components/Body/Preview";
 import MiniTitle from "~components/Body/MiniTitle";
 import Note from "~components/Body/Note";
 import Paragraph from "~components/Body/Paragraph";
 import Subtitle from "~components/Body/Subtitle";
 import SyntaxHighlighter from "~components/Body/SyntaxHighlighter";
-import WrapperWithTitle from "~components/Body/WrapperWithTitle";
+import WrapperWithTitleExample from "~components/Examples/WrapperWithTitleExample";
 import Head from "~components/Navigation/Head";
 import AnchorTitle from "~components/Navigation/AnchorTitle";
-import Link from "~components/Navigation/Link";
 import OutsideLink from "~components/Navigation/OutsideLink";
 
 const preStyles = { margin: "0 0 20px" };
@@ -17,34 +15,7 @@ const resolutions = `{
   "resolutions": {
     "styled-components": "^5"
   }
-}
-`;
-
-const exampleCode = `const Title = compose(
-  setDisplayName("Title")
-)("h1")\`
-  font-size: 20px;
-  text-align: center;
-  color: #ff6c47;
-  border: 3px solid #ff6c47;
-  border-radius: 4px;
-\`;
-
-const Wrapper = compose(
-  setDisplayName("Wrapper")
-)("section")\`
-  padding: 10px 20px;
-  border: 3px solid palevioletred;
-  border-radius: 4px;
-\`;
-
-const Headline = nest(Wrapper, Title);
-
-render(
-  <Headline>
-    Hello!
-  </Headline> 
-);`;
+}`;
 
 const Documentation = () => (
   <>
@@ -68,7 +39,7 @@ const Documentation = () => (
       </OutsideLink>
       , this library uses higer-order components (HoCs) to build a
       styled-component with ease. The goal isn't to replace styled-components,
-      but instead offer a DX-friendly way compose them.
+      but instead offer a DX-friendly way to compose them.
     </Subtitle>
     <AnchorTitle id="installation">Installation</AnchorTitle>
     <Paragraph>
@@ -95,21 +66,15 @@ const Documentation = () => (
     <Paragraph>
       Just like styled-components, this package utilizes tagged template
       literals to style your components. For example, the code below creates two
-      simple components, a wrapper and a title with some styles, and nests them
-      together.
-      <Preview code={exampleCode}>
-        <WrapperWithTitle>Hello!</WrapperWithTitle>
-      </Preview>
+      simple components, a wrapper and a title, and nests them together.
+      <WrapperWithTitleExample />
     </Paragraph>
     <AnchorTitle id="api">API</AnchorTitle>
     <Paragraph>
-      The table below describes the supported <strong>function</strong>, their{" "}
-      <strong>usage</strong>, <strong>description</strong> and any additional{" "}
-      <strong>notes</strong>. For usage examples, please see the{" "}
-      <Link nomargin nopadding href="/demonstration">
-        demonstration
-      </Link>
-      &nbsp;page.
+      The table below covers the named exports offered from
+      composabled-styled-components. If you wish to see usage examples of the
+      function(s), then click the link under the <strong>Property</strong>{" "}
+      column.
       <APITable />
     </Paragraph>
   </>
