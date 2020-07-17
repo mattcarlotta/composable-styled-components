@@ -1,6 +1,6 @@
 import { compose, setDisplayName } from "~lib";
 
-const Minititle = compose(setDisplayName("Minititle"))("div")`
+const Paragraph = compose(setDisplayName("Paragraph"))("div")`
   margin-top: 5px;
   margin-bottom: 30px;
   word-wrap: normal;
@@ -8,4 +8,4 @@ const Minititle = compose(setDisplayName("Minititle"))("div")`
   line-height: 26px;
 `;
 
-export default Minititle;
+export default Paragraph;

@@ -32,7 +32,7 @@ export default createGlobalStyle`
     color: #0088ff;
     white-space: nowrap;
     text-decoration: none;
-    transition: all 0.2s ease-in-out;
+    transition: all 200ms ease-in-out;
     cursor: pointer;
 
     &:hover {

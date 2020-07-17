@@ -1,14 +1,9 @@
 import PropTypes from "prop-types";
-import {
-  compose,
-  setDisplayName,
-  withPropTypes,
-  withStyleAttributes
-} from "~lib";
+import { compose, setDisplayName, withPropTypes, withAttributes } from "~lib";
 
 const OutsideLink = compose(
   setDisplayName("Outside Link"),
-  withStyleAttributes({
+  withAttributes({
     rel: "noopener noreferrer",
     target: "_blank"
   }),
@@ -24,7 +19,7 @@ const OutsideLink = compose(
   color: #036ef3;
   white-space: nowrap;
   text-decoration: none;
-  transition: all 0.2s ease-in-out;
+  transition: all 200ms ease-in-out;
   cursor: pointer;
 
   &:hover {

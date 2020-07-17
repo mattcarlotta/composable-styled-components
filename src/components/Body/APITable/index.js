@@ -58,7 +58,7 @@ const supportedFunctions = [
       </>
     ),
     usage:
-      "func(...funcs)('HTML Element')`\n  ...styles \n`;\nfunc(...funcs)('HTML Element')(css`\n  ...styles \n`);",
+      "fn(...fns)('element')`\n  ...styles \n`;\nfn(...fns)('element')(css`\n  ...styles \n`);",
     description:
       "Composes an HTML element string with functions and styles to create a styled-component.",
     notes:
@@ -80,7 +80,7 @@ const supportedFunctions = [
       </>
     ),
     usage:
-      "func(`\n  CSSproperty: ${prop => 'string'};\n  CSSproperty: ${prop => 'string'};\n  ...etc\n`);",
+      "fn(`\n  property: ${prop => 'string'};\n  property: ${prop => 'string'};\n  ...etc\n`);",
     description: "Interpolates CSS styles that require passed in props.",
     notes:
       "Accepts a template literal with interpolated functions. The interopolated function must be a child of a CSS property and the function must return a string."
@@ -100,7 +100,7 @@ const supportedFunctions = [
         &nbsp;(&#8224;)
       </>
     ),
-    usage: "func(...funcs)(node);",
+    usage: "fn(...fns)(node);",
     description: "Extends a node.",
     notes:
       "First argument accepts a list of functions seperated by commas and the second argument requires a node."
@@ -120,7 +120,7 @@ const supportedFunctions = [
         &nbsp;(&#8224;,&#8224;&#8224;)
       </>
     ),
-    usage: "func(...nodes);",
+    usage: "fn(...nodes);",
     description: "Nests nodes from left to right.",
     notes:
       "Accepts nodes separated by commas. Each node wraps any successive nodes to the right."
@@ -128,73 +128,41 @@ const supportedFunctions = [
   {
     property: (
       <Link
-        ariaLabel="withDefaultProps"
+        ariaLabel="Set Display Name"
         dark
         nomargin
         nopadding
-        href="/demonstrations#withDefaultProps"
+        href="/demonstrations#setDisplayName"
       >
-        withDefaultProps
+        setDisplayName
       </Link>
     ),
-    usage: "func({ ...props });",
-    description: "Establishes default props.",
-    notes: "Accepts an object of properties."
-  },
-  {
-    property: (
-      <Link
-        ariaLabel="withProps"
-        dark
-        nomargin
-        nopadding
-        href="/demonstrations#withProps"
-      >
-        withProps
-      </Link>
-    ),
-    usage: "func({ ...props }); \nfunc(props => ({ ...props }));",
-    description: "Creates or adds additional props.",
-    notes:
-      "Accepts an object of properties or a function that return properties."
-  },
-  {
-    property: (
-      <Link
-        ariaLabel="withPropTypes"
-        dark
-        nomargin
-        nopadding
-        href="/demonstrations#withPropsTypes"
-      >
-        withPropsTypes
-      </Link>
-    ),
-    usage: "func({ ...props });",
-    description: "Establishes prop types.",
+    usage: "fn('string');",
+    description: "Sets the display name of the node.",
     notes: (
       <>
-        Requires&nbsp;
-        <OutsideLink href="https://github.com/facebook/prop-types">
-          PropTypes
+        Attributes a display name to the component when viewed within the
+        'Components' tab. Requires the&nbsp;
+        <OutsideLink href="https://reactjs.org/blog/2015/09/02/new-react-developer-tools.html">
+          React Dev Tools
         </OutsideLink>
-        &nbsp;package.
+        &nbsp;browser extension.
       </>
     )
   },
   {
     property: (
       <Link
-        ariaLabel="withStyleAttributes"
+        ariaLabel="With Attributes"
         dark
         nomargin
         nopadding
-        href="/demonstrations#withStyleAttributes"
+        href="/demonstrations#withAttributes"
       >
-        withStyleAttributes
+        withAttributes
       </Link>
     ),
-    usage: "func({ ...props }); \nfunc(props => ({ ...props }));",
+    usage: "fn({ ...props }); \nfn(props => ({ ...props }));",
     description: (
       <>
         Creates or adds&nbsp;
@@ -210,6 +178,63 @@ const supportedFunctions = [
   {
     property: (
       <Link
+        ariaLabel="With Default Props"
+        dark
+        nomargin
+        nopadding
+        href="/demonstrations#withDefaultProps"
+      >
+        withDefaultProps
+      </Link>
+    ),
+    usage: "fn({ ...props });",
+    description: "Establishes default props.",
+    notes: "Accepts an object of properties."
+  },
+  {
+    property: (
+      <Link
+        ariaLabel="With Props"
+        dark
+        nomargin
+        nopadding
+        href="/demonstrations#withProps"
+      >
+        withProps
+      </Link>
+    ),
+    usage: "fn({ ...props }); \nfn(props => ({ ...props }));",
+    description: "Creates or adds additional props.",
+    notes:
+      "Accepts an object of properties or a function that return properties."
+  },
+  {
+    property: (
+      <Link
+        ariaLabel="With Prop Types"
+        dark
+        nomargin
+        nopadding
+        href="/demonstrations#withPropsTypes"
+      >
+        withPropsTypes
+      </Link>
+    ),
+    usage: "fn({ ...props });",
+    description: "Establishes prop types.",
+    notes: (
+      <>
+        Requires&nbsp;
+        <OutsideLink href="https://github.com/facebook/prop-types">
+          PropTypes
+        </OutsideLink>
+        &nbsp;package.
+      </>
+    )
+  },
+  {
+    property: (
+      <Link
         ariaLabel="withStyles"
         dark
         nomargin
@@ -219,7 +244,7 @@ const supportedFunctions = [
         withStyles
       </Link>
     ),
-    usage: "func({ ...props }); \nfunc(props => ({ ...props }));",
+    usage: "fn({ ...props }); \nfn(props => ({ ...props }));",
     description: "Creates or add to styles.",
     notes:
       "Accepts an object of properties or a function that return properties."

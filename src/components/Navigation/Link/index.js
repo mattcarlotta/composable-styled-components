@@ -79,7 +79,7 @@ const CustomLink = extend(
     text-transform: ${({ texttransform }) => texttransform || "none"};
     margin: ${({ margin, nomargin }) =>
       nomargin ? "0px" : margin || "0 10px"};
-    transition: all 0.2s ease-in-out;
+    transition: all 200ms ease-in-out;
     padding: ${({ nopadding }) => (nopadding ? "0" : "4px 8px")};
     border-radius: 2px;
     cursor: pointer;

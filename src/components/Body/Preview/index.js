@@ -3,7 +3,7 @@ import FlexSpaceBetween from "~components/Body/FlexSpaceBetween";
 import SyntaxHighlighter from "~components/Body/SyntaxHighlighter";
 import { compose, extend, setDisplayName, withStyles } from "~lib/";
 
-const SyntaxContainer = compose(setDisplayName("Syntax Container"))("div")`
+const SyntaxContainer = compose(setDisplayName("Preview"))("div")`
   @media (max-width: 976px) {
     width: 100%;
   }
@@ -14,12 +14,13 @@ const SyntaxContainer = compose(setDisplayName("Syntax Container"))("div")`
 `;
 
 const OutputContainer = extend(
-  setDisplayName("Output Container"),
+  setDisplayName("Output"),
   withStyles(`
     @media (max-width: 976px) {
       margin-top: 10px;
     }
     
+    overflow: auto;
     padding: 10px;
     border-radius: 4px;
     background: #f7f7f7;

@@ -8,43 +8,21 @@ A lightweight <strong>composable</strong> solution for <a href="https://github.c
 
 <br />
 
-## Table of Contents
-
-[Installation](#installation)
-
-[Documentation](#documentation)
-
-[Demo](#demo)
-
-[License](#license)
-
-[Third Party Resources](#third-party-resources)
-
-## Installation
-
-⚠️ Note: **This has not been published to npm yet**. To try out this package, see [Demo](#demo) for installation instructions.
-
-**yarn**
-```
-yarn add composable-styled-components
-```
-
-**npm**
-```
-npm i -S composable-styled-components
-```
-
 ## Documentation
 
-⚠️ Note: **Under construction**.
+⚠️ Note: **Documentation is under construction and this package has not been published to npm yet**.
 
 [Documentation](https://composable-styled-components.vercel.app/documentation)
 
-## Demo
+[Installation](https://composable-styled-components.vercel.app/documentation#installation)
 
-⚠️ Note: **Under construction**.
+[Getting Started](https://composable-styled-components.vercel.app/documentation#getting-started)
 
-[Demo](https://composable-styled-components.vercel.app/demonstrations)
+[API](https://composable-styled-components.vercel.app/documentation#api)
+
+[Demonstrations](https://composable-styled-components.vercel.app/demonstrations)
+
+[Releases](https://composable-styled-components.vercel.app/releases)
 
 
 ## License

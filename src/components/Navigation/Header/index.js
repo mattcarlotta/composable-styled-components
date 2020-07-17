@@ -11,7 +11,7 @@ import {
   compose,
   extend,
   setDisplayName,
-  withStyleAttributes,
+  withAttributes,
   withStyles
 } from "~lib";
 
@@ -31,7 +31,7 @@ const NavContainer = extend(
 
 const SearchBox = compose(
   setDisplayName("NavContainer"),
-  withStyleAttributes({
+  withAttributes({
     name: "search-box",
     placeholder: "Search...",
     type: "input"
@@ -73,7 +73,6 @@ const Header = () => {
         <Link
           ariaLabel="logo"
           hover={false}
-          nomargin
           nopadding
           light
           href="/"

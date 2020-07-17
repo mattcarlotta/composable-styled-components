@@ -5,7 +5,7 @@ import Paragraph from "~components/Body/Paragraph";
 import Subtitle from "~components/Body/Subtitle";
 import Title from "~components/Body/Title";
 import SyntaxHighlighter from "~components/Body/SyntaxHighlighter";
-import WrapperWithTitleExample from "~components/Examples/WrapperWithTitleExample";
+import GettingStartedExample from "~components/Examples/GettingStartedExample";
 import Head from "~components/Navigation/Head";
 import AnchorTitle from "~components/Navigation/AnchorTitle";
 import OutsideLink from "~components/Navigation/OutsideLink";
@@ -68,7 +68,7 @@ const Documentation = () => (
       Just like styled-components, this package utilizes tagged template
       literals to style your components. For example, the code below creates two
       simple components, a wrapper and a title, and nests them together.
-      <WrapperWithTitleExample />
+      <GettingStartedExample />
     </Paragraph>
     <AnchorTitle ariaLabel="API" id="api">
       API

@@ -38,7 +38,7 @@ const ComposedButton = compose(
 )("button")(css`
   height: ${({ height }) => height || "100%"};
   text-align: ${({ align }) => align || "center"};
-  transition: all 0.2s ease-in-out;
+  transition: all 200ms ease-in-out;
   text-decoration: none;
   text-transform: ${({ texttransform }) => texttransform || "uppercase"};
   letter-spacing: ${({ letterspacing }) => letterspacing || "1.5px"};

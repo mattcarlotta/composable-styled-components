@@ -4,13 +4,13 @@ import {
   extend,
   setDisplayName,
   withProps,
-  withStyleAttributes
+  withAttributes
 } from "~lib";
 import Preview from "~components/Body/Preview";
 
 const Button = compose(
   setDisplayName("Button"),
-  withStyleAttributes({ type: "button" }),
+  withAttributes({ type: "button" }),
   withProps(props => ({
     ...props,
     onClick: props.type === "button" ? () => alert("Default Button") : null
@@ -37,12 +37,12 @@ const Button = compose(
 
 const SubmitButton = extend(
   setDisplayName("Submit Button"),
-  withStyleAttributes({ type: "submit" })
+  withAttributes({ type: "submit" })
 )(Button);
 
 const exampleCode = `const Button = compose(
   setDisplayName("Button"),
-  withStyleAttributes({ type: "button" }),
+  withAttributes({ type: "button" }),
   withProps(props => ({
     ...props,
     onClick: props.type === "button" 
@@ -71,7 +71,7 @@ const exampleCode = `const Button = compose(
 
 const SubmitButton = extend(
   setDisplayName("Submit Button"),
-  withStyleAttributes({ type: "submit" })
+  withAttributes({ type: "submit" })
 )(Button);
 
 const Example = () => {

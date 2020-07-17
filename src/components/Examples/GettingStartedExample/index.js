@@ -1,6 +1,12 @@
 import { compose, nest, setDisplayName } from "~lib";
 import Preview from "~components/Body/Preview";
 
+const Wrapper = compose(setDisplayName("Wrapper"))("section")`
+  padding: 10px 20px;
+  border: 2px solid palevioletred;
+  border-radius: 4px;
+`;
+
 const Title = compose(setDisplayName("Title"))("h1")`
   font-size: 20px;
   text-align: center;
@@ -9,15 +15,17 @@ const Title = compose(setDisplayName("Title"))("h1")`
   border-radius: 4px;
 `;
 
-const Wrapper = compose(setDisplayName("Wrapper"))("section")`
-  padding: 10px 20px;
-  border: 2px solid palevioletred;
-  border-radius: 4px;
-`;
-
 const Headline = nest(Wrapper, Title);
 
-const exampleCode = `const Title = compose(
+const exampleCode = `const Wrapper = compose(
+  setDisplayName("Wrapper")
+)("section")\`
+  padding: 10px 20px;
+  border: 3px solid palevioletred;
+  border-radius: 4px;
+\`;
+
+const Title = compose(
   setDisplayName("Title")
 )("h1")\`
   font-size: 20px;
@@ -27,14 +35,6 @@ const exampleCode = `const Title = compose(
   border-radius: 4px;
 \`
 
-const Wrapper = compose(
-  setDisplayName("Wrapper")
-)("section")\`
-  padding: 10px 20px;
-  border: 3px solid palevioletred;
-  border-radius: 4px;
-\`;
-
 const Headline = nest(Wrapper, Title);
 
 render(
@@ -43,10 +43,10 @@ render(
   </Headline> 
 );`;
 
-const WrapperWithTitleExample = () => (
+const GettingStartedExample = () => (
   <Preview code={exampleCode}>
     <Headline>Hello!</Headline>
   </Preview>
 );
 
-export default WrapperWithTitleExample;
+export default GettingStartedExample;

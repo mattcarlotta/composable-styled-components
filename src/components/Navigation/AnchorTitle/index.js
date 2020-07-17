@@ -1,16 +1,11 @@
 import PropTypes from "prop-types";
 import { GoLink } from "react-icons/go";
-import {
-  compose,
-  setDisplayName,
-  withPropTypes,
-  withStyleAttributes
-} from "~lib";
+import { compose, setDisplayName, withPropTypes, withAttributes } from "~lib";
 import Link from "~components/Navigation/Link";
 
 const Anchor = compose(
   setDisplayName("Anchor"),
-  withStyleAttributes(props => ({
+  withAttributes(props => ({
     id: props.id
   })),
   withPropTypes({

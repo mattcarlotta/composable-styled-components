@@ -2,7 +2,7 @@ import SyntaxHighlighter from "~components/Body/SyntaxHighlighter";
 
 const exampleCode = `const Button = compose(
   setDisplayName("Button"),
-  withStyleAttributes({ type: "button" }),
+  withAttributes({ type: "button" }),
   withProps(props => ({
     ...props,
     onClick: props.type === "button" 
@@ -38,7 +38,7 @@ const exampleCode = `const Button = compose(
 
 const SubmitButton = extend(
   setDisplayName("Submit Button"),
-  withStyleAttributes({ type: "submit" })
+  withAttributes({ type: "submit" })
 )(Button);
 
 
