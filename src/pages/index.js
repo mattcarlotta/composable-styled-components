@@ -2,62 +2,18 @@ import { FaGithub } from "react-icons/fa";
 import { GiBookmark } from "react-icons/gi";
 import Button from "~components/Body/Button";
 import Subtitle from "~components/Body/Subtitle";
+import Title from "~components/Body/Title";
 import HomeExample from "~components/Examples/HomeExample";
 import Head from "~components/Navigation/Head";
 import Link from "~components/Navigation/Link";
 import OutsideLink from "~components/Navigation/OutsideLink";
-
-const exampeCode = `const Button = compose(
-  setDisplayName("Button"),
-  withStyleAttributes({ type: "button" }),
-  withProps(props => ({
-    ...props,
-    onClick: props.type === "button" 
-      ? () => alert("Button") 
-      : null
-  })),
-  withPropTypes({
-    className: PropTypes.string,
-    children: PropTypes.oneOfType(
-      [PropTypes.node, PropTypes.string]
-    ).isRequired,
-    onClick: PropTypes.func
-  })
-)("button")\`
-  cursor: pointer;
-  background: #1f1f1f;
-  color: white;
-  border: 0;
-  padding: 8px 16px;
-  border-radius: 4px;
-  text-decoration: none;
-  margin: 10px auto;
-
-  &:hover {
-    color: #ebebeb;
-  }
-
-  &:focus {
-    outline: 0;
-  }
-\`;
-
-const SubmitButton = extend(
-  setDisplayName("Submit Button"),
-  withStyleAttributes({ type: "submit" })
-)(Button);
-`;
 
 const iconStyle = { position: "relative", top: 2, marginRight: 8 };
 
 const App = () => (
   <div css="text-align: center;">
     <Head title="Home" />
-    <img
-      css="display:block;margin: 20px auto; width: 775px;user-select: none;"
-      src="composableLogo.png"
-      alt="composableLogo"
-    />
+    <Title>{`C(</>)mposable`}</Title>
     <Subtitle>
       A lightweight composable wrapper for&nbsp;
       <OutsideLink href="https://styled-components.com/">
@@ -72,7 +28,7 @@ const App = () => (
           Github
         </Button>
       </OutsideLink>
-      <Link hover={false} light href="/documentation">
+      <Link ariaLabel="documentation" hover={false} light href="/documentation">
         <Button>
           <GiBookmark style={iconStyle} />
           Documentation

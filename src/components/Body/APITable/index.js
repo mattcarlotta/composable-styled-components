@@ -45,7 +45,13 @@ const supportedFunctions = [
   {
     property: (
       <>
-        <Link dark nomargin nopadding href="/demonstrations#compose">
+        <Link
+          ariaLabel="compose"
+          dark
+          nomargin
+          nopadding
+          href="/demonstrations#compose"
+        >
           compose
         </Link>
         &nbsp;(&#8224;&#8224;)
@@ -61,7 +67,13 @@ const supportedFunctions = [
   {
     property: (
       <>
-        <Link dark nomargin nopadding href="/demonstrations#css">
+        <Link
+          ariaLabel="css"
+          dark
+          nomargin
+          nopadding
+          href="/demonstrations#css"
+        >
           css
         </Link>
         &nbsp;(&#8224;)
@@ -76,7 +88,13 @@ const supportedFunctions = [
   {
     property: (
       <>
-        <Link dark nomargin nopadding href="/demonstrations#extend">
+        <Link
+          ariaLabel="extend"
+          dark
+          nomargin
+          nopadding
+          href="/demonstrations#extend"
+        >
           extend
         </Link>
         &nbsp;(&#8224;)
@@ -90,7 +108,13 @@ const supportedFunctions = [
   {
     property: (
       <>
-        <Link dark nomargin nopadding href="/demonstrations#nest">
+        <Link
+          ariaLabel="nest"
+          dark
+          nomargin
+          nopadding
+          href="/demonstrations#nest"
+        >
           nest
         </Link>
         &nbsp;(&#8224;,&#8224;&#8224;)
@@ -103,7 +127,13 @@ const supportedFunctions = [
   },
   {
     property: (
-      <Link dark nomargin nopadding href="/demonstrations#withDefaultProps">
+      <Link
+        ariaLabel="withDefaultProps"
+        dark
+        nomargin
+        nopadding
+        href="/demonstrations#withDefaultProps"
+      >
         withDefaultProps
       </Link>
     ),
@@ -113,7 +143,13 @@ const supportedFunctions = [
   },
   {
     property: (
-      <Link dark nomargin nopadding href="/demonstrations#withProps">
+      <Link
+        ariaLabel="withProps"
+        dark
+        nomargin
+        nopadding
+        href="/demonstrations#withProps"
+      >
         withProps
       </Link>
     ),
@@ -124,7 +160,13 @@ const supportedFunctions = [
   },
   {
     property: (
-      <Link dark nomargin nopadding href="/demonstrations#withPropsTypes">
+      <Link
+        ariaLabel="withPropTypes"
+        dark
+        nomargin
+        nopadding
+        href="/demonstrations#withPropsTypes"
+      >
         withPropsTypes
       </Link>
     ),
@@ -142,7 +184,13 @@ const supportedFunctions = [
   },
   {
     property: (
-      <Link dark nomargin nopadding href="/demonstrations#withStyleAttributes">
+      <Link
+        ariaLabel="withStyleAttributes"
+        dark
+        nomargin
+        nopadding
+        href="/demonstrations#withStyleAttributes"
+      >
         withStyleAttributes
       </Link>
     ),
@@ -161,7 +209,13 @@ const supportedFunctions = [
   },
   {
     property: (
-      <Link dark nomargin nopadding href="/demonstrations#withStyles">
+      <Link
+        ariaLabel="withStyles"
+        dark
+        nomargin
+        nopadding
+        href="/demonstrations#withStyles"
+      >
         withStyles
       </Link>
     ),

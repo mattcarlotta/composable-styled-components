@@ -1,4 +1,5 @@
 import Subtitle from "~components/Body/Subtitle";
+import Title from "~components/Body/Title";
 import Head from "~components/Navigation/Head";
 
 const Releases = () => (
@@ -9,11 +10,7 @@ const Releases = () => (
       description="Information on new releases for composable-styled-components"
       name="Releases"
     />
-    <img
-      css="display:block;margin: 30px auto;width: 100%;max-width: 460px;"
-      src="releasesLogo.png"
-      alt="releasesLogo"
-    />
+    <Title>Releases</Title>
     <Subtitle textalign="left">
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
       eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam

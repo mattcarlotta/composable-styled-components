@@ -3,6 +3,7 @@ import MiniTitle from "~components/Body/MiniTitle";
 import Note from "~components/Body/Note";
 import Paragraph from "~components/Body/Paragraph";
 import Subtitle from "~components/Body/Subtitle";
+import Title from "~components/Body/Title";
 import SyntaxHighlighter from "~components/Body/SyntaxHighlighter";
 import WrapperWithTitleExample from "~components/Examples/WrapperWithTitleExample";
 import Head from "~components/Navigation/Head";
@@ -25,11 +26,7 @@ const Documentation = () => (
       description="Learn the basics of composable-styled-components"
       name="Documentation"
     />
-    <img
-      css="display:block;margin: 30px auto;width: 100%;max-width: 750px;"
-      src="documentationLogo.png"
-      alt="documentationLogo"
-    />
+    <Title>Documentation</Title>
     <Subtitle textalign="left">
       The motivation behind composable-styled-components is to provide a set of
       reusable functions that abstract some of the boilerplate code needed to
@@ -41,7 +38,9 @@ const Documentation = () => (
       styled-component with ease. The goal isn't to replace styled-components,
       but instead offer a DX-friendly way to compose them.
     </Subtitle>
-    <AnchorTitle id="installation">Installation</AnchorTitle>
+    <AnchorTitle ariaLabel="Installation" id="installation">
+      Installation
+    </AnchorTitle>
     <Paragraph>
       You can install composable-styled-components with either one of these
       package managers:
@@ -62,14 +61,18 @@ const Documentation = () => (
       </Note>
       <SyntaxHighlighter>{resolutions}</SyntaxHighlighter>
     </Paragraph>
-    <AnchorTitle id="getting-started">Getting Started</AnchorTitle>
+    <AnchorTitle ariaLabel="Getting Started" id="getting-started">
+      Getting Started
+    </AnchorTitle>
     <Paragraph>
       Just like styled-components, this package utilizes tagged template
       literals to style your components. For example, the code below creates two
       simple components, a wrapper and a title, and nests them together.
       <WrapperWithTitleExample />
     </Paragraph>
-    <AnchorTitle id="api">API</AnchorTitle>
+    <AnchorTitle ariaLabel="API" id="api">
+      API
+    </AnchorTitle>
     <Paragraph>
       The table below covers the named exports offered from
       composabled-styled-components. If you wish to see usage examples of the

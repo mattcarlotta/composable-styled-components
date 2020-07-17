@@ -1,6 +1,19 @@
 import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
+  @font-face {
+    font-family: "Amoreiza";
+    font-style: normal;
+    font-weight: normal;
+    font-display: fallback;
+    src: url('/Amoreiza.eot?#iefix') format('embedded-opentype'),
+         url("/Amoreiza.otf") format("opentype"),
+         url("/Amoreiza.ttf") format("truetype"),
+         url("/Amoreiza.woff2") format("woff2"),
+         url("/Amoreiza.woff") format("woff");
+  }
+ 
+
   html,body,#__next {
     height: 100%;
     width: 100%;

@@ -5,6 +5,7 @@ import Dot from "~components/Body/Dot";
 import Flex from "~components/Body/Flex";
 import FlexStart from "~components/Body/FlexStart";
 import FlexEnd from "~components/Body/FlexEnd";
+import Logo from "~components/Body/Logo";
 import Link from "~components/Navigation/Link";
 import {
   compose,
@@ -22,7 +23,7 @@ const NavContainer = extend(
     height: 50px;
     background: #222222;
     padding: 0 40px;
-    color: #eee;
+    color: #f1f1f1;
     z-index: 1000;
     border-bottom: 1px solid #ebebeb;
   `)
@@ -31,8 +32,9 @@ const NavContainer = extend(
 const SearchBox = compose(
   setDisplayName("NavContainer"),
   withStyleAttributes({
-    type: "input",
-    placeholder: "Search..."
+    name: "search-box",
+    placeholder: "Search...",
+    type: "input"
   })
 )("input")`
   height: 35px;
@@ -68,17 +70,22 @@ const Header = () => {
   return (
     <NavContainer>
       <FlexStart>
-        <Link hover={false} nomargin light href="/">
-          <img
-            css="vertical-align: bottom;height:35px;"
-            src="composableIconWhite.png"
-            alt="composableIconWhite"
-          />
+        <Link
+          ariaLabel="logo"
+          hover={false}
+          nomargin
+          nopadding
+          light
+          href="/"
+          style={{ height: "48px" }}
+        >
+          <Logo>{`(</>)`}</Logo>
         </Link>
         <nav>
           {["documentation", "demonstrations", "releases"].map(page => (
             <React.Fragment key={page}>
               <Link
+                ariaLabel={`header ${page} tab`}
                 active={activeTab.indexOf(page) > -1}
                 hover
                 light
@@ -94,7 +101,9 @@ const Header = () => {
       </FlexStart>
       <FlexEnd>
         <FaSearch style={{ marginRight: 8, fontSize: 15 }} />
-        <SearchBox onChange={handleSearchChange} value={searchText} />
+        <label htmlFor="search-box">
+          <SearchBox onChange={handleSearchChange} value={searchText} />
+        </label>
       </FlexEnd>
     </NavContainer>
   );

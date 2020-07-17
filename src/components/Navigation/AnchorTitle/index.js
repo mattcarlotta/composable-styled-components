@@ -35,16 +35,17 @@ const Anchor = compose(
   }
 `;
 
-const AnchorTitle = ({ id, children }) => (
+const AnchorTitle = ({ ariaLabel, id, children }) => (
   <Anchor id={id}>
     {children}
-    <Link nomargin href={`#${id}`}>
+    <Link ariaLabel={`${ariaLabel} anchor`} nomargin href={`#${id}`}>
       <GoLink style={{ fontSize: 18 }} />
     </Link>
   </Anchor>
 );
 
 AnchorTitle.propTypes = {
+  ariaLabel: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired
 };

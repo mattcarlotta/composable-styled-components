@@ -10,6 +10,7 @@ import {
 } from "~lib";
 
 const LinkComponent = ({
+  ariaLabel,
   asHref,
   className,
   children,
@@ -19,13 +20,20 @@ const LinkComponent = ({
   target
 }) => (
   <Link href={href} as={asHref} passHref>
-    <a data-test={dataTest} style={style} className={className} target={target}>
+    <a
+      data-test={dataTest}
+      aria-label={ariaLabel}
+      style={style}
+      className={className}
+      target={target}
+    >
       {children}
     </a>
   </Link>
 );
 
 LinkComponent.propTypes = {
+  ariaLabel: PropTypes.string.isRequired,
   asHref: PropTypes.string,
   className: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
@@ -78,12 +86,12 @@ const CustomLink = extend(
     ${({ active }) =>
       active &&
       `
-      color: #eee;
+      color: #f1f1f1;
       background-color: #0f7ae5;
     `};
 
     &:hover {
-      color: ${({ hover, light }) => (hover && light ? "#eee" : "#0f7ae5")};
+      color: ${({ hover, light }) => (hover && light ? "#f1f1f1" : "#0f7ae5")};
       background-color: ${({ hover, light }) =>
         hover && light ? "#0f7ae5" : "transparent"};
       text-decoration: ${({ light }) => !light && "underline"};
@@ -92,7 +100,7 @@ const CustomLink = extend(
     &:focus {
       color: ${({ dark, light }) => {
         if (dark) return "#0f7ae5";
-        if (light) return "#eee";
+        if (light) return "#f1f1f1";
         return "#000000a6";
       }};
       outline: none;

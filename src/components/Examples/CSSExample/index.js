@@ -71,10 +71,10 @@ const CSSExample = () => (
       <Button primary>primary button</Button>
     </Preview>
     <Note>
-      Due the syntax highlighter interpolating its own css styles using the
-      "css" helper function, the example above uses "CSS". This naming
-      convention is used for&nbsp;
-      <strong>demonstration purposes only</strong>.
+      Due to the syntax highlighter used on this page interpolating its own css
+      styles using the "css" helper function, the example above uses "CSS" as a
+      workaround. This naming convention is only used for&nbsp;
+      <strong>demonstration purposes</strong>.
     </Note>
   </>
 );

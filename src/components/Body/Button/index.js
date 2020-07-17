@@ -80,7 +80,7 @@ const ComposedButton = compose(
       if (props.danger)
         return "border-color:#ee395b;background-color:transparent;color:#ee395b;";
       if (props.link) return "color:#40a9ff;";
-      return "border-color:#222;background-color:#222;color:#eee;";
+      return "border-color:#222;background-color:#222;color:#f1f1f1;";
     }};
   }
 `);
