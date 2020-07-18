@@ -36,7 +36,9 @@ const Button = compose(
 const exampleCode = `const Button = compose(
   setDisplayName("Button"),
   withPropTypes({
-    children: PropTypes.oneOfType([PropTypes.node,PropTypes.string,]).isRequired,
+    children: PropTypes.oneOfType(
+      [PropTypes.node, PropTypes.string]
+    ).isRequired,
     type: PropTypes.string.isRequired,
     onClick: PropTypes.func,
   })
