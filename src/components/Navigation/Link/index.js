@@ -87,12 +87,12 @@ const CustomLink = extend(
       active &&
       `
       color: #f1f1f1;
-      background-color: #0f7ae5;
+      background: #0f7ae5;
     `};
 
     &:hover {
       color: ${({ hover, light }) => (hover && light ? "#f1f1f1" : "#0f7ae5")};
-      background-color: ${({ hover, light }) =>
+      background: ${({ hover, light }) =>
         hover && light ? "#0f7ae5" : "transparent"};
       text-decoration: ${({ light }) => !light && "underline"};
     }

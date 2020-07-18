@@ -80,7 +80,7 @@ const supportedFunctions = [
       </>
     ),
     usage:
-      "fn(`\n  property: ${prop => 'string'};\n  property: ${prop => 'string'};\n  ...etc\n`);",
+      "fn`\n  property: ${prop => 'string'};\n  property: ${prop => 'string'};\n  ...etc\n`;",
     description: "Interpolates CSS styles that require passed in props.",
     notes:
       "Accepts a template literal with interpolated functions. The interopolated function must be a child of a CSS property and the function must return a string."
@@ -165,7 +165,7 @@ const supportedFunctions = [
     usage: "fn({ ...props }); \nfn(props => ({ ...props }));",
     description: (
       <>
-        Creates or adds&nbsp;
+        Creates or appends&nbsp;
         <OutsideLink href="https://styled-components.com/docs/faqs#when-to-use-attrs">
           HTML attributes
         </OutsideLink>
@@ -204,7 +204,7 @@ const supportedFunctions = [
       </Link>
     ),
     usage: "fn({ ...props }); \nfn(props => ({ ...props }));",
-    description: "Creates or adds additional props.",
+    description: "Creates or appends additional props.",
     notes:
       "Accepts an object of properties or a function that return properties."
   },
@@ -215,9 +215,9 @@ const supportedFunctions = [
         dark
         nomargin
         nopadding
-        href="/demonstrations#withPropsTypes"
+        href="/demonstrations#withPropTypes"
       >
-        withPropsTypes
+        withPropTypes
       </Link>
     ),
     usage: "fn({ ...props });",
@@ -244,10 +244,11 @@ const supportedFunctions = [
         withStyles
       </Link>
     ),
-    usage: "fn({ ...props }); \nfn(props => ({ ...props }));",
-    description: "Creates or add to styles.",
+    usage:
+      "fn({ ...props }); \nfn(props => ({ ...props })); \nfn(css`\n  property: ${prop => 'string'};\n  property: ${prop => 'string'};\n  ...etc\n`);",
+    description: "Creates or appends styles.",
     notes:
-      "Accepts an object of properties or a function that return properties."
+      "Accepts an object of properties, a function that returns an object of properties, or the 'css' helper function."
   }
 ];
 

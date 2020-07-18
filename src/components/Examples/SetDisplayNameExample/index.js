@@ -1,15 +1,17 @@
 import { compose, setDisplayName } from "~lib";
 import Preview from "~components/Body/Preview";
+import Note from "~components/Body/Note";
+import OutsideLink from "~components/Navigation/OutsideLink";
 
 const NamedButton = compose(setDisplayName("NamedButton"))("button")`
-  cursor: pointer;
-  font-size: 16px;
-  padding: 5px;
-  margin-bottom: 10px;
   background: #dc004e;
   border-radius: 3px;
   border: none;
   color: white;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 5px;
   transition: background 200ms ease-in-out;
 
   &:hover {
@@ -24,13 +26,13 @@ const NamedButton = compose(setDisplayName("NamedButton"))("button")`
 export const exampleCode = `const NamedButton = compose(
   setDisplayName("NamedButton"))
 ("button")\`
-  cursor: pointer;
-  font-size: 16px;
-  padding: 5px;
   background: #dc004e;
   border-radius: 3px;
   border: none;
   color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px;
   transition: background 200ms ease-in-out;
 
   &:hover {
@@ -46,9 +48,26 @@ render(<NamedButton />)
 `;
 
 const SetDisplayNameExample = () => (
-  <Preview code={exampleCode}>
-    <NamedButton>pink button</NamedButton>
-  </Preview>
+  <>
+    <Preview code={exampleCode}>
+      <NamedButton>pink button</NamedButton>
+    </Preview>
+    <Note>
+      The display name will not be applied to the class name! Instead, in order
+      to view the display name, you must have&nbsp;
+      <OutsideLink href="https://reactjs.org/blog/2015/09/02/new-react-developer-tools.html">
+        React Dev Tools
+      </OutsideLink>
+      &nbsp;installed, open your browser console and select the "Components"
+      tab. For example:
+      <br />
+      <img
+        css="width: 100%;max-width: 629px;"
+        src="/setDisplayNameExample.png"
+        alt="setDisplayNameExample.png"
+      />
+    </Note>
+  </>
 );
 
 export default SetDisplayNameExample;

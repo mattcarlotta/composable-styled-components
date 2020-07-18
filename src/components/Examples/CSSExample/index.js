@@ -3,14 +3,14 @@ import Note from "~components/Body/Note";
 import Preview from "~components/Body/Preview";
 
 const Button = compose(setDisplayName("Button"))("button")(css`
-  cursor: pointer;
-  display: block;
-  color: white;
   background: ${props => (props.primary ? "palevioletred" : "#1e87f0")};
   border: 1px solid ${props => (props.primary ? "palevioletred" : "#1e87f0")};
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  display: block;
   font-size: 16px;
   padding: 5px;
-  border-radius: 3px;
   margin-bottom: 10px;
   transition: all 200ms ease-in-out;
 
@@ -26,9 +26,6 @@ const Button = compose(setDisplayName("Button"))("button")(css`
 export const exampleCode = `const Button = compose(
   setDisplayName("Button"))
 ("button")(CSS\`
-  cursor: pointer;
-  display: block;
-  color: white;
   background: \$\{props => (
     props.primary 
       ? "palevioletred" 
@@ -39,9 +36,12 @@ export const exampleCode = `const Button = compose(
       ? "palevioletred" 
       : "#1e87f0"
   )};
+  border-radius: 3px;
+  cursor: pointer;
+  color: white;
+  display: block;
   font-size: 16px;
   padding: 5px;
-  border-radius: 3px;
   margin-bottom: 10px;
   transition: all 200ms ease-in-out;
 

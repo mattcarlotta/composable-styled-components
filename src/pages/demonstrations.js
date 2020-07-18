@@ -1,4 +1,3 @@
-import Note from "~components/Body/Note";
 import ComposeExample from "~components/Examples/ComposeExample";
 import CSSExample from "~components/Examples/CSSExample";
 import ExtendExample from "~components/Examples/ExtendExample";
@@ -6,6 +5,9 @@ import GettingStartedExample from "~components/Examples/GettingStartedExample";
 import SetDisplayNameExample from "~components/Examples/SetDisplayNameExample";
 import WithAttributesExample from "~components/Examples/WithAttributesExample";
 import WithDefaultPropsExample from "~components/Examples/WithDefaultPropsExample";
+import WithPropsExample from "~components/Examples/WithPropsExample";
+import WithPropTypesExample from "~components/Examples/WithPropTypesExample";
+import WithStylesExample from "~components/Examples/WithStylesExample";
 import Paragraph from "~components/Body/Paragraph";
 import Subtitle from "~components/Body/Subtitle";
 import Title from "~components/Body/Title";
@@ -42,8 +44,12 @@ const Demonstrations = () => (
       css
     </AnchorTitle>
     <Paragraph>
-      A named export helper function from the styled-components package that
-      interpolates styles from props.
+      A named export&nbsp;
+      <OutsideLink href="https://styled-components.com/docs/api#css">
+        helper function
+      </OutsideLink>
+      &nbsp;from the styled-components package that interpolates styles from
+      props.
       <CSSExample />
     </Paragraph>
     <AnchorTitle ariaLabel="Extend" id="extend">
@@ -67,35 +73,48 @@ const Demonstrations = () => (
     <Paragraph>
       A composable function that sets the display name of a component.
       <SetDisplayNameExample />
-      <Note>
-        The display name will not be applied to the class name! Instead, in
-        order to view the display name, you must have&nbsp;
-        <OutsideLink href="https://reactjs.org/blog/2015/09/02/new-react-developer-tools.html">
-          React Dev Tools
-        </OutsideLink>
-        &nbsp;installed, open your browser console and select the "Components"
-        tab. For example:
-        <br />
-        <img
-          css="width: 100%;max-width: 629px;"
-          src="/setDisplayNameExample.png"
-          alt="setDisplayNameExample.png"
-        />
-      </Note>
     </Paragraph>
     <AnchorTitle ariaLabel="With Attributes" id="withAttributes">
       withAttributes
     </AnchorTitle>
     <Paragraph>
-      A composable function that adds DOM-specific attributes to the node.
+      A composable function that can either explicitly (via an object) or
+      conditionally appends (via a function returning an object) DOM-specific
+      attributes to the node.
       <WithAttributesExample />
     </Paragraph>
     <AnchorTitle ariaLabel="With Default Props" id="withDefaultProps">
       withDefaultProps
     </AnchorTitle>
     <Paragraph>
-      A composable function that attributes default props to the node.
+      A composable function that explicitly appends (via an object) default
+      props to the node.
       <WithDefaultPropsExample />
+    </Paragraph>
+    <AnchorTitle ariaLabel="With Props" id="withProps">
+      withProps
+    </AnchorTitle>
+    <Paragraph>
+      A composable function that can explicitly (via an object) or conditionally
+      appends (via a function returning an object) props to the node.
+      <WithPropsExample />
+    </Paragraph>
+    <AnchorTitle ariaLabel="With Prop Types" id="withPropTypes">
+      withPropTypes
+    </AnchorTitle>
+    <Paragraph>
+      A composable function that can explicitly (via an object) appends prop
+      types to the node.
+      <WithPropTypesExample />
+    </Paragraph>
+    <AnchorTitle ariaLabel="With Styles" id="withStyles">
+      withStyles
+    </AnchorTitle>
+    <Paragraph>
+      A composable function that can explicitly (via an object) or conditionally
+      appends (via a function returning an object or interpolating props using
+      the 'css' helper) styles to the node.
+      <WithStylesExample />
     </Paragraph>
   </>
 );

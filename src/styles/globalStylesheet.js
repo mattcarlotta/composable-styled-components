@@ -25,7 +25,7 @@ export default createGlobalStyle`
     font-size: 15px;
     font-family: sans-serif;
     min-height: 100vh;
-    background-color: #ebebeb;
+    background: #ebebeb;
   }
 
   .link {

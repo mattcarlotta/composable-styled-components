@@ -58,29 +58,26 @@ const ComposedButton = compose(
       : undefined};
   ${props => {
     if (props.disabled)
-      return "border:1px solid #ebebeb;background-color:#ebebeb;color:#bbb;";
+      return "border:1px solid #ebebeb;background:#ebebeb;color:#bbb;";
     if (props.tertiary)
-      return "border:1px solid #ddd;background-color:transparent;color:#ddd;";
+      return "border:1px solid #ddd;background:transparent;color:#ddd;";
     if (props.primary)
-      return "border:1px solid #188fff;background-color:#188fff;color:#fff;";
+      return "border:1px solid #188fff;background:#188fff;color:#fff;";
     if (props.danger)
-      return "border:1px solid #f0506e;background-color:transparent;color:#f0506e;";
-    if (props.link)
-      return "border: 0;background-color:transparent;color:#000000a6;";
-    return "border:1px solid #222;background-color:#222;color:#03a9f3;";
+      return "border:1px solid #f0506e;background:transparent;color:#f0506e;";
+    if (props.link) return "border: 0;background:transparent;color:#000000a6;";
+    return "border:1px solid #222;background:#222;color:#03a9f3;";
   }};
 
   &:hover {
     ${props => {
-      if (props.disabled)
-        return "border-color:#ebebeb;background-color:#ebebeb;";
+      if (props.disabled) return "border-color:#ebebeb;background:#ebebeb;";
       if (props.tertiary) return "border-color:#fff;color:#fff;";
-      if (props.primary)
-        return "border-color:#0f7ae5;background-color:#0f7ae5;";
+      if (props.primary) return "border-color:#0f7ae5;background:#0f7ae5;";
       if (props.danger)
-        return "border-color:#ee395b;background-color:transparent;color:#ee395b;";
+        return "border-color:#ee395b;background:transparent;color:#ee395b;";
       if (props.link) return "color:#40a9ff;";
-      return "border-color:#222;background-color:#222;color:#f1f1f1;";
+      return "border-color:#222;background:#222;color:#f1f1f1;";
     }};
   }
 `);

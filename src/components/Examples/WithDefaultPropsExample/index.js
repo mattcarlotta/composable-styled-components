@@ -8,10 +8,10 @@ const Button = compose(
     onClick: () => alert("Hello")
   })
 )("button")`
-  cursor: pointer;
-  background-color: transparent;
+  background: transparent;
   border: 2px solid #888;
   border-radius: 0;
+  cursor: pointer;
   display: block;
   font-size: 14px;
   line-height: 38px;
@@ -20,8 +20,7 @@ const Button = compose(
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  transition: 100ms ease-in-out;
-  transition-property: color,background-color,border-color;
+  transition: all 200ms ease-in-out;
 
   &:hover {
     border-color: #555;
@@ -40,10 +39,10 @@ const exampleCode = `const Button = compose(
     onClick: () => alert("Hello")
   })
 )("button")\`
-  cursor: pointer;
-  background-color: transparent;
+  background: transparent;
   border: 2px solid #888;
   border-radius: 0;
+  cursor: pointer;
   display: block;
   font-size: 14px;
   line-height: 38px;
@@ -52,8 +51,7 @@ const exampleCode = `const Button = compose(
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  transition: 100ms ease-in-out;
-  transition-property: color,background-color,border-color;
+  transition: all 200ms ease-in-out;
 
   &:hover {
     border-color: #555;
@@ -67,9 +65,11 @@ const exampleCode = `const Button = compose(
 
 render(
   <>
-    <Button/>
-    <Button onClick={() => alert("Goodbye")}>
-      With passed in props
+    <Button />
+    <Button 
+      onClick={() => alert("Goodbye")}
+    >
+      Goodbye
     </Button>
   </>
 );`;

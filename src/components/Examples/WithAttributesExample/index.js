@@ -1,14 +1,14 @@
-import { compose, setDisplayName, withAttributes } from "~lib";
+import { compose, extend, setDisplayName, withAttributes } from "~lib";
 import Preview from "~components/Body/Preview";
 
-const Input = compose(
-  setDisplayName("Input"),
+const UsernameTextBox = compose(
+  setDisplayName("UsernameTextBox"),
   withAttributes({
-    type: "password",
-    placeholder: "Enter password..."
+    type: "text",
+    placeholder: "Enter username..."
   })
 )("input")`
-  background-color: transparent;
+  background: transparent;
   border: 1px solid #555;
   border-radius: 4px;
   font-size: 14px;
@@ -16,6 +16,7 @@ const Input = compose(
   margin-bottom: 10px;
   padding-left: 10px;
   transition: all 300ms ease-in-out;
+  width: 100%;
 
   ::placeholder {
     color: #bbb;
@@ -26,20 +27,28 @@ const Input = compose(
   }
 
   &:focus {
-    outline: 0;
     border-color: #1e87f0;
     box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14), 0px 1px 8px 0px rgba(0,0,0,0.12);
+    outline: 0;
   }
 `;
 
-const exampleCode = `compose(
-  setDisplayName("Input"),
+const TextBox = extend(
+  setDisplayName("TextBox"),
+  withAttributes(props => ({
+    type: props.password ? "password" : props.type,
+    placeholder: props.password ? "Enter password..." : props.placeholder
+  }))
+)(UsernameTextBox);
+
+const exampleCode = `const UsernameTextBox = compose(
+  setDisplayName("UsernameTextBox"),
   withAttributes({
-    type: "password",
-    placeholder: "Enter password..."
+    type: "text",
+    placeholder: "Enter username..."
   })
 )("input")\`
-  background-color: transparent;
+  background: transparent;
   border: 1px solid #555;
   border-radius: 4px;
   font-size: 14px;
@@ -57,17 +66,42 @@ const exampleCode = `compose(
   }
 
   &:focus {
-    outline: 0;
     border-color: #1e87f0;
-    box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14), 0px 1px 8px 0px rgba(0,0,0,0.12);
+    box-shadow: 
+      0px 3px 3px -2px rgba(0,0,0,0.2), 
+      0px 3px 4px 0px rgba(0,0,0,0.14), 
+      0px 1px 8px 0px rgba(0,0,0,0.12);
+    outline: 0;
   }
 \`;
 
-render(<Input/>);`;
+const TextBox = extend(
+  setDisplayName("TextBox"),
+  withAttributes(props => ({
+    type: 
+      props.password 
+        ? "password" 
+        : props.type,
+    placeholder: 
+      props.password 
+        ? "Enter password..." 
+        : props.placeholder
+  }))
+)(UsernameTextBox);
+
+render(
+  <>
+    <UsernameTextBox />
+    <TextBox />
+    <TextBox password />
+  </>
+);`;
 
 const WithAttributesExample = () => (
   <Preview code={exampleCode}>
-    <Input />
+    <UsernameTextBox />
+    <TextBox />
+    <TextBox password />
   </Preview>
 );
 

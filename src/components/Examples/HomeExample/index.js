@@ -17,15 +17,15 @@ const exampleCode = `const Button = compose(
     onClick: PropTypes.func
   })
 )("button")\`
+  background: #1f1f1f;
+  border: 0;
+  border-radius: 4px;
+  color: white;
   cursor: pointer;
   display: block;
-  background: #1f1f1f;
-  color: white;
-  border: 0;
   padding: 8px 16px;
-  border-radius: 4px;
-  text-decoration: none;
   margin-bottom: 10px;
+  text-decoration: none;
 
   &:hover {
     color: #ebebeb;
