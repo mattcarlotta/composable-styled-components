@@ -2,16 +2,16 @@
   "name": "composable-styled-components",
   "version": "0.0.1",
   "description": "Composable Styled Components",
-  "main": "dist/index.js",
-  "module": "dist/esm/index.esm.js",
-  "browser": "dist/umd/index.umd.js",
+  "main": "dist/composable-styled-components.js",
+  "module": "dist/composable-styled-components.esm.js",
+  "browser": "dist/composable-styled-components.cjs.js",
   "sideEffects": false,
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "rimraf dist && cross-env NODE_ENV=production rollup -c",
-    "checkbuild": "es-check es5 './dist/index.js' './dist/umd/index.umd.js' './docs/**/*.js'",
+    "checkbuild": "es-check es5 './dist/composable-styled-components.js' './dist/composable-styled-components.cjs.js'",
     "docs": "next dev -p 8080",
     "docs:build": "next build && next export",
     "start": "next start -p 8080",

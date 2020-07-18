@@ -9,11 +9,9 @@ import pkg from "./package.json";
 
 const outputs = [
   { file: "module", format: "esm" },
-  { file: "main", format: "cjs" },
-  { file: "browser", format: "umd" }
+  { file: "main", format: "umd" },
+  { file: "browser", format: "cjs" }
 ];
-
-const configFile = resolve(__dirname, "babel.rollup.js");
 
 export default {
   input: "./lib/index.js",
@@ -27,12 +25,13 @@ export default {
       "react-dom": "ReactDOM",
       "styled-components": "styled"
     },
-    exports: "named"
+    exports: "named",
+    sourcemap: true
   })),
   external: ["react", "react-dom", "styled-components"],
   plugins: [
     babel({
-      configFile,
+      configFile: resolve(__dirname, "babel.rollup.js"),
       babelHelpers: "runtime",
       exclude: "node_modules/**"
     }),
@@ -41,7 +40,7 @@ export default {
     commonjs(),
     terser({
       output: {
-        comments: "false"
+        comments: false
       }
     }),
     filesize()
