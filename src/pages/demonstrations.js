@@ -79,7 +79,7 @@ const Demonstrations = () => (
     </AnchorTitle>
     <Paragraph>
       A composable function that can either explicitly (via an object) or
-      conditionally appends (via a function returning an object) DOM-specific
+      conditionally (via a function returning an object) appends DOM-specific
       attributes to the node.
       <WithAttributesExample />
     </Paragraph>
@@ -87,7 +87,7 @@ const Demonstrations = () => (
       withDefaultProps
     </AnchorTitle>
     <Paragraph>
-      A composable function that explicitly appends (via an object) default
+      A composable function that explicitly (via an object) appends default
       props to the node.
       <WithDefaultPropsExample />
     </Paragraph>
@@ -96,7 +96,7 @@ const Demonstrations = () => (
     </AnchorTitle>
     <Paragraph>
       A composable function that can explicitly (via an object) or conditionally
-      appends (via a function returning an object) props to the node.
+      (via a function returning an object) appends props to the node.
       <WithPropsExample />
     </Paragraph>
     <AnchorTitle ariaLabel="With Prop Types" id="withPropTypes">
@@ -112,8 +112,8 @@ const Demonstrations = () => (
     </AnchorTitle>
     <Paragraph>
       A composable function that can explicitly (via an object) or conditionally
-      appends (via a function returning an object or interpolating props using
-      the 'css' helper) styles to the node.
+      (via a function returning an object or interpolating props using the 'css'
+      helper) appends styles to the node.
       <WithStylesExample />
     </Paragraph>
   </>
