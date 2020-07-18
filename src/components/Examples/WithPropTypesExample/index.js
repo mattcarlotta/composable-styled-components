@@ -62,7 +62,10 @@ const exampleCode = `const Button = compose(
 \`;
 
 render(
-  <Button type="button" onClick={() => alert("Hello")}>
+  <Button 
+    type="button" 
+    onClick={() => alert("Hello")}
+  >
     With PropTypes
   </Button>
 );`;
