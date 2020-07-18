@@ -10,7 +10,7 @@ const Button = compose(setDisplayName("Button"))("button")`
   padding: 5px;
 `;
 
-export const exampleCode = `compose(
+export const exampleCode = `const Button = compose(
   setDisplayName("Button")
 )("button")\`
   background: palevioletred;
