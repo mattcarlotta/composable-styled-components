@@ -62,7 +62,7 @@ const supportedFunctions = [
     description:
       "Composes an HTML element string with functions and styles to create a styled-component.",
     notes:
-      "Accepts three arguments: First argument is a list of functions seperated by commas, the second argument requires an HTML Element as a string, and the third argument can either be a template literal or interpolated css."
+      "Accepts three arguments: First argument is a list of functions separated by commas, the second argument requires an HTML Element as a string, and the third argument can either be a template literal or interpolated css."
   },
   {
     property: (
@@ -103,7 +103,7 @@ const supportedFunctions = [
     usage: "fn(...fns)(node);",
     description: "Extends a node.",
     notes:
-      "First argument accepts a list of functions seperated by commas and the second argument requires a node."
+      "First argument accepts a list of functions separated by commas and the second argument requires a node."
   },
   {
     property: (
