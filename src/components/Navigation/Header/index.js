@@ -5,7 +5,6 @@ import Dot from "~components/Body/Dot";
 import Flex from "~components/Body/Flex";
 import FlexStart from "~components/Body/FlexStart";
 import FlexEnd from "~components/Body/FlexEnd";
-import Logo from "~components/Body/Logo";
 import Link from "~components/Navigation/Link";
 import {
   compose,
@@ -70,15 +69,12 @@ const Header = () => {
   return (
     <NavContainer>
       <FlexStart>
-        <Link
-          ariaLabel="logo"
-          hover={false}
-          nopadding
-          light
-          href="/"
-          style={{ height: "48px" }}
-        >
-          <Logo>{`(</>)`}</Logo>
+        <Link ariaLabel="logo" hover={false} nopadding light href="/">
+          <img
+            css="margin-top: 3px;"
+            src="/composableLogoHeaderSmall.png"
+            alt="logo-header.png"
+          />
         </Link>
         <nav>
           {["documentation", "demonstrations", "releases"].map(page => (

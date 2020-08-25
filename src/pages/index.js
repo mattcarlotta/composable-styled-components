@@ -13,7 +13,10 @@ const iconStyle = { position: "relative", top: 2, marginRight: 8 };
 const App = () => (
   <div css="text-align: center;">
     <Head title="Home" />
-    <Title>{`C(</>)mposable`}</Title>
+    <Title>
+      C<span css="letter-spacing: -3px;margin-right: 15px;">{`(</>)`}</span>
+      mposable
+    </Title>
     <Subtitle>
       A lightweight composable wrapper for&nbsp;
       <OutsideLink href="https://styled-components.com/">

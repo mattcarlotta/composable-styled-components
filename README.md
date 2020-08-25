@@ -1,5 +1,5 @@
 <a target="_blank" rel="noopener noreferrer" href="https://composable-styled-components.vercel.app" >
-<img src="https://raw.githubusercontent.com/mattcarlotta/composable-styled-components/master/public/composableLogo.png" alt="composableLogo.png" />
+<img src="https://raw.githubusercontent.com/mattcarlotta/composable-styled-components/master/public/composableLogo.png" alt="composable-logo.png" />
 </a>
 
 <div align="center">
