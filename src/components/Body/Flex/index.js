@@ -1,6 +1,6 @@
 import { compose, css, setDisplayName } from "~lib";
 
-const Flex = compose(setDisplayName("Flex"))("div")(css`
+const Flex = compose(setDisplayName("Flex"))("div")`
   @media (max-width: 976px) {
     display: block;
     margin: 0 auto;
@@ -13,6 +13,6 @@ const Flex = compose(setDisplayName("Flex"))("div")(css`
   margin: ${({ margin }) => margin || "0px"};
   width: ${({ width }) => width || "100%"};
   height: ${({ height }) => height || "auto"};
-`);
+`;
 
 export default Flex;

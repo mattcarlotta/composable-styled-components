@@ -54,15 +54,22 @@ const supportedFunctions = [
         >
           compose
         </Link>
-        &nbsp;(&#8224;&#8224;)
+        &nbsp;(&#8224;)
       </>
     ),
-    usage:
-      "fn(...fns)('element')`\n  ...styles \n`;\nfn(...fns)('element')(css`\n  ...styles \n`);",
+    usage: "fn(...fns)('element')`\n  ...styles \n`;",
     description:
       "Composes an HTML element string with functions and styles to create a styled-component.",
-    notes:
-      "Accepts three arguments: First argument is a list of functions separated by commas, the second argument requires an HTML Element as a string, and the third argument can either be a template literal or interpolated css."
+    notes: (
+      <>
+        Accepts three arguments: First argument is a list of functions separated
+        by commas, the second argument requires an HTML Element as a string, and
+        the third argument can either be a template literal or interpolated css.
+        <br />
+        <br />
+        (&#8224;) Do <strong>not</strong> use within extend.
+      </>
+    )
   },
   {
     property: (
@@ -82,8 +89,16 @@ const supportedFunctions = [
     usage:
       "fn`\n  property: ${prop => 'string'};\n  property: ${prop => 'string'};\n  ...etc\n`;",
     description: "Interpolates CSS styles that require passed in props.",
-    notes:
-      "Accepts a template literal with interpolated functions. The interopolated function must be a child of a CSS property and the function must return a string."
+    notes: (
+      <>
+        Accepts a template literal with interpolated functions. The
+        interopolated function must be a child of a CSS property and the
+        function must return a string.
+        <br />
+        <br />
+        (&#8224;) Only to be used <strong>within</strong> withStyles.
+      </>
+    )
   },
   {
     property: (
@@ -102,8 +117,15 @@ const supportedFunctions = [
     ),
     usage: "fn(...fns)(node);",
     description: "Extends a node.",
-    notes:
-      "First argument accepts a list of functions separated by commas and the second argument requires a node."
+    notes: (
+      <>
+        First argument accepts a list of functions separated by commas and the
+        second argument requires a node.
+        <br />
+        <br />
+        (&#8224;) Do <strong>not</strong> use with compose.
+      </>
+    )
   },
   {
     property: (
@@ -117,13 +139,20 @@ const supportedFunctions = [
         >
           nest
         </Link>
-        &nbsp;(&#8224;,&#8224;&#8224;)
+        &nbsp;(&#8224;)
       </>
     ),
     usage: "fn(...nodes);",
     description: "Nests nodes from left to right.",
-    notes:
-      "Accepts nodes separated by commas. Each node wraps any successive nodes to the right."
+    notes: (
+      <>
+        Accepts nodes separated by commas. Each node wraps any successive nodes
+        to the right.
+        <br />
+        <br />
+        (&#8224;) Do <strong>not</strong> use within compose.
+      </>
+    )
   },
   {
     property: (
@@ -285,11 +314,8 @@ const APITable = () => (
       </CustomTable>
     </div>
     <Note>
-      Any functions with a dagger (&#8224;) should not be used within the&nbsp;
-      <strong>first</strong>&nbsp;nor&nbsp;<strong>second</strong>&nbsp;argument
-      to&nbsp;<strong>compose</strong>&nbsp;and any functions with a double
-      dagger (&#8224;&#8224;) should not be used as any arguments to&nbsp;
-      <strong>extend</strong>.
+      Any functions with a dagger (&#8224;) have special use cases, please read
+      the table above for more information.
     </Note>
   </>
 );

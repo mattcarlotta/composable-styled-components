@@ -1,10 +1,22 @@
-import { compose, css, setDisplayName } from "~lib";
+import { compose, css, setDisplayName, withStyles } from "~lib";
 import Note from "~components/Body/Note";
 import Preview from "~components/Body/Preview";
 
-const Button = compose(setDisplayName("Button"))("button")(css`
-  background: ${props => (props.primary ? "palevioletred" : "#1e87f0")};
-  border: 1px solid ${props => (props.primary ? "palevioletred" : "#1e87f0")};
+const Button = compose(
+  setDisplayName("Button"),
+  withStyles(css`
+    background: ${props => (props.primary ? "palevioletred" : "#1e87f0")};
+    border: 1px solid ${props => (props.primary ? "palevioletred" : "#1e87f0")};
+
+    &:hover {
+      background: ${props => (props.primary ? "#ca5c80" : "#0f7ae5")};
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  `)
+)("button")`
   border-radius: 3px;
   color: white;
   cursor: pointer;
@@ -13,50 +25,32 @@ const Button = compose(setDisplayName("Button"))("button")(css`
   padding: 5px;
   margin-bottom: 10px;
   transition: all 200ms ease-in-out;
-
-  &:hover {
-    background: ${props => (props.primary ? "#ca5c80" : "#0f7ae5")};
-  }
-
-  &:focus {
-    outline: 0;
-  }
-`);
+`;
 
 export const exampleCode = `const Button = compose(
   setDisplayName("Button"))
-("button")(CSS\`
-  background: \$\{props => (
-    props.primary 
-      ? "palevioletred" 
-      : "#1e87f0"
-  )};
-  border: 1px solid $\{props => (
-    props.primary 
-      ? "palevioletred" 
-      : "#1e87f0"
-  )};
+  withStyles(CSS\`
+    background: $\{props => \n      props.primary \n        ? "palevioletred"\n        : "#1e87f0"\n    };
+    border: 1px solid \$\{props => \n      props.primary \n        ? "palevioletred"\n        : "#1e87f0"\n    };
+
+    &:hover {
+      background: \$\{props => \n        props.primary \n          ? "#ca5c80" \n          : "#0f7ae5"\n      };
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  \`)
+("button")\`
   border-radius: 3px;
-  cursor: pointer;
   color: white;
+  cursor: pointer;
   display: block;
   font-size: 16px;
   padding: 5px;
   margin-bottom: 10px;
   transition: all 200ms ease-in-out;
-
-  &:hover {
-    background: \$\{props => (
-      props.primary 
-        ? "#ca5c80" 
-        : "#0f7ae5"
-    )};
-  }
-
-  &:focus {
-    outline: 0;
-  }
-\`);
+\`;
 
   render(
     <Button>default button</Button>

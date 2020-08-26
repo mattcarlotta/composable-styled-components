@@ -49,7 +49,17 @@ const Demonstrations = () => (
         helper function
       </OutsideLink>
       &nbsp;from the styled-components package that interpolates styles from
-      props.
+      props within&nbsp;
+      <Link
+        ariaLabel="with styles"
+        dark
+        nomargin
+        nopadding
+        href="/demonstrations#withStyles"
+      >
+        withStyles
+      </Link>
+      .
       <CSSExample />
     </Paragraph>
     <AnchorTitle ariaLabel="Extend" id="extend">
@@ -104,8 +114,8 @@ const Demonstrations = () => (
       withPropTypes
     </AnchorTitle>
     <Paragraph>
-      A composable function that can either explicitly (via an object) appends
-      prop types to the node.
+      A composable function that explicitly (via an object) appends appends prop
+      types to the node.
       <WithPropTypesExample />
     </Paragraph>
     <AnchorTitle ariaLabel="With Styles" id="withStyles">
@@ -114,7 +124,17 @@ const Demonstrations = () => (
     <Paragraph>
       A composable function that can either explicitly (via an object) or
       conditionally (via a function returning an object or interpolating props
-      using the 'css' helper) append styles to the node.
+      using the&nbsp;
+      <Link
+        ariaLabel="css helper"
+        dark
+        nomargin
+        nopadding
+        href="/demonstrations#css"
+      >
+        css
+      </Link>{" "}
+      helper) append styles to the node.
       <WithStylesExample />
     </Paragraph>
   </>

@@ -35,7 +35,7 @@ const ComposedButton = compose(
     type: "button",
     onClick: () => {}
   })
-)("button")(css`
+)("button")`
   height: ${({ height }) => height || "100%"};
   text-align: ${({ align }) => align || "center"};
   transition: all 200ms ease-in-out;
@@ -80,7 +80,7 @@ const ComposedButton = compose(
       return "border-color:#222;background:#222;color:#f1f1f1;";
     }};
   }
-`);
+`;
 
 const Button = React.forwardRef((props, ref) => (
   <ComposedButton {...props} ref={ref}>

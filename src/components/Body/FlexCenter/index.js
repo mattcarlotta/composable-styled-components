@@ -1,6 +1,6 @@
 import { compose, css, setDisplayName } from "~lib";
 
-const FlexCenter = compose(setDisplayName("FlexCenter"))("div")(css`
+const FlexCenter = compose(setDisplayName("FlexCenter"))("div")`
   flex-direction: ${({ direction }) => direction || "row"};
   display: flex;
   justify-content: center;
@@ -9,6 +9,6 @@ const FlexCenter = compose(setDisplayName("FlexCenter"))("div")(css`
   height: ${({ height }) => height || "100%"};
   ${({ floating }) =>
     floating ? "top: 0;left: 0;position: absolute;" : undefined};
-`);
+`;
 
 export default FlexCenter;
