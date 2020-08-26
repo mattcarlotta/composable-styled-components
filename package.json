@@ -15,10 +15,10 @@
     "docs": "next dev -p 8080",
     "docs:build": "next build && next export",
     "start": "next start -p 8080",
-    "test": "cross-env NODE_ENV=testing jest --config ./jest.json",
-    "test:cov": "cross-env NODE_ENV=testing jest --config ./jest.json --coverage",
-    "test:watch": "cross-env NODE_ENV=testing jest --config ./jest.json --watch --onlyChanged",
-    "test:watchall": "cross-env NODE_ENV=testing jest --config ./jest.json --watchAll"
+    "test": "NODE_ENV=testing jest --config ./jest.json",
+    "test:cov": "NODE_ENV=testing jest --config ./jest.json --coverage",
+    "test:watch": "NODE_ENV=testing jest --config ./jest.json --watch --onlyChanged",
+    "test:watchall": "NODE_ENV=testing jest --config ./jest.json --watchAll"
   },
   "repository": {
     "type": "git",
@@ -55,7 +55,6 @@
     "babel-plugin-react-remove-properties": "^0.3.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "browserslist": "^4.13.0",
-    "cross-env": "^7.0.2",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "es-check": "^5.1.0",
@@ -64,7 +63,6 @@
     "jest": "^26.1.0",
     "jest-enzyme": "^7.1.2",
     "jest-resolve": "^26.1.0",
-    "jest-styled-components": "^7.0.2",
     "jsdom": "^16.3.0",
     "next": "^9.4.4",
     "prettier": "^2.0.5",
