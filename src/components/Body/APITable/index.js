@@ -46,7 +46,8 @@ const supportedFunctions = [
     property: (
       <>
         <Link
-          ariaLabel="compose"
+          ariaLabel="Navigate to compose function example"
+          dataTestId="compose"
           dark
           nomargin
           nopadding
@@ -77,7 +78,8 @@ const supportedFunctions = [
     property: (
       <>
         <Link
-          ariaLabel="css"
+          ariaLabel="Navigate to css function example"
+          dataTestId="cssLink"
           dark
           nomargin
           nopadding
@@ -106,7 +108,8 @@ const supportedFunctions = [
     property: (
       <>
         <Link
-          ariaLabel="extend"
+          ariaLabel="Navigate to extend function example"
+          dataTestId="extendLink"
           dark
           nomargin
           nopadding
@@ -133,7 +136,8 @@ const supportedFunctions = [
     property: (
       <>
         <Link
-          ariaLabel="nest"
+          ariaLabel="Navigate to nest function example"
+          dataTestId="nestLink"
           dark
           nomargin
           nopadding
@@ -159,7 +163,8 @@ const supportedFunctions = [
   {
     property: (
       <Link
-        ariaLabel="Set Display Name"
+        ariaLabel="Navigate to Set Display Name function example"
+        dataTestId="setDisplayNameLink"
         dark
         nomargin
         nopadding
@@ -184,7 +189,8 @@ const supportedFunctions = [
   {
     property: (
       <Link
-        ariaLabel="With Attributes"
+        ariaLabel="Navigate to With Attributes function example"
+        dataTestId="withAtrributesLink"
         dark
         nomargin
         nopadding
@@ -209,7 +215,8 @@ const supportedFunctions = [
   {
     property: (
       <Link
-        ariaLabel="With Default Props"
+        ariaLabel="Navigate to With Default Props function example"
+        dataTestId="withDefaultPropsLink"
         dark
         nomargin
         nopadding
@@ -225,7 +232,8 @@ const supportedFunctions = [
   {
     property: (
       <Link
-        ariaLabel="With Props"
+        ariaLabel="Navigate to With Props function example"
+        dataTestId="withPropsLink"
         dark
         nomargin
         nopadding
@@ -242,7 +250,8 @@ const supportedFunctions = [
   {
     property: (
       <Link
-        ariaLabel="With Prop Types"
+        ariaLabel="Navigate to With Prop Types function example"
+        dataTestId="withPropTypesLink"
         dark
         nomargin
         nopadding
@@ -266,7 +275,8 @@ const supportedFunctions = [
   {
     property: (
       <Link
-        ariaLabel="withStyles"
+        ariaLabel="Navigate to With Styles function example"
+        dataTestId="withStylesLink"
         dark
         nomargin
         nopadding
@@ -283,7 +293,8 @@ const supportedFunctions = [
         Accepts an object of properties, a function that returns an object of
         properties, or the&nbsp;
         <Link
-          ariaLabel="CSS helper function"
+          ariaLabel="Navigate to CSS helper function"
+          dataTestId="cssDemoLink"
           dark
           nomargin
           nopadding

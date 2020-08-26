@@ -31,7 +31,13 @@ const App = () => (
           Github
         </Button>
       </OutsideLink>
-      <Link ariaLabel="documentation" hover={false} light href="/documentation">
+      <Link
+        ariaLabel="Navigate to documentation"
+        dataTestId="documentationLink"
+        hover={false}
+        light
+        href="/documentation"
+      >
         <Button>
           <GiBookmark style={iconStyle} />
           Documentation

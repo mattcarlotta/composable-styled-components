@@ -69,7 +69,14 @@ const Header = () => {
   return (
     <NavContainer>
       <FlexStart>
-        <Link ariaLabel="logo" hover={false} nopadding light href="/">
+        <Link
+          ariaLabel="logo"
+          dataTestId="logo"
+          hover={false}
+          nopadding
+          light
+          href="/"
+        >
           <img
             css="margin-top: 3px;"
             src="/composableLogoHeaderSmall.png"
@@ -82,6 +89,7 @@ const Header = () => {
               <Link
                 ariaLabel={`header ${page} tab`}
                 active={activeTab.indexOf(page) > -1}
+                dataTestId={page}
                 hover
                 light
                 href={`/${page}`}

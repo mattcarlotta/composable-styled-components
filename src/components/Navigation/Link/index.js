@@ -14,14 +14,14 @@ const LinkComponent = ({
   asHref,
   className,
   children,
-  dataTest,
+  dataTestId,
   href,
   style,
   target
 }) => (
   <Link href={href} as={asHref} passHref>
     <a
-      data-test={dataTest}
+      data-testid={dataTestId}
       aria-label={ariaLabel}
       style={style}
       className={className}
@@ -37,7 +37,7 @@ LinkComponent.propTypes = {
   asHref: PropTypes.string,
   className: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
-  dataTest: PropTypes.string,
+  dataTestId: PropTypes.string,
   href: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   stopPropagation: PropTypes.bool,
@@ -59,7 +59,7 @@ const CustomLink = extend(
     className: PropTypes.string,
     children: PropTypes.oneOfType([PropTypes.node, PropTypes.string])
       .isRequired,
-    dataTest: PropTypes.string,
+    dataTestId: PropTypes.string,
     href: PropTypes.string.isRequired,
     onClick: PropTypes.func,
     stopPropagation: PropTypes.bool,

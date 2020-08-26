@@ -19,11 +19,7 @@
     "<rootDir>/babel.config.js",
     "<rootDir>/next.config.js"
   ],
-  "collectCoverageFrom": [
-    "src/**/*.{js,jsx}",
-    "!src/utils/**",
-    "lib/**/*.{js,jsx}"
-  ],
+  "collectCoverageFrom": ["lib/**/*.{js,jsx}"],
   "coveragePathIgnorePatterns": ["<rootDir>/src/pages"],
   "setupFilesAfterEnv": ["<rootDir>/src/utils/setupTests/index.js"]
 }

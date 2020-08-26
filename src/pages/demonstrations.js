@@ -27,7 +27,14 @@ const Demonstrations = () => (
     <Title>Demonstrations</Title>
     <Subtitle>
       From simple to complex, this page aims to cover the&nbsp;
-      <Link ariaLabel="api" dark nomargin nopadding href="/documentation#api">
+      <Link
+        ariaLabel="Navigate to API"
+        dataTestId="api"
+        dark
+        nomargin
+        nopadding
+        href="/documentation#api"
+      >
         API
       </Link>
       &nbsp;functions and how they can be utilized.
@@ -51,7 +58,8 @@ const Demonstrations = () => (
       &nbsp;from the styled-components package that interpolates styles from
       props within&nbsp;
       <Link
-        ariaLabel="with styles"
+        ariaLabel="Navigate to With Styles function"
+        dataTestId="withStylesLink"
         dark
         nomargin
         nopadding
@@ -126,15 +134,16 @@ const Demonstrations = () => (
       conditionally (via a function returning an object or interpolating props
       using the&nbsp;
       <Link
-        ariaLabel="css helper"
+        ariaLabel="Navigate to css helper function"
+        dataTestId="cssLink"
         dark
         nomargin
         nopadding
         href="/demonstrations#css"
       >
         css
-      </Link>{" "}
-      helper) append styles to the node.
+      </Link>
+      &nbsp;helper) append styles to the node.
       <WithStylesExample />
     </Paragraph>
   </>
