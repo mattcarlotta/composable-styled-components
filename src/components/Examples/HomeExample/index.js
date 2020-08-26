@@ -1,6 +1,6 @@
 import SyntaxHighlighter from "~components/Body/SyntaxHighlighter";
 
-const exampleCode = `const Button = compose(
+const exampleCode = `const Button = compose.button(
   setDisplayName("Button"),
   withAttributes({ type: "button" }),
   withProps(props => ({
@@ -16,7 +16,7 @@ const exampleCode = `const Button = compose(
     ).isRequired,
     onClick: PropTypes.func
   })
-)("button")\`
+)\`
   background: #1f1f1f;
   border: 0;
   border-radius: 4px;

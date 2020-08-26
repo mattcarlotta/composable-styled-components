@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import FlexSpaceBetween from "~components/Body/FlexSpaceBetween";
 import SyntaxHighlighter from "~components/Body/SyntaxHighlighter";
-import { compose, extend, setDisplayName, withStyles } from "~lib/";
+import { compose, extend, setDisplayName, withStyles } from "~lib";
 
-const SyntaxContainer = compose(setDisplayName("Preview"))("div")`
+const SyntaxContainer = compose.div(setDisplayName("Preview"))`
   @media (max-width: 976px) {
     width: 100%;
   }

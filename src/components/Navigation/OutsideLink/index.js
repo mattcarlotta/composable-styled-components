@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { compose, setDisplayName, withPropTypes, withAttributes } from "~lib";
 
-const OutsideLink = compose(
+const OutsideLink = compose.a(
   setDisplayName("Outside Link"),
   withAttributes({
     rel: "noopener noreferrer",
@@ -15,7 +15,7 @@ const OutsideLink = compose(
       PropTypes.oneOfType([PropTypes.string, PropTypes.number])
     )
   })
-)("a")`
+)`
   color: #036ef3;
   white-space: nowrap;
   text-decoration: none;

@@ -1,6 +1,6 @@
 import { compose, setDisplayName } from "~lib";
 
-const FlexSpaceEvenly = compose(setDisplayName("FlexSpaceEvenly"))("div")`
+const FlexSpaceEvenly = compose.div(setDisplayName("FlexSpaceEvenly"))`
   display: flex;
   justify-content: space-evenly;
   align-items: center;

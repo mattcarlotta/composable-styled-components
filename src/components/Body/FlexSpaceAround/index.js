@@ -1,6 +1,6 @@
 import { compose, setDisplayName } from "~lib";
 
-const FlexSpaceAround = compose(setDisplayName("FlexSpaceAround"))("div")`
+const FlexSpaceAround = compose.div(setDisplayName("FlexSpaceAround"))`
   display: flex;
   justify-content: space-around;
   align-items: center;

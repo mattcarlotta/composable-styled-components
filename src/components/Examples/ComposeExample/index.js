@@ -1,7 +1,7 @@
 import { compose, setDisplayName } from "~lib";
 import Preview from "~components/Body/Preview";
 
-const Button = compose(setDisplayName("Button"))("button")`
+const Button = compose.button(setDisplayName("Button"))`
   background: palevioletred;
   border: none;
   border-radius: 3px;
@@ -10,9 +10,9 @@ const Button = compose(setDisplayName("Button"))("button")`
   padding: 5px;
 `;
 
-export const exampleCode = `const Button = compose(
+export const exampleCode = `const Button = compose.button(
   setDisplayName("Button")
-)("button")\`
+)\`
   background: palevioletred;
   border: none;
   border-radius: 3px;

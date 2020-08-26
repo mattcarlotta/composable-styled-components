@@ -1,6 +1,6 @@
 import { compose, setDisplayName } from "~lib";
 
-const MiniTitle = compose(setDisplayName("MiniTitle"))("div")`
+const MiniTitle = compose.div(setDisplayName("MiniTitle"))`
   margin: 10px 0 0;
   word-wrap: break-word;
   font-size: 17px;

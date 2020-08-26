@@ -8,7 +8,7 @@ import {
   withPropTypes
 } from "~lib";
 
-const ComposedButton = compose(
+const ComposedButton = compose.button(
   setDisplayName("Button"),
   withPropTypes({
     className: PropTypes.string,
@@ -35,7 +35,7 @@ const ComposedButton = compose(
     type: "button",
     onClick: () => {}
   })
-)("button")`
+)`
   height: ${({ height }) => height || "100%"};
   text-align: ${({ align }) => align || "center"};
   transition: all 200ms ease-in-out;

@@ -1,6 +1,6 @@
 import { compose, setDisplayName } from "~lib";
 
-const Title = compose(setDisplayName("Title"))("h1")`
+const Title = compose.h1(setDisplayName("Title"))`
   font-family: "Amoreiza", sans-serif;
   text-transform: uppercase;
   letter-spacing: 15px;

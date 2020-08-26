@@ -1,6 +1,6 @@
 import { compose, setDisplayName } from "~lib";
 
-const Paragraph = compose(setDisplayName("Paragraph"))("div")`
+const Paragraph = compose.div(setDisplayName("Paragraph"))`
   margin-top: 5px;
   margin-bottom: 30px;
   word-wrap: normal;

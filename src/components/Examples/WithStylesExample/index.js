@@ -2,7 +2,7 @@ import { compose, css, extend, setDisplayName, withStyles } from "~lib";
 import Note from "~components/Body/Note";
 import Preview from "~components/Body/Preview";
 
-const Button = compose(setDisplayName("DefaultButton"))("button")`
+const Button = compose.button(setDisplayName("DefaultButton"))`
   background: transparent;
   border: 2px solid #888;
   border-radius: 10px;
@@ -86,9 +86,9 @@ const SecondaryButton = extend(
   `)
 )(Button);
 
-const exampleCode = `const Button = compose(
+const exampleCode = `const Button = compose.button(
   setDisplayName("DefaultButton")
-)("button")\`
+)\`
   background: transparent;
   border: 2px solid #888;
   border-radius: 10px;

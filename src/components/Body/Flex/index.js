@@ -1,6 +1,6 @@
-import { compose, css, setDisplayName } from "~lib";
+import { compose, setDisplayName } from "~lib";
 
-const Flex = compose(setDisplayName("Flex"))("div")`
+const Flex = compose.div(setDisplayName("Flex"))`
   @media (max-width: 976px) {
     display: block;
     margin: 0 auto;

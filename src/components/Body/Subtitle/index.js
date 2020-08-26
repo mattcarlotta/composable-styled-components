@@ -1,6 +1,6 @@
-import { css, compose, setDisplayName } from "~lib";
+import { compose, setDisplayName } from "~lib";
 
-const Subtitle = compose(setDisplayName("Subtitle"))("p")`
+const Subtitle = compose.p(setDisplayName("Subtitle"))`
   margin-bottom: 30px;
   word-wrap: break-word;
   font-size: 16px;

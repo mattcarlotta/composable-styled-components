@@ -3,7 +3,7 @@ import Note from "~components/Body/Note";
 import Link from "~components/Navigation/Link";
 import OutsideLink from "~components/Navigation/OutsideLink";
 
-const CustomTable = compose(setDisplayName("Table"))("table")` 
+const CustomTable = compose.table(setDisplayName("Table"))` 
   width: 100%;
   word-break: normal;
   overflow-x: auto;
@@ -12,7 +12,7 @@ const CustomTable = compose(setDisplayName("Table"))("table")`
   border-collapse: collapse;
 `;
 
-const Th = compose(setDisplayName("Th"))("th")`
+const Th = compose.th(setDisplayName("Th"))`
   color: rgba(0, 0, 0, 0.87);
   padding: 10px;
   font-weight: bold;
@@ -22,7 +22,7 @@ const Th = compose(setDisplayName("Th"))("th")`
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 `;
 
-const Td = compose(setDisplayName("Td"))("td")`
+const Td = compose.td(setDisplayName("Td"))`
   @media (max-width: 976px) {
     max-width: 125px;
     min-width: 125px;
@@ -57,14 +57,16 @@ const supportedFunctions = [
         &nbsp;(&#8224;)
       </>
     ),
-    usage: "fn(...fns)('element')`\n  ...styles \n`;",
+    usage: "fn.element(...fns)`\n  ...styles \n`;",
     description:
-      "Composes an HTML element string with functions and styles to create a styled-component.",
+      "Composes an HTML element with composable functions and styles to create a styled-component.",
     notes: (
       <>
-        Accepts three arguments: First argument is a list of functions separated
-        by commas, the second argument requires an HTML Element as a string, and
-        the third argument can either be a template literal or interpolated css.
+        The first argument to compose requires an HTML Element either declared
+        as a property of compose: 'compose.div' or passed as a string to
+        compose: 'compose("div")', the second argument is a list of composable
+        functions separated by commas, and the third argument must be a template
+        literal containing CSS properties.
         <br />
         <br />
         (&#8224;) Do <strong>not</strong> use within extend.
@@ -88,7 +90,7 @@ const supportedFunctions = [
     ),
     usage:
       "fn`\n  property: ${prop => 'string'};\n  property: ${prop => 'string'};\n  ...etc\n`;",
-    description: "Interpolates CSS styles that require passed in props.",
+    description: "Interpolates CSS properties that require passed in props.",
     notes: (
       <>
         Accepts a template literal with interpolated functions. The
@@ -120,7 +122,7 @@ const supportedFunctions = [
     notes: (
       <>
         First argument accepts a list of functions separated by commas and the
-        second argument requires a node.
+        second argument requires a styled-component node.
         <br />
         <br />
         (&#8224;) Do <strong>not</strong> use within compose nor nest.
@@ -146,8 +148,8 @@ const supportedFunctions = [
     description: "Nests nodes from left to right.",
     notes: (
       <>
-        Accepts nodes separated by commas. Each node wraps any successive nodes
-        to the right.
+        Accepts nodes (React components) separated by commas. Each node wraps
+        any successive nodes to the right.
         <br />
         <br />
         (&#8224;) Do <strong>not</strong> use within compose nor extend.
@@ -276,8 +278,22 @@ const supportedFunctions = [
     usage:
       "fn({ ...props }); \nfn(props => ({ ...props })); \nfn(css`\n  property: ${prop => 'string'};\n  property: ${prop => 'string'};\n  ...etc\n`);",
     description: "Creates or appends styles.",
-    notes:
-      "Accepts an object of properties, a function that returns an object of properties, or the 'css' helper function."
+    notes: (
+      <>
+        Accepts an object of properties, a function that returns an object of
+        properties, or the&nbsp;
+        <Link
+          ariaLabel="CSS helper function"
+          dark
+          nomargin
+          nopadding
+          href="/demonstrations#css"
+        >
+          css
+        </Link>
+        &nbsp;helper function that interoplates CSS properties.
+      </>
+    )
   }
 ];
 

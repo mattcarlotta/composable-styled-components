@@ -1,13 +1,13 @@
 import { compose, nest, setDisplayName } from "~lib";
 import Preview from "~components/Body/Preview";
 
-const Wrapper = compose(setDisplayName("Wrapper"))("section")`
+const Wrapper = compose.section(setDisplayName("Wrapper"))`
   border: 2px solid palevioletred;
   border-radius: 4px;
   padding: 10px 20px;
 `;
 
-const Title = compose(setDisplayName("Title"))("h1")`
+const Title = compose.h1(setDisplayName("Title"))`
   border: 2px solid #ff6c47;
   border-radius: 4px;
   color: #ff6c47;
@@ -17,17 +17,17 @@ const Title = compose(setDisplayName("Title"))("h1")`
 
 const Headline = nest(Wrapper, Title);
 
-const exampleCode = `const Wrapper = compose(
+const exampleCode = `const Wrapper = compose.section(
   setDisplayName("Wrapper")
-)("section")\`
+)\`
   border: 3px solid palevioletred;
   border-radius: 4px;
   padding: 10px 20px;
 \`;
 
-const Title = compose(
+const Title = compose.h1(
   setDisplayName("Title")
-)("h1")\`
+)\`
   border: 3px solid #ff6c47;
   border-radius: 4px;
   color: #ff6c47;

@@ -2,7 +2,7 @@ import { FaRegLightbulb } from "react-icons/fa";
 import { compose, setDisplayName } from "~lib";
 import MiniTitle from "~components/Body/MiniTitle";
 
-const ComposedNote = compose(setDisplayName("Note"))("div")`
+const ComposedNote = compose.div(setDisplayName("Note"))`
   background: rgb(224, 224, 224);
   padding: 10px;
   border-left: 7px solid #222;

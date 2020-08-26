@@ -1,13 +1,13 @@
 import { compose, extend, setDisplayName, withAttributes } from "~lib";
 import Preview from "~components/Body/Preview";
 
-const UsernameTextBox = compose(
+const UsernameTextBox = compose.input(
   setDisplayName("UsernameTextBox"),
   withAttributes({
     type: "text",
     placeholder: "Enter username..."
   })
-)("input")`
+)`
   background: transparent;
   border: 1px solid #555;
   border-radius: 4px;
@@ -41,13 +41,13 @@ const TextBox = extend(
   }))
 )(UsernameTextBox);
 
-const exampleCode = `const UsernameTextBox = compose(
+const exampleCode = `const UsernameTextBox = compose.input(
   setDisplayName("UsernameTextBox"),
   withAttributes({
     type: "text",
     placeholder: "Enter username..."
   })
-)("input")\`
+)\`
   background: transparent;
   border: 1px solid #555;
   border-radius: 4px;

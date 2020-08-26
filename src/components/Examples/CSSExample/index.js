@@ -2,7 +2,7 @@ import { compose, css, setDisplayName, withStyles } from "~lib";
 import Note from "~components/Body/Note";
 import Preview from "~components/Body/Preview";
 
-const Button = compose(
+const Button = compose.button(
   setDisplayName("Button"),
   withStyles(css`
     background: ${props => (props.primary ? "palevioletred" : "#1e87f0")};
@@ -16,7 +16,7 @@ const Button = compose(
       outline: 0;
     }
   `)
-)("button")`
+)`
   border-radius: 3px;
   color: white;
   cursor: pointer;
@@ -27,7 +27,7 @@ const Button = compose(
   transition: all 200ms ease-in-out;
 `;
 
-export const exampleCode = `const Button = compose(
+export const exampleCode = `const Button = compose.button(
   setDisplayName("Button"))
   withStyles(CSS\`
     background: $\{props => \n      props.primary \n        ? "palevioletred"\n        : "#1e87f0"\n    };
@@ -40,8 +40,7 @@ export const exampleCode = `const Button = compose(
     &:focus {
       outline: 0;
     }
-  \`)
-("button")\`
+\`)\`
   border-radius: 3px;
   color: white;
   cursor: pointer;

@@ -1,6 +1,6 @@
-import { compose, css, setDisplayName } from "~lib";
+import { compose, setDisplayName } from "~lib";
 
-const FlexCenter = compose(setDisplayName("FlexCenter"))("div")`
+const FlexCenter = compose.div(setDisplayName("FlexCenter"))`
   flex-direction: ${({ direction }) => direction || "row"};
   display: flex;
   justify-content: center;

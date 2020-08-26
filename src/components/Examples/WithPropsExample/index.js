@@ -1,12 +1,12 @@
 import { compose, extend, setDisplayName, withProps } from "~lib";
 import Preview from "~components/Body/Preview";
 
-const Button = compose(
+const Button = compose.button(
   setDisplayName("Button"),
   withProps({
     onClick: () => alert("Alert")
   })
-)("button")`
+)`
   cursor: pointer;
   background: transparent;
   border: 4px solid #ff6c47;
@@ -39,12 +39,12 @@ const ExtendedButton = extend(
   }))
 )(Button);
 
-const exampleCode = `const Button = compose(
+const exampleCode = `const Button = compose.button(
   setDisplayName("Button"),
   withProps({
     onClick: () => alert("Alert") 
   })
-)("button")\`
+)\`
   background: transparent;
   border: 4px solid #ff6c47;
   border-radius: 10px;

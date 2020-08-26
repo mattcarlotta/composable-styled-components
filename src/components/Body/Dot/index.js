@@ -1,6 +1,6 @@
 import { compose, setDisplayName } from "~lib";
 
-const ComposedDot = compose(setDisplayName("Dot"))("span")`
+const ComposedDot = compose.span(setDisplayName("Dot"))`
   color: #9a9a9a;
 `;
 

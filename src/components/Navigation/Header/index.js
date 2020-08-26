@@ -28,14 +28,14 @@ const NavContainer = extend(
   `)
 )(Flex);
 
-const SearchBox = compose(
+const SearchBox = compose.input(
   setDisplayName("NavContainer"),
   withAttributes({
     name: "search-box",
     placeholder: "Search...",
     type: "input"
   })
-)("input")`
+)`
   height: 35px;
   border-radius: 4px;
   border: 1px solid transparent;

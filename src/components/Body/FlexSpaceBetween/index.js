@@ -1,6 +1,6 @@
 import { compose, setDisplayName } from "~lib";
 
-const FlexSpaceBetween = compose(setDisplayName("FlexSpaceBetween"))("div")`
+const FlexSpaceBetween = compose.div(setDisplayName("FlexSpaceBetween"))`
   @media (max-width: 976px) {
     display: block;
   }

@@ -1,6 +1,6 @@
 import { compose, setDisplayName } from "~lib";
 
-const Logo = compose(setDisplayName("Logo"))("div")`
+const Logo = compose.div(setDisplayName("Logo"))`
   font-family: "Amoreiza", sans-serif;
   font-size: 24px;
   letter-spacing: 4px;

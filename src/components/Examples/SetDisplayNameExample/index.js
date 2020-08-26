@@ -3,7 +3,7 @@ import Preview from "~components/Body/Preview";
 import Note from "~components/Body/Note";
 import OutsideLink from "~components/Navigation/OutsideLink";
 
-const NamedButton = compose(setDisplayName("NamedButton"))("button")`
+const NamedButton = compose.button(setDisplayName("NamedButton"))`
   background: #dc004e;
   border-radius: 3px;
   border: none;
@@ -23,9 +23,9 @@ const NamedButton = compose(setDisplayName("NamedButton"))("button")`
   }
 `;
 
-export const exampleCode = `const NamedButton = compose(
-  setDisplayName("NamedButton"))
-("button")\`
+export const exampleCode = `const NamedButton = compose.button(
+  setDisplayName("NamedButton")
+)\`
   background: #dc004e;
   border-radius: 3px;
   border: none;

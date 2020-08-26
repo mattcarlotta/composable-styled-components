@@ -30,7 +30,7 @@ const Demonstrations = () => (
       <Link ariaLabel="api" dark nomargin nopadding href="/documentation#api">
         API
       </Link>
-      &nbsp;functions and their usage.
+      &nbsp;functions and how they can be utilized.
     </Subtitle>
     <AnchorTitle ariaLabel="Compose" id="compose">
       compose
@@ -66,7 +66,7 @@ const Demonstrations = () => (
       extend
     </AnchorTitle>
     <Paragraph>
-      A factory function to extend a styled-component.
+      A factory function to extend a styled-component with composable functions.
       <ExtendExample />
     </Paragraph>
     <AnchorTitle ariaLabel="Nest" id="nest">

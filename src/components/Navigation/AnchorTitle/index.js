@@ -3,7 +3,7 @@ import { GoLink } from "react-icons/go";
 import { compose, setDisplayName, withPropTypes, withAttributes } from "~lib";
 import Link from "~components/Navigation/Link";
 
-const Anchor = compose(
+const Anchor = compose.h1(
   setDisplayName("Anchor"),
   withAttributes(props => ({
     id: props.id
@@ -14,10 +14,11 @@ const Anchor = compose(
       .isRequired,
     id: PropTypes.string.isRequired
   })
-)("h1")`
+)`
   margin-top: 75px;
   margin-bottom: 20px;
   letter-spacing: 2px;
+  color: ${({ color }) => color || "black"};
 
   a {
     opacity: 0;
@@ -30,8 +31,8 @@ const Anchor = compose(
   }
 `;
 
-const AnchorTitle = ({ ariaLabel, id, children }) => (
-  <Anchor id={id}>
+const AnchorTitle = ({ ariaLabel, id, children, color }) => (
+  <Anchor color={color} id={id}>
     {children}
     <Link ariaLabel={`${ariaLabel} anchor`} nomargin href={`#${id}`}>
       <GoLink style={{ fontSize: 18 }} />
@@ -42,7 +43,8 @@ const AnchorTitle = ({ ariaLabel, id, children }) => (
 AnchorTitle.propTypes = {
   ariaLabel: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
+  color: PropTypes.string
 };
 
 export default AnchorTitle;

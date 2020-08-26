@@ -4,7 +4,7 @@ import Note from "~components/Body/Note";
 import Preview from "~components/Body/Preview";
 import OutsideLink from "~components/Navigation/OutsideLink";
 
-const Button = compose(
+const Button = compose.button(
   setDisplayName("Button"),
   withPropTypes({
     children: PropTypes.oneOfType([PropTypes.node, PropTypes.string])
@@ -12,7 +12,7 @@ const Button = compose(
     type: PropTypes.string.isRequired,
     onClick: PropTypes.func
   })
-)("button")`
+)`
   background: #888;
   border: 2px solid transparent;
   border-radius: 2px;
@@ -33,7 +33,7 @@ const Button = compose(
   }
 `;
 
-const exampleCode = `const Button = compose(
+const exampleCode = `const Button = compose.button(
   setDisplayName("Button"),
   withPropTypes({
     children: PropTypes.oneOfType(
@@ -42,7 +42,7 @@ const exampleCode = `const Button = compose(
     type: PropTypes.string.isRequired,
     onClick: PropTypes.func,
   })
-)("button")\`
+)\`
   background: #888;
   border: 2px solid transparent;
   border-radius: 2px;

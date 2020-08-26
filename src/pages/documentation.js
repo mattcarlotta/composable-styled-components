@@ -34,7 +34,7 @@ const Documentation = () => (
       <OutsideLink href="https://github.com/acdlite/recompose">
         recompose
       </OutsideLink>
-      , this library uses higer-order components (HoCs) to build a
+      , this library uses higher-order components (HoCs) to build a
       styled-component with ease. The goal isn't to replace styled-components,
       but instead offer a DX-friendly way to compose them.
     </Subtitle>

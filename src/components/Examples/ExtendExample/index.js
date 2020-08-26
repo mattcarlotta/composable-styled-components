@@ -8,14 +8,14 @@ import {
 } from "~lib";
 import Preview from "~components/Body/Preview";
 
-const Button = compose(
+const Button = compose.button(
   setDisplayName("Button"),
   withAttributes({ type: "button" }),
   withProps(props => ({
     ...props,
     onClick: props.type === "button" ? () => alert("Default Button") : null
   }))
-)("button")`
+)`
   background: #1f1f1f;
   border: 0;
   border-radius: 4px;
@@ -40,7 +40,7 @@ const SubmitButton = extend(
   withAttributes({ type: "submit" })
 )(Button);
 
-const exampleCode = `const Button = compose(
+const exampleCode = `const Button = compose.button(
   setDisplayName("Button"),
   withAttributes({ type: "button" }),
   withProps(props => ({
@@ -49,7 +49,7 @@ const exampleCode = `const Button = compose(
       ? () => alert("Button") 
       : null
   })),
-)("button")\`
+)\`
   background: #1f1f1f;
   border: 0;
   border-radius: 4px;

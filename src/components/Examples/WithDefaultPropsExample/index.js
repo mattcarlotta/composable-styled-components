@@ -1,13 +1,13 @@
 import { compose, setDisplayName, withDefaultProps } from "~lib";
 import Preview from "~components/Body/Preview";
 
-const Button = compose(
+const Button = compose.button(
   setDisplayName("Button"),
   withDefaultProps({
-    children: "Hello",
-    onClick: () => alert("Hello")
+    children: "Hi",
+    onClick: () => alert("Hi")
   })
-)("button")`
+)`
   background: transparent;
   border: 2px solid #888;
   border-radius: 0;
@@ -32,13 +32,13 @@ const Button = compose(
   }
 `;
 
-const exampleCode = `const Button = compose(
+const exampleCode = `const Button = compose.button(
   setDisplayName("Button"),
   withDefaultProps({
-    children: "Hello",
-    onClick: () => alert("Hello")
+    children: "Hi",
+    onClick: () => alert("Hi")
   })
-)("button")\`
+)\`
   background: transparent;
   border: 2px solid #888;
   border-radius: 0;
@@ -66,10 +66,8 @@ const exampleCode = `const Button = compose(
 render(
   <>
     <Button />
-    <Button 
-      onClick={() => alert("Goodbye")}
-    >
-      Goodbye
+    <Button onClick={() => alert("bye")}>
+      bye
     </Button>
   </>
 );`;
@@ -77,7 +75,7 @@ render(
 const WithDefaultPropsExample = () => (
   <Preview code={exampleCode}>
     <Button />
-    <Button onClick={() => alert("Goodbye")}>Goodbye</Button>
+    <Button onClick={() => alert("bye")}>bye</Button>
   </Preview>
 );
 
