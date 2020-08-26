@@ -123,7 +123,7 @@ const supportedFunctions = [
         second argument requires a node.
         <br />
         <br />
-        (&#8224;) Do <strong>not</strong> use with compose.
+        (&#8224;) Do <strong>not</strong> use within compose nor nest.
       </>
     )
   },
@@ -150,7 +150,7 @@ const supportedFunctions = [
         to the right.
         <br />
         <br />
-        (&#8224;) Do <strong>not</strong> use within compose.
+        (&#8224;) Do <strong>not</strong> use within compose nor extend.
       </>
     )
   },
