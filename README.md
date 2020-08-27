@@ -1,4 +1,4 @@
-<a target="_blank" rel="noopener noreferrer" href="https://composable-styled-components.vercel.app" >
+<a target="_blank" rel="noopener noreferrer" href="https://composable.mattcarlotta.sh" >
 <img src="https://raw.githubusercontent.com/mattcarlotta/composable-styled-components/master/public/composableLogo.png" alt="composable-logo.png" />
 </a>
 
@@ -10,19 +10,19 @@ A lightweight <strong>composable</strong> solution for <a href="https://github.c
 
 ## Documentation
 
-⚠️ Note: **Documentation is under construction and this package has not been published to npm yet**.
+⚠️ Note: **Documentation is under construction**.
 
-[Documentation](https://composable-styled-components.vercel.app/documentation)
+[Documentation](https://composable.mattcarlotta.sh/documentation)
 
-[Installation](https://composable-styled-components.vercel.app/documentation#installation)
+[Installation](https://composable.mattcarlotta.sh/documentation#installation)
 
-[Getting Started](https://composable-styled-components.vercel.app/documentation#getting-started)
+[Getting Started](https://composable.mattcarlotta.sh/documentation#getting-started)
 
-[API](https://composable-styled-components.vercel.app/documentation#api)
+[API](https://composable.mattcarlotta.sh/documentation#api)
 
-[Demonstrations](https://composable-styled-components.vercel.app/demonstrations)
+[Demonstrations](https://composable.mattcarlotta.sh/demonstrations)
 
-[Releases](https://composable-styled-components.vercel.app/releases)
+[Releases](https://composable.mattcarlotta.sh/releases)
 
 
 ## License
