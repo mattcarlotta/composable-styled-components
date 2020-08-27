@@ -15,7 +15,7 @@ A lightweight <strong>composable</strong> solution for <a href="https://github.c
   <a aria-label="Code coverage" href="https://codecov.io/gh/mattcarlotta/composable-styled-components">
     <img alt="" src="https://img.shields.io/codecov/c/github/mattcarlotta/composable-styled-components?style=for-the-badge&labelColor=000000">
   </a>
-  <a aria-label="License" href="https://github.com/mattcarlotta/composable-styled-components/LICENSE.md">
+  <a aria-label="License" href="https://github.com/mattcarlotta/composable-styled-components/blob/master/LICENSE">
     <img alt="" src="https://img.shields.io/npm/l/composable-styled-components?style=for-the-badge&labelColor=000000">
   </a>
 </p>
