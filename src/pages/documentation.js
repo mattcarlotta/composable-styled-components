@@ -64,11 +64,11 @@ const Documentation = () => (
       package managers:
       <MiniTitle>npm</MiniTitle>
       <SyntaxHighlighter preStyles={preStyles}>
-        npm install composable-styled-components --save
+        npm install composable-styled-components styled-components --save
       </SyntaxHighlighter>
       <MiniTitle>yarn (recommended)</MiniTitle>
       <SyntaxHighlighter preStyles={preStyles}>
-        yarn add composable-styled-components
+        yarn add composable-styled-components styled-components
       </SyntaxHighlighter>
       <Note>
         If you use a package manager like yarn that supports the "resolutions"

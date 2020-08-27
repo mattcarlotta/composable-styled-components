@@ -1,5 +1,5 @@
-import { FaRegLightbulb } from "react-icons/fa";
 import { compose, setDisplayName } from "~lib";
+import { FaRegLightbulb } from "react-icons/fa";
 import MiniTitle from "~components/Body/MiniTitle";
 
 const ComposedNote = compose.div(setDisplayName("Note"))`

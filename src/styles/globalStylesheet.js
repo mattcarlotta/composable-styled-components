@@ -47,6 +47,51 @@ export default createGlobalStyle`
     }
   }
 
+  .algolia-autocomplete
+  .ds-dropdown-menu
+  .ds-suggestion
+  .algolia-docsearch-suggestion--content {
+    width: 100% !important;
+    &::before {
+      content: none;
+    }
+  }
+  .algolia-autocomplete
+    .ds-dropdown-menu
+    .ds-suggestion.ds-cursor
+    .algolia-docsearch-suggestion--content {
+    background: #282a36 !important;
+  }
+  /* Main category (eg. Getting Started) */
+  .algolia-autocomplete .algolia-docsearch-suggestion--category-header {
+    color: #282a36;
+  }
+
+  .algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column {
+    display: none !important;
+  }
+
+  .algolia-autocomplete .algolia-docsearch-suggestion--title {
+    font-weight: bold;
+    color: black;
+  }
+
+  .algolia-autocomplete .algolia-docsearch-suggestion--text {
+    color: #282a36;
+  }
+
+  .algolia-autocomplete .algolia-docsearch-suggestion--highlight {
+    box-shadow: none !important;
+    color: rgb(33, 33, 33) !important;
+    background: transparent !important;
+  }
+  .algolia-autocomplete .ds-dropdown-menu {
+    margin-top: 0;
+    > *:first-child {
+      border: 0;
+    }
+  }
+
   ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -64,7 +109,6 @@ export default createGlobalStyle`
       background: #555;
     }
   }
-
 
   *,
   ::after,

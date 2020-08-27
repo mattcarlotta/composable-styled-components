@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
 import { compose, setDisplayName, withPropTypes } from "~lib";
+import PropTypes from "prop-types";
 import Note from "~components/Body/Note";
 import Preview from "~components/Body/Preview";
 import OutsideLink from "~components/Navigation/OutsideLink";

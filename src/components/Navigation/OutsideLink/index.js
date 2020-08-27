@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
 import { compose, setDisplayName, withPropTypes, withAttributes } from "~lib";
+import PropTypes from "prop-types";
 
 const OutsideLink = compose.a(
   setDisplayName("Outside Link"),

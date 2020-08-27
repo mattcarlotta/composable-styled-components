@@ -1,6 +1,6 @@
 {
   "name": "composable-styled-components",
-  "version": "0.0.12",
+  "version": "0.0.16",
   "description": "Composable Styled Components",
   "main": "dist/composable-styled-components.js",
   "module": "dist/composable-styled-components.esm.js",
@@ -60,8 +60,10 @@
     "babel-plugin-react-remove-properties": "^0.3.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "browserslist": "^4.14.0",
+    "composable-styled-components": "^0.0.15",
     "concurrently": "^5.3.0",
     "cypress": "^5.0.0",
+    "docsearch.js": "^2.6.3",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.3",
     "es-check": "^5.1.0",
@@ -95,9 +97,7 @@
   "homepage": "https://composable.mattcarlotta.sh",
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
-    "react-dom": "^15.0.0 || ^16.0.0"
-  },
-  "dependencies": {
-    "styled-components": "^5.1.1"
+    "react-dom": "^15.0.0 || ^16.0.0",
+    "styled-components": "^5.0.0"
   }
 }

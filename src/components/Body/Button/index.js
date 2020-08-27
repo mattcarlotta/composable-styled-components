@@ -37,7 +37,7 @@ const ComposedButton = compose.button(
   letter-spacing: 1.5px;
   outline: none;
   cursor: pointer;
-  padding: 12px 18px;
+  padding: ${({ padding }) => padding || "12px 18px"};
   font-size: 15px;
   border-radius: 4px;
   border:1px solid #222;
