@@ -77,65 +77,67 @@ const Demonstrations = () => (
       extend
     </AnchorTitle>
     <Paragraph>
-      A factory function to extend a styled-component with composable functions.
+      A named export factory function to extend a styled-component with
+      composable functions.
       <ExtendExample />
     </Paragraph>
     <AnchorTitle ariaLabel="Nest" id="nest">
       nest
     </AnchorTitle>
     <Paragraph>
-      A factory function that nests each node from the left with any successive
-      nodes to the right.
+      A named export factory function that nests each node from the left with
+      any successive nodes to the right.
       <GettingStartedExample />
     </Paragraph>
     <AnchorTitle ariaLabel="Set Display Name" id="setDisplayName">
       setDisplayName
     </AnchorTitle>
     <Paragraph>
-      A composable function that sets the display name of a component.
+      A named export composable function that sets the display name of a
+      component.
       <SetDisplayNameExample />
     </Paragraph>
     <AnchorTitle ariaLabel="With Attributes" id="withAttributes">
       withAttributes
     </AnchorTitle>
     <Paragraph>
-      A composable function that can either explicitly (via an object) or
-      conditionally (via a function returning an object) append DOM-specific
-      attributes to the node.
+      A named export composable function that can either explicitly (via an
+      object) or conditionally (via a function returning an object) append
+      DOM-specific attributes to the node.
       <WithAttributesExample />
     </Paragraph>
     <AnchorTitle ariaLabel="With Default Props" id="withDefaultProps">
       withDefaultProps
     </AnchorTitle>
     <Paragraph>
-      A composable function that explicitly (via an object) appends default
-      props to the node.
+      A named export composable function that explicitly (via an object) appends
+      default props to the node.
       <WithDefaultPropsExample />
     </Paragraph>
     <AnchorTitle ariaLabel="With Props" id="withProps">
       withProps
     </AnchorTitle>
     <Paragraph>
-      A composable function that can either explicitly (via an object) or
-      conditionally (via a function returning an object) appends props to the
-      node.
+      A named export composable function that can either explicitly (via an
+      object) or conditionally (via a function returning an object) appends
+      props to the node.
       <WithPropsExample />
     </Paragraph>
     <AnchorTitle ariaLabel="With Prop Types" id="withPropTypes">
       withPropTypes
     </AnchorTitle>
     <Paragraph>
-      A composable function that explicitly (via an object) appends appends prop
-      types to the node.
+      A named export composable function that explicitly (via an object) appends
+      appends prop types to the node.
       <WithPropTypesExample />
     </Paragraph>
     <AnchorTitle ariaLabel="With Styles" id="withStyles">
       withStyles
     </AnchorTitle>
     <Paragraph>
-      A composable function that can either explicitly (via an object) or
-      conditionally (via a function returning an object or interpolating props
-      using the&nbsp;
+      A named export composable function that can either explicitly (via an
+      object) or conditionally (via a function returning an object or
+      interpolating props using the&nbsp;
       <Link
         ariaLabel="Navigate to css helper function"
         dataTestId="css-demo-link"

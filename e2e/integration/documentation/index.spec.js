@@ -16,6 +16,16 @@ context("Documentation Page", () => {
     cy.hash().should("eq", "#installation");
   });
 
+  it("focuses on the Package Exports anchor", () => {
+    cy.get("[data-testid='package-exports-anchor']").click();
+    cy.hash().should("eq", "#package-exports");
+  });
+
+  it("navigates to the API when clicking on the 'API' link under 'Package Exports'", () => {
+    cy.get("[data-testid='api-link']").click();
+    cy.hash().should("eq", "#api");
+  });
+
   it("focuses on the Getting Started anchor", () => {
     cy.get("[data-testid='getting-started-anchor']").click();
     cy.hash().should("eq", "#getting-started");

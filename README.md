@@ -8,6 +8,18 @@ A lightweight <strong>composable</strong> solution for <a href="https://github.c
 
 <br />
 
+<p align="center">
+  <a aria-label="NPM version" href="https://www.npmjs.com/package/composable-styled-components">
+    <img alt="" src="https://img.shields.io/npm/v/composable-styled-components.svg?style=for-the-badge&labelColor=000000">
+  </a>
+  <a aria-label="Code coverage" href="https://codecov.io/gh/mattcarlotta/composable-styled-components">
+    <img alt="" src="https://img.shields.io/codecov/c/github/mattcarlotta/composable-styled-components?style=for-the-badge&labelColor=000000">
+  </a>
+  <a aria-label="License" href="https://github.com/mattcarlotta/composable-styled-components/LICENSE.md">
+    <img alt="" src="https://img.shields.io/npm/l/composable-styled-components?style=for-the-badge&labelColor=000000">
+  </a>
+</p>
+
 ## Documentation
 
 ⚠️ Note: **Documentation is under construction**.
@@ -15,6 +27,8 @@ A lightweight <strong>composable</strong> solution for <a href="https://github.c
 [Documentation](https://composable.mattcarlotta.sh/documentation)
 
 [Installation](https://composable.mattcarlotta.sh/documentation#installation)
+
+[Package Exports](https://composable.mattcarlotta.sh/documentation#package-exports)
 
 [Getting Started](https://composable.mattcarlotta.sh/documentation#getting-started)
 

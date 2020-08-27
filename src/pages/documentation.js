@@ -8,6 +8,7 @@ import SyntaxHighlighter from "~components/Body/SyntaxHighlighter";
 import GettingStartedExample from "~components/Examples/GettingStartedExample";
 import Head from "~components/Navigation/Head";
 import AnchorTitle from "~components/Navigation/AnchorTitle";
+import Link from "~components/Navigation/Link";
 import OutsideLink from "~components/Navigation/OutsideLink";
 
 const preStyles = { margin: "0 0 20px" };
@@ -17,6 +18,20 @@ const resolutions = `{
     "styled-components": "^5"
   }
 }`;
+
+const packageexports = `import compose, {
+  css,
+  compose,
+  extend,
+  nest,
+  setDisplayName,
+  withAttributes,
+  withDefaultProps,
+  withProps,
+  withPropTypes,
+  withStyles
+} from "composable-styled-components"
+`;
 
 const Documentation = () => (
   <>
@@ -64,6 +79,27 @@ const Documentation = () => (
       </Note>
       <SyntaxHighlighter>{resolutions}</SyntaxHighlighter>
     </Paragraph>
+    <AnchorTitle ariaLabel="Package Exports" id="package-exports">
+      Package Exports
+    </AnchorTitle>
+    <Paragraph>
+      This library exports the following default and named exports. To learn
+      more about each and how to use them, visit the&nbsp;
+      <Link
+        ariaLabel="Navigate to API"
+        dataTestId="api-link"
+        dark
+        nomargin
+        nopadding
+        href="#api"
+      >
+        API
+      </Link>
+      &nbsp;section.
+      <SyntaxHighlighter preStyles={preStyles}>
+        {packageexports}
+      </SyntaxHighlighter>
+    </Paragraph>
     <AnchorTitle ariaLabel="Getting Started" id="getting-started">
       Getting Started
     </AnchorTitle>
@@ -77,7 +113,7 @@ const Documentation = () => (
       API
     </AnchorTitle>
     <Paragraph>
-      The table below covers the named exports offered from
+      The table below covers the exports offered by
       composabled-styled-components. If you wish to see usage examples of the
       function(s), then click the link under the <strong>Property</strong>{" "}
       column.

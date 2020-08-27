@@ -3,6 +3,7 @@ import Title from "~components/Body/Title";
 import Head from "~components/Navigation/Head";
 import V001 from "~components/Releases/V001";
 import V0011 from "~components/Releases/V0011";
+import V0012 from "~components/Releases/V0012";
 
 const Releases = () => (
   <>
@@ -16,6 +17,7 @@ const Releases = () => (
     <Subtitle textalign="center">
       You can find the latest releases and any change logs here.
     </Subtitle>
+    <V0012 />
     <V0011 />
     <V001 />
   </>
