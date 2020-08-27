@@ -24,12 +24,12 @@ const Demonstrations = () => (
       description="Learn how to use composable-styled-components"
       name="Demonstrations"
     />
-    <Title>Demonstrations</Title>
+    <Title data-testid="title">Demonstrations</Title>
     <Subtitle>
       From simple to complex, this page aims to cover the&nbsp;
       <Link
         ariaLabel="Navigate to API"
-        dataTestId="api"
+        dataTestId="api-link"
         dark
         nomargin
         nopadding
@@ -52,14 +52,17 @@ const Demonstrations = () => (
     </AnchorTitle>
     <Paragraph>
       A named export&nbsp;
-      <OutsideLink href="https://styled-components.com/docs/api#css">
+      <OutsideLink
+        data-testid="styled-components-css"
+        href="https://styled-components.com/docs/api#css"
+      >
         helper function
       </OutsideLink>
       &nbsp;from the styled-components package that interpolates styles from
       props within&nbsp;
       <Link
         ariaLabel="Navigate to With Styles function"
-        dataTestId="withStylesLink"
+        dataTestId="withStyles-link"
         dark
         nomargin
         nopadding
@@ -135,7 +138,7 @@ const Demonstrations = () => (
       using the&nbsp;
       <Link
         ariaLabel="Navigate to css helper function"
-        dataTestId="cssLink"
+        dataTestId="css-demo-link"
         dark
         nomargin
         nopadding

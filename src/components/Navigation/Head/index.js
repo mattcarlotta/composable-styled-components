@@ -14,14 +14,14 @@ const Header = ({
 }) => (
   <Head>
     <title>{title} - Composable Styled Components</title>
-    <link rel="canonical" href={`${LOCALHOST}/${url}`} />
+    <link rel="canonical" href={`${LOCALHOST}${url}`} />
     {keywords && <meta name="keywords" content={keywords} />}
     {name && (
       <meta name="name" content={`composable-styled-components: ${name}`} />
     )}
     <meta name="description" content={description} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={`${LOCALHOST}/${url}`} />
+    <meta property="og:url" content={`${LOCALHOST}${url}`} />
     <meta property="og:type" content={type} />
     {children}
   </Head>

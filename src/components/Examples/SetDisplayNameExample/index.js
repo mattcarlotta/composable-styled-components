@@ -50,12 +50,15 @@ render(<NamedButton />)
 const SetDisplayNameExample = () => (
   <>
     <Preview code={exampleCode}>
-      <NamedButton>pink button</NamedButton>
+      <NamedButton data-testid="display-name-button">pink button</NamedButton>
     </Preview>
     <Note>
       The display name will not be applied to the class name! Instead, in order
       to view the display name, you must have&nbsp;
-      <OutsideLink href="https://reactjs.org/blog/2015/09/02/new-react-developer-tools.html">
+      <OutsideLink
+        data-testid="react-dev-tools"
+        href="https://reactjs.org/blog/2015/09/02/new-react-developer-tools.html"
+      >
         React Dev Tools
       </OutsideLink>
       &nbsp;installed, open your browser console and select the "Components"

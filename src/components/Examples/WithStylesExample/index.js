@@ -220,12 +220,22 @@ render(
 const WithStyledExample = () => (
   <>
     <Preview code={exampleCode}>
-      <Button>Default</Button>
-      <DisabledButton>Disabled</DisabledButton>
-      <PrimaryButton>Default</PrimaryButton>
-      <PrimaryButton primary>Primary</PrimaryButton>
-      <SecondaryButton>Default</SecondaryButton>
-      <SecondaryButton danger>Danger</SecondaryButton>
+      <Button data-testid="with-styles-default-button">Default</Button>
+      <DisabledButton data-testid="with-styles-disabled-button">
+        Disabled
+      </DisabledButton>
+      <PrimaryButton data-testid="with-styles-default-primary-button">
+        Default
+      </PrimaryButton>
+      <PrimaryButton data-testid="with-styles-primary-button" primary>
+        Primary
+      </PrimaryButton>
+      <SecondaryButton data-testid="with-styles-default-secondary-button">
+        Default
+      </SecondaryButton>
+      <SecondaryButton data-testid="with-styles-secondary-danger-button" danger>
+        Danger
+      </SecondaryButton>
     </Preview>
     <Note>
       Due to the syntax highlighter used on this page interpolating its own css

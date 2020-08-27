@@ -99,9 +99,9 @@ render(
 
 const WithAttributesExample = () => (
   <Preview code={exampleCode}>
-    <UsernameTextBox />
-    <TextBox />
-    <TextBox password />
+    <UsernameTextBox data-testid="attributes-username-input" />
+    <TextBox data-testid="attributes-textbox-text" />
+    <TextBox data-testid="attributes-textbox-password" password />
   </Preview>
 );
 

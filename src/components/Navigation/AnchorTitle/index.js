@@ -34,7 +34,12 @@ const Anchor = compose.h1(
 const AnchorTitle = ({ ariaLabel, id, children, color }) => (
   <Anchor color={color} id={id}>
     {children}
-    <Link ariaLabel={`${ariaLabel} anchor`} nomargin href={`#${id}`}>
+    <Link
+      ariaLabel={`${ariaLabel} anchor`}
+      dataTestId={`${id}-anchor`}
+      nomargin
+      href={`#${id}`}
+    >
       <GoLink style={{ fontSize: 18 }} />
     </Link>
   </Anchor>

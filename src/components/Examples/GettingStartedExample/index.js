@@ -45,7 +45,7 @@ render(
 
 const GettingStartedExample = () => (
   <Preview code={exampleCode}>
-    <Headline>Hello!</Headline>
+    <Headline data-testid="nest-headline">Hello!</Headline>
   </Preview>
 );
 

@@ -71,7 +71,7 @@ const Header = () => {
       <FlexStart>
         <Link
           ariaLabel="logo"
-          dataTestId="logo"
+          dataTestId="logo-tab"
           hover={false}
           nopadding
           light
@@ -89,7 +89,7 @@ const Header = () => {
               <Link
                 ariaLabel={`header ${page} tab`}
                 active={activeTab.indexOf(page) > -1}
-                dataTestId={page}
+                dataTestId={`${page}-tab`}
                 hover
                 light
                 href={`/${page}`}

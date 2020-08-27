@@ -101,8 +101,8 @@ const ExtendExample = () => {
   return (
     <Preview code={exampleCode}>
       <form onSubmit={handleSubmit}>
-        <Button>Default</Button>
-        <SubmitButton>Submit</SubmitButton>
+        <Button data-testid="extend-default-button">Default</Button>
+        <SubmitButton data-testid="extend-submit-button">Submit</SubmitButton>
       </form>
     </Preview>
   );

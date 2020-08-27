@@ -26,12 +26,15 @@ const Documentation = () => (
       description="Learn the basics of composable-styled-components"
       name="Documentation"
     />
-    <Title>Documentation</Title>
+    <Title data-testid="title">Documentation</Title>
     <Subtitle textalign="left">
       The motivation behind composable-styled-components is to provide a set of
       reusable functions that abstract some of the boilerplate code needed to
       create or extend a styled component. Partially utilizing&nbsp;
-      <OutsideLink href="https://github.com/acdlite/recompose">
+      <OutsideLink
+        data-testid="recompose"
+        href="https://github.com/acdlite/recompose"
+      >
         recompose
       </OutsideLink>
       , this library uses higher-order components (HoCs) to build a

@@ -75,13 +75,20 @@ render(
 const WithPropTypesExample = () => (
   <>
     <Preview code={exampleCode}>
-      <Button type="button" onClick={() => alert("Hello")}>
+      <Button
+        data-testid="with-prop-types-button"
+        type="button"
+        onClick={() => alert("Hello")}
+      >
         With PropTypes
       </Button>
     </Preview>
     <Note>
       In order to use the composable "withPropTypes" function, the&nbsp;
-      <OutsideLink href="https://github.com/facebook/prop-types">
+      <OutsideLink
+        data-testid="prop-types"
+        href="https://github.com/facebook/prop-types"
+      >
         PropTypes
       </OutsideLink>
       &nbsp;package is required to be installed.

@@ -74,8 +74,13 @@ render(
 
 const WithDefaultPropsExample = () => (
   <Preview code={exampleCode}>
-    <Button />
-    <Button onClick={() => alert("bye")}>bye</Button>
+    <Button data-testid="default-props-button" />
+    <Button
+      data-testid="default-props-override-button"
+      onClick={() => alert("bye")}
+    >
+      bye
+    </Button>
   </Preview>
 );
 

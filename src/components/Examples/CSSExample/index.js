@@ -60,8 +60,10 @@ export const exampleCode = `const Button = compose.button(
 const CSSExample = () => (
   <>
     <Preview code={exampleCode}>
-      <Button>default button</Button>
-      <Button primary>primary button</Button>
+      <Button data-testid="css-default-button">default button</Button>
+      <Button data-testid="css-primary-button" primary>
+        primary button
+      </Button>
     </Preview>
     <Note>
       Due to the syntax highlighter used on this page interpolating its own css

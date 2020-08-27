@@ -29,7 +29,7 @@ render(
 
 const ComposeExample = () => (
   <Preview code={exampleCode}>
-    <Button>pink button</Button>
+    <Button data-testid="compose-pink-button">pink button</Button>
   </Preview>
 );
 

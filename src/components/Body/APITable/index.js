@@ -47,7 +47,7 @@ const supportedFunctions = [
       <>
         <Link
           ariaLabel="Navigate to compose function example"
-          dataTestId="compose"
+          dataTestId="compose-link"
           dark
           nomargin
           nopadding
@@ -79,7 +79,7 @@ const supportedFunctions = [
       <>
         <Link
           ariaLabel="Navigate to css function example"
-          dataTestId="cssLink"
+          dataTestId="css-link"
           dark
           nomargin
           nopadding
@@ -109,7 +109,7 @@ const supportedFunctions = [
       <>
         <Link
           ariaLabel="Navigate to extend function example"
-          dataTestId="extendLink"
+          dataTestId="extend-link"
           dark
           nomargin
           nopadding
@@ -137,7 +137,7 @@ const supportedFunctions = [
       <>
         <Link
           ariaLabel="Navigate to nest function example"
-          dataTestId="nestLink"
+          dataTestId="nest-link"
           dark
           nomargin
           nopadding
@@ -164,7 +164,7 @@ const supportedFunctions = [
     property: (
       <Link
         ariaLabel="Navigate to Set Display Name function example"
-        dataTestId="setDisplayNameLink"
+        dataTestId="setDisplayName-link"
         dark
         nomargin
         nopadding
@@ -179,7 +179,10 @@ const supportedFunctions = [
       <>
         Attributes a display name to the component when viewed within the
         'Components' tab. Requires the&nbsp;
-        <OutsideLink href="https://reactjs.org/blog/2015/09/02/new-react-developer-tools.html">
+        <OutsideLink
+          data-testid="react-dev-tools"
+          href="https://reactjs.org/blog/2015/09/02/new-react-developer-tools.html"
+        >
           React Dev Tools
         </OutsideLink>
         &nbsp;browser extension.
@@ -190,7 +193,7 @@ const supportedFunctions = [
     property: (
       <Link
         ariaLabel="Navigate to With Attributes function example"
-        dataTestId="withAtrributesLink"
+        dataTestId="withAttributes-link"
         dark
         nomargin
         nopadding
@@ -203,7 +206,10 @@ const supportedFunctions = [
     description: (
       <>
         Creates or appends&nbsp;
-        <OutsideLink href="https://styled-components.com/docs/faqs#when-to-use-attrs">
+        <OutsideLink
+          data-testid="styled-components-attrs"
+          href="https://styled-components.com/docs/faqs#when-to-use-attrs"
+        >
           HTML attributes
         </OutsideLink>
         .
@@ -216,7 +222,7 @@ const supportedFunctions = [
     property: (
       <Link
         ariaLabel="Navigate to With Default Props function example"
-        dataTestId="withDefaultPropsLink"
+        dataTestId="withDefaultProps-link"
         dark
         nomargin
         nopadding
@@ -233,7 +239,7 @@ const supportedFunctions = [
     property: (
       <Link
         ariaLabel="Navigate to With Props function example"
-        dataTestId="withPropsLink"
+        dataTestId="withProps-link"
         dark
         nomargin
         nopadding
@@ -251,7 +257,7 @@ const supportedFunctions = [
     property: (
       <Link
         ariaLabel="Navigate to With Prop Types function example"
-        dataTestId="withPropTypesLink"
+        dataTestId="withPropTypes-link"
         dark
         nomargin
         nopadding
@@ -265,7 +271,10 @@ const supportedFunctions = [
     notes: (
       <>
         Requires&nbsp;
-        <OutsideLink href="https://github.com/facebook/prop-types">
+        <OutsideLink
+          data-testid="prop-types"
+          href="https://github.com/facebook/prop-types"
+        >
           PropTypes
         </OutsideLink>
         &nbsp;package.
@@ -276,7 +285,7 @@ const supportedFunctions = [
     property: (
       <Link
         ariaLabel="Navigate to With Styles function example"
-        dataTestId="withStylesLink"
+        dataTestId="withStyles-link"
         dark
         nomargin
         nopadding
@@ -294,7 +303,7 @@ const supportedFunctions = [
         properties, or the&nbsp;
         <Link
           ariaLabel="Navigate to CSS helper function"
-          dataTestId="cssDemoLink"
+          dataTestId="css-demo-link"
           dark
           nomargin
           nopadding

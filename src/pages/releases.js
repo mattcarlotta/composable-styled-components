@@ -11,7 +11,7 @@ const Releases = () => (
       description="Information on new releases for composable-styled-components"
       name="Releases"
     />
-    <Title>Releases</Title>
+    <Title data-testid="title">Releases</Title>
     <Subtitle textalign="center">
       You can find the latest releases and any change logs here.
     </Subtitle>

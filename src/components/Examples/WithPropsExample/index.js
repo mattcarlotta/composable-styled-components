@@ -93,9 +93,13 @@ render(
 
 const WithPropsExample = () => (
   <Preview code={exampleCode}>
-    <Button>Alert</Button>
-    <ExtendedButton>No Alert</ExtendedButton>
-    <ExtendedButton alert>Alert</ExtendedButton>
+    <Button data-testid="with-props-default-button">Alert</Button>
+    <ExtendedButton data-testid="with-props-noalert-button">
+      No Alert
+    </ExtendedButton>
+    <ExtendedButton data-testid="with-props-alert-button" alert>
+      Alert
+    </ExtendedButton>
   </Preview>
 );
 
