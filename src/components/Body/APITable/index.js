@@ -49,6 +49,7 @@ const supportedFunctions = [
           ariaLabel="Navigate to compose function example"
           dataTestId="compose-link"
           dark
+          id="api-compose"
           nomargin
           nopadding
           href="/demonstrations#compose"
@@ -81,6 +82,7 @@ const supportedFunctions = [
           ariaLabel="Navigate to css function example"
           dataTestId="css-link"
           dark
+          id="api-css"
           nomargin
           nopadding
           href="/demonstrations#css"
@@ -111,6 +113,7 @@ const supportedFunctions = [
           ariaLabel="Navigate to extend function example"
           dataTestId="extend-link"
           dark
+          id="api-extend"
           nomargin
           nopadding
           href="/demonstrations#extend"
@@ -139,6 +142,7 @@ const supportedFunctions = [
           ariaLabel="Navigate to nest function example"
           dataTestId="nest-link"
           dark
+          id="api-nest"
           nomargin
           nopadding
           href="/demonstrations#nest"
@@ -166,6 +170,7 @@ const supportedFunctions = [
         ariaLabel="Navigate to Set Display Name function example"
         dataTestId="setDisplayName-link"
         dark
+        id="api-setdisplayname"
         nomargin
         nopadding
         href="/demonstrations#setDisplayName"
@@ -195,6 +200,7 @@ const supportedFunctions = [
         ariaLabel="Navigate to With Attributes function example"
         dataTestId="withAttributes-link"
         dark
+        id="api-withattributes"
         nomargin
         nopadding
         href="/demonstrations#withAttributes"
@@ -224,6 +230,7 @@ const supportedFunctions = [
         ariaLabel="Navigate to With Default Props function example"
         dataTestId="withDefaultProps-link"
         dark
+        id="api-withdefaultprops"
         nomargin
         nopadding
         href="/demonstrations#withDefaultProps"
@@ -241,6 +248,7 @@ const supportedFunctions = [
         ariaLabel="Navigate to With Props function example"
         dataTestId="withProps-link"
         dark
+        id="api-withprops"
         nomargin
         nopadding
         href="/demonstrations#withProps"
@@ -259,6 +267,7 @@ const supportedFunctions = [
         ariaLabel="Navigate to With Prop Types function example"
         dataTestId="withPropTypes-link"
         dark
+        id="api-withproptypes"
         nomargin
         nopadding
         href="/demonstrations#withPropTypes"
@@ -287,6 +296,7 @@ const supportedFunctions = [
         ariaLabel="Navigate to With Styles function example"
         dataTestId="withStyles-link"
         dark
+        id="api-withstyles"
         nomargin
         nopadding
         href="/demonstrations#withStyles"

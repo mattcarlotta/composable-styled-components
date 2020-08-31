@@ -16,6 +16,7 @@ const LinkComponent = ({
   children,
   dataTestId,
   href,
+  id,
   style,
   target
 }) => (
@@ -23,6 +24,7 @@ const LinkComponent = ({
     <a
       data-testid={dataTestId}
       aria-label={ariaLabel}
+      id={id}
       style={style}
       className={className}
       target={target}
@@ -39,6 +41,7 @@ LinkComponent.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
   dataTestId: PropTypes.string,
   href: PropTypes.string.isRequired,
+  id: PropTypes.string,
   onClick: PropTypes.func,
   stopPropagation: PropTypes.bool,
   style: PropTypes.objectOf(
