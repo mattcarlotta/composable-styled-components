@@ -13,7 +13,7 @@ const HeaderTabs = () => {
   }, [pathname]);
 
   return (
-    <FlexStart>
+    <FlexStart className="left-nav">
       <Link
         ariaLabel="logo"
         dataTestId="logo-tab"

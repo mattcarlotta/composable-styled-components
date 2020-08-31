@@ -1,6 +1,6 @@
 {
   "name": "composable-styled-components",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "Composable Styled Components",
   "main": "dist/composable-styled-components.js",
   "module": "dist/composable-styled-components.esm.js",

@@ -1,66 +1,39 @@
 import * as React from "react";
 import { FaSearch } from "react-icons/fa";
+import Router from "next/router";
 import Button from "~components/Body/Button";
 import FlexEnd from "~components/Body/FlexEnd";
 import SearchBox from "~components/Body/SearchBox";
 import Form from "./Form";
 
+const { NODE_ENV } = process.env;
+
 const SearchForm = () => {
-  const searchFormRef = React.useRef(null);
-  const [isVisible, setVisible] = React.useState(false);
-
-  const openModal = React.useCallback(() => setVisible(true), []);
-  const closeModal = React.useCallback(() => setVisible(false), []);
-
-  const handleClickOutside = React.useCallback(
-    ({ target }) => {
-      if (isVisible && this.wrapperRef && !this.wrapperRef.contains(target))
-        closeModal();
-    },
-    [isVisible, closeModal]
-  );
+  const inputRef = React.useRef(null);
 
   React.useEffect(() => {
-    // if (process.env.NODE_ENV !== "test") {
-    //   import("docsearch.js").then(mdl => {
-    //     mdl.default({
-    //       apiKey: "",
-    //       indexName: "composable-styled-components",
-    //       inputSelector: '[class^="doc-search"]',
-    //       debug: true, // Set debug to true if you want to inspect the dropdown
-    //       handleSelected: (input, event, suggestion) => {
-    //         // original handleselect
-    //         requestModalClose();
-    //         input.setVal("");
-    //         window.location.assign(suggestion.url);
-    //       }
-    //     });
-    //   });
-    // }
+    docsearch({
+      apiKey: "87fbefd9926b69909e3b806c4c9eb26a",
+      indexName: "mattcarlotta_composable",
+      inputSelector: '[id="search-docs"]',
+      debug: NODE_ENV !== "production",
+      handleSelected: (input, event, { url }) => {
+        event.stopPropagation();
+        input.close();
+        inputRef.current.blur();
+        Router.push(url.replace(/^.+.sh/, ""));
+      }
+    });
   }, []);
-
-  React.useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
-  React.useEffect(() => {
-    if (searchFormRef.current) searchFormRef.current.focus();
-  }, [searchFormRef.current]);
 
   return (
-    <FlexEnd>
-      <div ref={searchFormRef}>
-        <Form>
-          <Button margin="0 8px 0" padding="0px 4px" htmlFor="search-docs">
-            <FaSearch style={{ fontSize: 15 }} />
-          </Button>
-          <SearchBox className="doc-search" />
-        </Form>
-      </div>
+    <FlexEnd className="right-nav">
+      <Form>
+        <Button margin="0 8px 0" padding="0px 4px" htmlFor="search-docs">
+          <FaSearch style={{ fontSize: 15 }} />
+        </Button>
+        <SearchBox ref={inputRef} className="doc-search" />
+      </Form>
     </FlexEnd>
   );
 };

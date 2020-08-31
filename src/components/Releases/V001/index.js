@@ -20,10 +20,12 @@ const V001 = () => (
       <li>Integrated with Github actions for library CI</li>
       <li>Integrated with Vercel for documentation CI</li>
       <li>
-        ⬆️ Temporary inlined toHaveStyleRule because of&nbsp;
+        ⬆️&nbsp;
         <OutsideLink href="https://github.com/styled-components/jest-styled-components/issues/338">
-          upstream bug
+          Upstream Issue
         </OutsideLink>
+        &#58;&nbsp;temporary inlined toHaveStyleRule because of invalid 'sc-'
+        selectors
       </li>
     </ReleaseNotes>
   </>

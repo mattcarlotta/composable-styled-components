@@ -1,11 +1,14 @@
 import { compose, setDisplayName } from "~lib";
 
 const Form = compose.form(setDisplayName("SearchForm"))`
-  @media (max-width: 1000px) {
+  @media (min-width: 768px)
+  .algolia-docsearch-suggestion--subcategory-column {
     display: block;
-    padding: 0;
+  }
+
+  @media (max-width: 1000px) {
     span.algolia-autocomplete {
-      display: block !important;
+      display: block;
     }
     span.ds-dropdown-menu::before {
       display: none;

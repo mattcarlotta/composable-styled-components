@@ -52,9 +52,9 @@ const Documentation = () => (
       >
         recompose
       </OutsideLink>
-      , this library uses higher-order components (HoCs) to build a
-      styled-component with ease. The goal isn't to replace styled-components,
-      but instead offer a DX-friendly way to compose them.
+      , this library uses higher-order components to build a styled-component
+      with ease. The goal isn't to replace styled-components, but instead offer
+      a DX-friendly way to compose them.
     </Subtitle>
     <AnchorTitle ariaLabel="Installation" id="installation">
       Installation

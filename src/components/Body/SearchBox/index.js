@@ -16,6 +16,7 @@ const SearchBox = compose.input(
   background: #ebebeb;
   color: #000;
   font-size: 15px;
+  width: 250px;
   
   ::-webkit-search-cancel-button {
     background-color: white;

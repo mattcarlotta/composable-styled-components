@@ -22,8 +22,6 @@ A lightweight <strong>composable</strong> solution for <a href="https://github.c
 
 ## Documentation
 
-⚠️ Note: **Documentation is under construction**.
-
 [Documentation](https://composable.mattcarlotta.sh/documentation)
 
 [Installation](https://composable.mattcarlotta.sh/documentation#installation)

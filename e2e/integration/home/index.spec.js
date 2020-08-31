@@ -43,6 +43,14 @@ context("Home Page", () => {
     cy.get("[data-testid='title']").should("have.text", "Releases");
   });
 
+  it("searches the website by query and navigates to option when clicked", () => {
+    cy.get("[id='search-docs']").type("css");
+    cy.get(".ds-suggestions").should("have.length", 1);
+    cy.get("a.algolia-docsearch-suggestion").first().click();
+    cy.url().should("contain", "/demonstrations");
+    cy.hash().should("eq", "#css");
+  });
+
   it("navigates back home when clicking on the logo tab", () => {
     cy.visit("/demonstrations");
     cy.get(`[data-testid='logo-tab']`).click();

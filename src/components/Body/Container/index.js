@@ -1,6 +1,10 @@
 import { compose, setDisplayName } from "~lib";
 
 const Container = compose.main(setDisplayName("Container"))`
+  @media (max-width: 1100px) {
+    padding-top: 95px;
+  }
+
   @media (min-width: 976px) {
     margin: 0 auto 40px;
     padding-left: 0;
