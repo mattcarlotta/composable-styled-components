@@ -7,7 +7,7 @@ const Wrapper = compose.section(setDisplayName("Wrapper"))`
   padding: 10px 20px;
 `;
 
-const Title = compose.h1(setDisplayName("Title"))`
+const Title = compose.div(setDisplayName("Title"))`
   border: 2px solid #ff6c47;
   border-radius: 4px;
   color: #ff6c47;
@@ -25,7 +25,7 @@ const exampleCode = `const Wrapper = compose.section(
   padding: 10px 20px;
 \`;
 
-const Title = compose.h1(
+const Title = compose.div(
   setDisplayName("Title")
 )\`
   border: 3px solid #ff6c47;
