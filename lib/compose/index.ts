@@ -7,7 +7,7 @@ const compose = t => (...f) => (...s) =>
     ${() => css(...s)};
   `);
 
-domElements.forEach(domElement => {
+domElements.forEach((domElement: string) => {
   compose[domElement] = compose(domElement);
 });
 

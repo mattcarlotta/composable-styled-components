@@ -1,21 +1,23 @@
 {
+  "preset": "ts-jest",
   "testEnvironment": "jsdom",
   "moduleDirectories": ["<rootDir>/src", "<rootDir>/lib", "node_modules"],
-  "moduleNameMapper": {
-    "~(.*)$": "<rootDir>/$1"
+  "globals": {
+    "ts-jest": {
+      "babelConfig": true,
+      "diagnostics": false
+    }
   },
   "transform": {
-    "^.+\\.(js|jsx)$": "babel-jest"
+    "^.+\\.(js|jsx|ts|tsx)$": "ts-jest"
   },
   "testPathIgnorePatterns": [
     "<rootDir>/coverage",
-    "<rootDir>/config",
     "<rootDir>/dist",
     "<rootDir>/node_modules",
     "<rootDir>/utils",
-    "<rootDir>/babel.config.js",
-    "<rootDir>/next.config.js"
+    "<rootDir>/babel.config.js"
   ],
-  "collectCoverageFrom": ["lib/**/*.{js,jsx}"],
-  "setupFilesAfterEnv": ["<rootDir>/utils/setupTests/index.js"]
+  "collectCoverageFrom": ["lib/**/*.{ts,tsx}"],
+  "setupFilesAfterEnv": ["<rootDir>/utils/setupTests/index.ts"]
 }

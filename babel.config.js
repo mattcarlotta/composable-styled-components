@@ -6,6 +6,7 @@ module.exports = function (api) {
   return {
     presets: [
       "@babel/preset-react",
+      "@babel/preset-typescript",
       !inTesting
         ? ["@babel/preset-env", { modules: false, loose: true }]
         : "@babel/preset-env"

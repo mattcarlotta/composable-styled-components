@@ -1,10 +1,12 @@
+import * as React from "react";
+import { mount } from "enzyme";
 import { compose } from "../index";
 
 const Component = compose.div()`
   width: 100%;
   height: 100%;
-  color: ${props => props.color || "black"};
-  background: ${props => props.background || "transparent"};
+  color: ${(props: any) => props.color || "black"};
+  background: ${(props: any) => props.background || "transparent"};
 `;
 
 describe("Compose Function", () => {

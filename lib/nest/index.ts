@@ -1,6 +1,6 @@
 import { createFactory } from "../createFactory";
 import { getDisplayName } from "../displayName";
-import inDevelopment from "../inDevelopment";
+import inDev from "../inDev";
 
 export const nest = (...Components) => {
   const factories = Components.map(createFactory);
@@ -8,7 +8,7 @@ export const nest = (...Components) => {
     factories.reduceRight((child, factory) => factory(props, child), children);
 
   /* istanbul ignore next */
-  if (inDevelopment) {
+  if (inDev) {
     const displayNames = Components.map(getDisplayName);
     Nest.displayName = `nest(${displayNames.join(", ")})`;
   }

@@ -1,4 +1,6 @@
-import { compose } from "~lib";
+import * as React from "react";
+import { mount } from "enzyme";
+import { compose } from "../../index";
 import { setDisplayName } from "../index";
 
 const Component = compose.h1(setDisplayName("CustomDisplayName"))`

@@ -14,7 +14,7 @@ const outputs = [
 ];
 
 export default {
-  input: "./lib/index.js",
+  input: "./lib/index.ts",
   output: outputs.map(({ file, format }) => ({
     file: pkg[file],
     name: "composable-styled-components",

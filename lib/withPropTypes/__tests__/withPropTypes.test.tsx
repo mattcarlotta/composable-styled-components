@@ -1,5 +1,7 @@
+import * as React from "react";
+import { mount } from "enzyme";
 import PropTypes from "prop-types";
-import { compose } from "~lib";
+import { compose } from "../../index";
 import { withPropTypes } from "../index";
 
 const Button = compose.button(

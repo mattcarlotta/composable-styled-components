@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { setDisplayName, wrapDisplayName } from "../displayName";
 import isFunc from "../isFunc";
-import inDevelopment from "../inDevelopment";
+import inDev from "../inDev";
 
 export const withStyles = incomingStyles => BaseComponent => {
   const extendedComponent = styled(BaseComponent)`
@@ -10,7 +10,7 @@ export const withStyles = incomingStyles => BaseComponent => {
       : () => incomingStyles};
   `;
 
-  return inDevelopment
+  return inDev
     ? setDisplayName(wrapDisplayName(BaseComponent, "withStyles"))(
         extendedComponent
       )

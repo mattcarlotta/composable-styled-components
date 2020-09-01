@@ -1,4 +1,6 @@
-import { compose } from "~lib";
+import * as React from "react";
+import { mount } from "enzyme";
+import { compose } from "../../index";
 import { nest } from "../index";
 
 const Container = compose.main()`

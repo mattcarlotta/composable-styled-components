@@ -1,4 +1,6 @@
-import { compose, withAttributes } from "~lib";
+import * as React from "react";
+import { mount } from "enzyme";
+import { compose, withAttributes } from "../../index";
 import { extend } from "../index";
 
 const Input = compose.input(

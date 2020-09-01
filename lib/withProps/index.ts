@@ -1,7 +1,7 @@
 import { mapProps } from "../mapProps";
 import { setDisplayName, wrapDisplayName } from "../displayName";
 import isFunc from "../isFunc";
-import inDevelopment from "../inDevelopment";
+import inDev from "../inDev";
 
 export const withProps = incomingProps => BaseComponent => {
   const extraProps = isFunc(BaseComponent) ? BaseComponent().props : {};
@@ -16,7 +16,7 @@ export const withProps = incomingProps => BaseComponent => {
     ...props
   }));
 
-  return inDevelopment
+  return inDev
     ? setDisplayName(wrapDisplayName(BaseComponent, "withProps"))(
         hoc(BaseComponent)
       )

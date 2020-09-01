@@ -1,4 +1,6 @@
-import { compose } from "~lib";
+import * as React from "react";
+import { mount } from "enzyme";
+import { compose } from "../../index";
 import { withDefaultProps } from "../index";
 
 const onClick = jest.fn();

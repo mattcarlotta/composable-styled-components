@@ -1,4 +1,6 @@
-import { compose, css, extend } from "~lib";
+import * as React from "react";
+import { mount } from "enzyme";
+import { compose, css, extend } from "../../index";
 import { withStyles } from "../index";
 
 const Header = compose.h1()`

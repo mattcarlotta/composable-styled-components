@@ -1,4 +1,6 @@
-import { compose, extend } from "~lib";
+import * as React from "react";
+import { mount } from "enzyme";
+import { compose, extend } from "../../index";
 import { withProps } from "../index";
 
 const Input = compose.input(withProps({ type: "text", "data-name": "input" }))`
