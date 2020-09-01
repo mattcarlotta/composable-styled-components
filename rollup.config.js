@@ -3,8 +3,8 @@ import babel from "@rollup/plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
 import filesize from "rollup-plugin-filesize";
 import resolver from "@rollup/plugin-node-resolve";
+import typescript from "@rollup/plugin-typescript";
 import { terser } from "rollup-plugin-terser";
-import { localResolver } from "./utils/resolver";
 import pkg from "./package.json";
 
 const outputs = [
@@ -36,8 +36,8 @@ export default {
       exclude: "node_modules/**"
     }),
     resolver(),
-    localResolver(),
     commonjs(),
+    typescript(),
     terser({
       output: {
         comments: false

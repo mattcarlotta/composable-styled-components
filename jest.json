@@ -1,15 +1,12 @@
 {
-  "preset": "ts-jest",
   "testEnvironment": "jsdom",
   "moduleDirectories": ["<rootDir>/src", "<rootDir>/lib", "node_modules"],
   "globals": {
-    "ts-jest": {
-      "babelConfig": true,
-      "diagnostics": false
-    }
+    "mount": true,
+    "React": true
   },
   "transform": {
-    "^.+\\.(js|jsx|ts|tsx)$": "ts-jest"
+    "^.+\\.[t|j]sx?$": "babel-jest"
   },
   "testPathIgnorePatterns": [
     "<rootDir>/coverage",

@@ -1,5 +1,3 @@
-import * as React from "react";
-import { mount } from "enzyme";
 import { compose, extend } from "../../index";
 import { withAttributes } from "../index";
 

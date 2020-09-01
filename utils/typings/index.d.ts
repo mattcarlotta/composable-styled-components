@@ -1,4 +1,5 @@
-// tslint:disable:no-namespace
+import { mount } from "enzyme";
+
 declare namespace jest {
   interface AsymmetricMatcher {
     $$typeof: Symbol;
@@ -15,5 +16,16 @@ declare namespace jest {
 
   interface Matchers<R> {
     toHaveStyleRule(property: string, value?: Value, options?: Options): R;
+  }
+}
+
+declare global {
+  namespace NodeJS {
+    interface Global {
+      document: Document;
+      window: Window;
+      navigator: Navigator;
+      mount: typeof mount;
+    }
   }
 }
