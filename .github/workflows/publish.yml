@@ -1,12 +1,10 @@
-name: Deployment
-
-"on":
+on:
   push:
     branches:
-      - canary
+      - master
 
 jobs:
-  deploy:
+  publish:
     if: "!contains(github.event.commits[0].message, '[skip-ci]')"
     runs-on: ubuntu-18.04
 
@@ -36,5 +34,11 @@ jobs:
         run: yarn test
 
       - name: Create Local Build
+        id: build
         if: steps.tests.exit_code == 0
         run: yarn build
+
+      - name: NPM Publish
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.TOKEN }}

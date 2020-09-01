@@ -31,7 +31,7 @@ export default {
   external: ["react", "react-dom", "styled-components"],
   plugins: [
     babel({
-      configFile: resolve(__dirname, "babel.rollup.js"),
+      configFile: resolve(__dirname, "babel.config.js"),
       babelHelpers: "runtime",
       exclude: "node_modules/**"
     }),

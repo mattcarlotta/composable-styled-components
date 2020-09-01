@@ -2,13 +2,11 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "~components/*": ["src/components/*"],
       "~lib/*": ["lib/*"],
       "~lib": ["lib/index"],
-      "~styles/*": ["src/styles/*"],
       "~utils/*": ["utils/*"]
     }
   },
-  "include": ["lib/**/*", "src/**/*", "utils/**/*"],
-  "exclude": ["node_modules", "*.config.js", "*.rollup.js"]
+  "include": ["lib/**/*", "utils/**/*"],
+  "exclude": ["node_modules", "*.config.js"]
 }

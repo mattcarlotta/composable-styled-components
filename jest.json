@@ -8,18 +8,14 @@
     "^.+\\.(js|jsx)$": "babel-jest"
   },
   "testPathIgnorePatterns": [
-    "<rootDir>/.next",
     "<rootDir>/coverage",
     "<rootDir>/config",
     "<rootDir>/dist",
-    "<rootDir>/e2e",
     "<rootDir>/node_modules",
-    "<rootDir>/public",
     "<rootDir>/utils",
     "<rootDir>/babel.config.js",
     "<rootDir>/next.config.js"
   ],
   "collectCoverageFrom": ["lib/**/*.{js,jsx}"],
-  "coveragePathIgnorePatterns": ["<rootDir>/src/pages"],
-  "setupFilesAfterEnv": ["<rootDir>/src/utils/setupTests/index.js"]
+  "setupFilesAfterEnv": ["<rootDir>/utils/setupTests/index.js"]
 }
