@@ -1,10 +1,6 @@
 {
   "testEnvironment": "jsdom",
-  "moduleDirectories": ["<rootDir>/src", "<rootDir>/lib", "node_modules"],
-  "globals": {
-    "mount": true,
-    "React": true
-  },
+  "moduleDirectories": ["<rootDir>/src", "node_modules"],
   "transform": {
     "^.+\\.[t|j]sx?$": "babel-jest"
   },
@@ -15,6 +11,6 @@
     "<rootDir>/utils",
     "<rootDir>/babel.config.js"
   ],
-  "collectCoverageFrom": ["lib/**/*.{ts,tsx}"],
-  "setupFilesAfterEnv": ["<rootDir>/utils/setupTests/index.ts"]
+  "collectCoverageFrom": ["src/**/*.{ts,tsx}"],
+  "setupFilesAfterEnv": ["<rootDir>/src/utils/setupTests/index.ts"]
 }
