@@ -1,7 +1,9 @@
 import type {
+  ComponentClass,
+  ComponentType,
   CSSProperties,
   FunctionComponent as FC,
   ReactElement
 } from "react";
 
-export { CSSProperties, FC, ReactElement };
+export { ComponentClass, ComponentType, CSSProperties, FC, ReactElement };

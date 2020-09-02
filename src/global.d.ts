@@ -1,4 +1,4 @@
-import { mount } from "enzyme";
+export {};
 
 declare global {
   namespace NodeJS {
@@ -6,7 +6,6 @@ declare global {
       document: Document;
       window: any;
       navigator: Navigator;
-      mount: typeof mount;
     }
   }
 }
