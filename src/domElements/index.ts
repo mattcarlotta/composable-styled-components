@@ -1,6 +1,6 @@
 // Thanks to ReactDOMFactories for this handy list!
 
-const domeElements = [
+const domElements = [
   "a",
   "abbr",
   "address",
@@ -115,8 +115,6 @@ const domeElements = [
   "var",
   "video",
   "wbr",
-
-  // SVG
   "circle",
   "clipPath",
   "defs",
@@ -140,4 +138,4 @@ const domeElements = [
   "tspan"
 ];
 
-export default domeElements;
+export default domElements;
