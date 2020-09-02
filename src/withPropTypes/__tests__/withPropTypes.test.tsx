@@ -33,8 +33,8 @@ describe("WithPropTypes Function", () => {
     wrapper.setProps({ onClick: null });
 
     expect(global.console.error)
-      .toHaveBeenCalledWith(`Warning: Failed prop type: The prop \`onClick\` is marked as required in \`compose\`, but its value is \`null\`.
-    in compose`);
+      .toHaveBeenCalledWith(`Warning: Failed prop type: The prop \`onClick\` is marked as required in \`constructWithOptions\`, but its value is \`null\`.
+    in constructWithOptions`);
 
     global.console.error.mockRestore();
   });

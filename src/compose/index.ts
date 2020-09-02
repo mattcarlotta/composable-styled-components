@@ -1,27 +1,24 @@
-import styled, { css } from "styled-components";
-import { extend } from "../extend";
+import constructWithOptions from "./constructWithOptions";
 import domElements from "../domElements";
 import { ComponentType } from "../types";
 
+const elements = [...domElements] as const;
+
+type Keys = typeof elements[number];
+type Elements = { [key in Keys]: () => any };
 type Tag = string | ComponentType<any>;
 
-type Functions = any[];
+type ComposedFn = (tag: Tag) => any;
+type ComposeFn = ComposedFn & Elements;
 
-type Interpolation =
-  | ((executionContext: Object) => Interpolation)
-  | string
-  | ComponentType<any>
-  | Interpolation[];
+const composed: ComposedFn = (tag: Tag) => constructWithOptions(tag);
 
-type Styles = string[] | Object | ((props: Object) => Interpolation);
+const JSXElements = elements.reduce((acc, tag) => {
+  acc[tag] = composed(tag);
+  return acc;
+}, {} as Elements);
 
-const compose = (t: Tag) => (...f: Functions) => (...s: Styles[]) =>
-  extend(...f)(styled(t)`
-    ${() => css(...s)};
-  `);
-
-domElements.forEach(element => {
-  compose[element] = compose(element);
-});
-
-export { compose };
+export const compose: ComposeFn = Object.assign(
+  (tag: Tag) => composed(tag),
+  JSXElements
+);

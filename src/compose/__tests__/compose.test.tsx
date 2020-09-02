@@ -20,7 +20,7 @@ describe("Compose Function", () => {
   });
 
   it("creates component properties", () => {
-    expect(wrapper).toHaveDisplayName("compose");
+    expect(wrapper).toHaveDisplayName("constructWithOptions");
     expect(Component.target).toEqual("div");
     expect(Component.styledComponentId).toBeDefined();
   });
