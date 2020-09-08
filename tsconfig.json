@@ -18,7 +18,7 @@
     "rootDir": "src",
     "strict": true,
     "target": "es5",
-    "types": ["styled-components", "jest", "react", "react-dom"]
+    "types": ["styled-components", "jest", "react", "react-dom", "node"]
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": [
