@@ -3,7 +3,7 @@ import babel from "@rollup/plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
 import filesize from "rollup-plugin-filesize";
 import resolver from "@rollup/plugin-node-resolve";
-import typescript from "@rollup/plugin-typescript";
+import typescript from "rollup-plugin-typescript2";
 import { terser } from "rollup-plugin-terser";
 import pkg from "./package.json";
 

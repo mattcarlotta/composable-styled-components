@@ -1,5 +1,9 @@
 import { ComponentType } from "../types";
 
-export const setStatic = (key: string, value: string | Object) => (
-  BaseComponent: ComponentType<any>
-) => Object.assign(BaseComponent, { [key]: value });
+type SetStaticFn = (
+  key: string,
+  value: string | Object
+) => (BaseComponent: ComponentType) => ComponentType<any>;
+
+export const setStatic: SetStaticFn = (key, value) => BaseComponent =>
+  Object.assign(BaseComponent, { [key]: value });

@@ -1,4 +1,5 @@
-import * as React from "react";
+import { createElement } from "react";
+import { ComponentType } from "../types";
 
-export const createFactory = (Type: React.ComponentType<any>) =>
-  React.createElement.bind(null, Type);
+export const createFactory = (Type: ComponentType<any>) =>
+  createElement.bind(null, Type);
