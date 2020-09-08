@@ -1,25 +1,22 @@
 import styled, { css } from "styled-components";
 import { isValidElementType } from "react-is";
-import { ComponentType } from "../types";
-import { extend } from "extend";
+import { extend } from "../extend";
+import { Styles, Tag } from "../types";
 
-type Tag = string | ComponentType<any>;
+/*
 
-type Interpolation =
-  | ((props: Object) => Interpolation)
-  | string
-  | ComponentType<any>
-  | Interpolation[];
+first: CSSObject | TemplateStringsArray, ...interpolations: SimpleInterpolation[]
 
-type Styles = string[] | Object | ((props: Object) => Interpolation);
+*/
 
-const constructWithOptions = (tag: Tag) => {
+const constructWithOptions = (t: Tag) => {
   try {
-    if (!isValidElementType(tag)) throw new Error("Invalid tag");
+    if (!isValidElementType(t))
+      throw new Error(`${String(t)} is not an HTML tag`);
 
     const templateFunction = (...f: any[]) => (...s: Styles[]) =>
-      extend(...f)(styled(tag)`
-        ${() => css(...s)};
+      extend(...f)(styled(t)`
+        ${() => (css as any)(...s)};
       `);
 
     return templateFunction;

@@ -15,7 +15,8 @@
     "test": "NODE_ENV=testing jest --config ./jest.json",
     "test:cov": "NODE_ENV=testing jest --config ./jest.json --coverage",
     "test:watch": "NODE_ENV=testing jest --config ./jest.json --watch --onlyChanged",
-    "test:watchall": "NODE_ENV=testing jest --config ./jest.json --watchAll"
+    "test:watchall": "NODE_ENV=testing jest --config ./jest.json --watchAll",
+    "tsc": "tsc"
   },
   "repository": {
     "type": "git",

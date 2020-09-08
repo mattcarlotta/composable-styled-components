@@ -1,12 +1,14 @@
 import { createFactory } from "../createFactory";
 import { setDisplayName, wrapDisplayName } from "../displayName";
 import inDev from "../inDev";
-import { FC } from "types";
+import { ComponentType } from "types";
 
-export const withDefaultProps = (props: any) => (BaseComponent: FC) => {
+export const withDefaultProps = (props: {}) => (
+  BaseComponent: ComponentType<any>
+) => {
   const factory = createFactory(BaseComponent);
 
-  const DefaultProps = (ownerProps: any) => factory(ownerProps);
+  const DefaultProps = (ownerProps: {}) => factory(ownerProps);
 
   DefaultProps.defaultProps = props;
 

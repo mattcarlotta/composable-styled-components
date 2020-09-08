@@ -1,13 +1,18 @@
 import { mapProps } from "../mapProps";
 import { setDisplayName, wrapDisplayName } from "../displayName";
-import isFunc from "../isFunc";
 import inDev from "../inDev";
+import { FC, IncomingProps } from "../types";
 
-export const withProps = incomingProps => BaseComponent => {
-  const extraProps = isFunc(BaseComponent) ? BaseComponent().props : {};
+type WithPropsFn = (
+  incomingStyles: IncomingProps
+) => (BaseComponent: any) => any;
 
-  const hoc = mapProps(props => ({
-    ...(isFunc(incomingProps)
+export const withProps: WithPropsFn = incomingProps => BaseComponent => {
+  const extraProps =
+    typeof BaseComponent === "function" ? BaseComponent().props : {};
+
+  const hoc = mapProps((props: any) => ({
+    ...(typeof incomingProps === "function"
       ? incomingProps({
           ...props,
           ...extraProps

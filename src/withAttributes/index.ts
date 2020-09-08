@@ -1,12 +1,15 @@
 import styled from "styled-components";
 import { setDisplayName, wrapDisplayName } from "../displayName";
-import isFunc from "../isFunc";
 import inDev from "../inDev";
-import { CSSProperties, FC } from "../types";
+import { ComponentType, IncomingProps } from "../types";
 
-export const withAttributes = incomingAttributes => (BaseComponent: FC) => {
+type WithAttributesFn = (
+  incomingStyles: IncomingProps
+) => (BaseComponent: ComponentType) => ComponentType<any>;
+
+export const withAttributes: WithAttributesFn = incomingAttributes => BaseComponent => {
   const extendedComponent = styled(BaseComponent).attrs(
-    isFunc(incomingAttributes)
+    typeof incomingAttributes === "function"
       ? props => incomingAttributes(props)
       : () => incomingAttributes
   )``;

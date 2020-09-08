@@ -1,4 +1,4 @@
 import { setStatic } from "../setStatic";
 
-export const withPropTypes = (propTypes: Object) =>
+export const withPropTypes = (propTypes: {}) =>
   setStatic("propTypes", propTypes);

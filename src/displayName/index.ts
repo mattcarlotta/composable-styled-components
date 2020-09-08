@@ -1,12 +1,13 @@
 import { setStatic } from "../setStatic";
-import { FC } from "../types";
+import { ComponentType } from "../types";
 
-const getDisplayName = (Component: FC) => Component.displayName;
+const getDisplayName = (Component: ComponentType<any>) =>
+  Component?.displayName;
 
 const setDisplayName = (displayName: string) =>
   setStatic("displayName", displayName);
 
-const wrapDisplayName = (BaseComponent: FC, hocName: string) =>
+const wrapDisplayName = (BaseComponent: ComponentType<any>, hocName: string) =>
   `${hocName}(${getDisplayName(BaseComponent)})`;
 
 export { getDisplayName, setDisplayName, wrapDisplayName };

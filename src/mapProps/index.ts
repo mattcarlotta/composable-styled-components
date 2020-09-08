@@ -1,11 +1,13 @@
 import { createFactory } from "../createFactory";
 import { setDisplayName, wrapDisplayName } from "../displayName";
 import inDev from "../inDev";
-import { FC } from "../types";
+import { ComponentType } from "../types";
 
-export const mapProps = (propsMapper: (props: any) => void) => (
-  BaseComponent: FC
-) => {
+type MapPropsFn = (
+  props: any
+) => (BaseComponent: ComponentType) => ComponentType<any>;
+
+export const mapProps: MapPropsFn = propsMapper => BaseComponent => {
   const MapProps = (props: any) =>
     createFactory(BaseComponent)(propsMapper(props));
 

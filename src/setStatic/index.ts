@@ -1,9 +1,5 @@
-// import { FC } from "../types";
+import { ComponentType } from "../types";
 
-type K = string;
-type V = string | Object;
-
-export const setStatic = (key: K, value: V) => BaseComponent => {
-  BaseComponent[key] = value;
-  return BaseComponent;
-};
+export const setStatic = (key: string, value: string | Object) => (
+  BaseComponent: ComponentType<any>
+) => Object.assign(BaseComponent, { [key]: value });

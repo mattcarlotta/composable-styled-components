@@ -1,10 +1,11 @@
 import { createFactory } from "../createFactory";
 import { getDisplayName } from "../displayName";
 import inDev from "../inDev";
+import { ComponentType, ReactNode } from "../types";
 
-export const nest = (...Components) => {
+export const nest = (...Components: ComponentType[]) => {
   const factories = Components.map(createFactory);
-  const Nest = ({ children, ...props }) =>
+  const Nest = ({ children, ...props }: { children: ReactNode | undefined }) =>
     factories.reduceRight((child, factory) => factory(props, child), children);
 
   /* istanbul ignore next */
