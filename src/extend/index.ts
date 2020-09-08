@@ -1,5 +1,5 @@
-export const extend = (...f) =>
+export const extend = (...f: any[]) =>
   f.reduce(
-    (a, b) => (...args) => a(b(...args)),
-    arg => arg
+    (a, b) => (...args: any[]) => a(b(...args)),
+    (arg: any) => arg
   );

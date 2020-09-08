@@ -27,8 +27,8 @@
     "node_modules",
     "build",
     ".next",
-    "out",
-    "lib/**/*.test.tsx",
+    "**/*.test.tsx",
+    "src/utils/**/*.ts",
     "*.config.js"
   ]
 }

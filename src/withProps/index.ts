@@ -1,7 +1,7 @@
 import { mapProps } from "../mapProps";
 import { setDisplayName, wrapDisplayName } from "../displayName";
 import inDev from "../inDev";
-import { FC, IncomingProps } from "../types";
+import { IncomingProps } from "../types";
 
 type WithPropsFn = (
   incomingStyles: IncomingProps
